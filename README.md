@@ -1,5 +1,7 @@
 # Matthew Feickert's Ph.D. Thesis
 
+[![CircleCI](https://circleci.com/gh/matthewfeickert/feickert-thesis/tree/master.svg?style=svg&circle-token=fe00e42458020cfeb57c8738bd3474503d0e7fcc)](https://circleci.com/gh/matthewfeickert/feickert-thesis/tree/master)
+
 --------------------------------------------------------------------------------
 
 ## Thesis Table of Contents (currently outline)
