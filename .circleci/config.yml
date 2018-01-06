@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: matthewfeickert/feickert-thesis
+      - image: matthewfeickert/latex-docker
     steps:
       - checkout
       - run:
@@ -14,5 +14,9 @@ jobs:
             make final
             ls -la
       - deploy:
+       # For Docker builds disable host key checking. Be aware that by adding that
+       # you are suspectible to man-in-the-middle attacks.
           name: Push draft to ATLAS internal public web area
-          command: SSHPASS="${LXPLUS_PASS}" sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+          command: |
+              echo -e "Host lxplus.cern.ch\n\tStrictHostKeyChecking no" >> ~/.ssh/config
+              SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
