@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: matthewfeickert/feickert-thesis
     steps:
       - checkout
       - run:
@@ -11,3 +11,9 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+      - run:
+          name: List the Environment
+          command: ls -la
+      - run:
+          name: Compile Thesis
+          command: make final && ls -la
