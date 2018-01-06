@@ -6,14 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo "This is Matthew's Thesis"
-      - run:
-          name: Print the Current Time
-          command: date
-      - run:
-          name: List the Environment
-          command: ls -la
+          name: Print current datetime
+          command: date -u '+%Y-%m-%d %H:%M:%S'
       - run:
           name: Compile Thesis
-          command: make final && ls -la
+          command: |
+            make final
+            ls -la
+      - deploy:
+          name: Push draft to ATLAS internal public web area
+          command: SSHPASS="${LXPLUS_PASS}" sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
