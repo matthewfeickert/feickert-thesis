@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: matthewfeickert/latex-docker
+    branches:
+      ignore:
+        - /test-.*/
     steps:
       - checkout
       - run:
@@ -12,6 +15,7 @@ jobs:
           name: Compile Thesis
           command: |
             make final
+            echo ""
             ls -la
       - deploy:
        # For Docker builds disable host key checking. Be aware that by adding that
