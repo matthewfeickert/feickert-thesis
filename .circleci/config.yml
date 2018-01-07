@@ -2,12 +2,21 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: matthewfeickert/latex-docker
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo "This is Matthew's Thesis"
+          name: Print current datetime
+          command: date -u '+%Y-%m-%d %H:%M:%S'
       - run:
-          name: Print the Current Time
-          command: date
+          name: Compile Thesis
+          command: |
+            make final
+            ls -la
+      - deploy:
+       # For Docker builds disable host key checking. Be aware that by adding that
+       # you are suspectible to man-in-the-middle attacks.
+          name: Push draft to ATLAS internal public web area
+          command: |
+              echo -e "Host lxplus.cern.ch\n\tStrictHostKeyChecking no" >> ~/.ssh/config
+              SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
