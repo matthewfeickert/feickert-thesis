@@ -20,7 +20,9 @@ jobs:
       - deploy:
        # For Docker builds disable host key checking. Be aware that by adding that
        # you are suspectible to man-in-the-middle attacks.
-          name: Push draft to ATLAS internal public web area
+          name: Push draft to ATLAS and SMU internal public web areas
           command: |
+              echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
               echo -e "Host lxplus.cern.ch\n\tStrictHostKeyChecking no" >> ~/.ssh/config
               SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+              SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
