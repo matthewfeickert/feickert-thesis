@@ -12,12 +12,12 @@ TEX=xelatex
 
 all: document
 
-slides: $(driver) $(tex_source) $(image_source)
+text: $(driver) $(tex_source) $(image_source)
 	$(TEX) $(driver)
 	$(TEX) $(driver)
 
 document: $(driver) $(tex_source) $(image_source) $(bib_source)
-	make slides
+	make text 
 	if [ "$(REFERENCES)" = true ]; then bibtex $(basename $(driver)); $(TEX) $(driver); $(TEX) $(driver); fi
 	cp $(basename $(driver)).pdf $(output_file)
 
