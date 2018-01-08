@@ -18,11 +18,12 @@ jobs:
             echo ""
             ls -la
       - deploy:
-       # For Docker builds disable host key checking. Be aware that by adding that
-       # you are suspectible to man-in-the-middle attacks.
+       # For Docker builds disable host key checking. Be aware that by adding
+       # that you are suspectible to man-in-the-middle attacks.
+       # Apply the ssh config to all host servers instead of applying to each
+       # host name. (example host names: lxplus.cern.ch, rubin.physics.smu.edu)
           name: Push draft to ATLAS and SMU internal public web areas
           command: |
               echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
-              echo -e "Host lxplus.cern.ch\n\tStrictHostKeyChecking no" >> ~/.ssh/config
               SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
               SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
