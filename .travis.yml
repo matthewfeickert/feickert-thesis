@@ -1,0 +1,49 @@
+sudo: required
+
+services: docker
+
+branches:
+  # ignore:
+  #   - /test-.*/
+  only:
+    - master
+
+before_install:
+  - docker pull matthewfeickert/latex-docker
+  - docker run -d -i -t --name build matthewfeickert/latex-docker /bin/bash
+  - docker cp ~/build/matthewfeickert/feickert-thesis/. build:/root/
+  - docker ps -a
+  # Install sshpass
+  - sudo apt-get -qq update
+  - sudo apt-get install -y sshpass
+
+jobs:
+  include:
+    - stage: Compile Thesis
+      script:
+        - docker ps -a
+        - docker exec build ls -la
+        - docker exec build make final
+        - docker exec build ls -la
+    # - stage: deploy
+    #   script:
+        - docker exec build /bin/bash -c "mv draft*.pdf draft.pdf"
+        # - docker cp build:/root/draft*.pdf .
+        - docker cp build:/root/draft.pdf .
+        - echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
+        - SSHPASS=$LXPLUS_PASS sshpass -e scp draft.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+        - SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
+
+notifications:
+  # email:
+  #   recipients:
+  #     - matthew.feickert@cern.ch
+  #   on_success: never
+  #   on_failure: always
+
+  email:
+    recipients:
+      - matthew.feickert@cern.ch
+      # - ssekula@smu.edu
+    on_success: always
+    on_failure: never
