@@ -1,24 +1,44 @@
 file = feickert_thesis
 driver = $(file).tex
-date=$(shell date +%Y-%m-%d)
-output_file = draft_$(date).pdf
+
 tex_source = $(wildcard *.tex) $(wildcard src/*.tex) $(wildcard src/backup/*.tex)
 image_source = $(wildcard images/figures/*.pdf) $(wildcard images/figures/*.jpg) $(wildcard images/figures/*.png)
-#bib_source = SMU_ATLAS.bib
 bib_source = $(wildcard *.bib) $(wildcard bib/*.bib)
-REFERENCES = true
-#REFERENCES = false
-TEX=xelatex
+
+LATEX = xelatex
+BIBTEX = bibtex
+# BIBTEX = biber
+
+# The main document filename
+BASENAME = feickert_thesis
+
+date=$(shell date +%Y-%m-%d)
+output_file = draft_$(date).pdf
+
+default: run_latexmk
+	make copy_draft
 
 all: document
 
+run_latexmk:
+	latexmk -pdf $(BASENAME)
+
+%.pdf: %.tex *.tex *.bib
+	$(LATEX) $<
+	-$(BIBTEX)  $(basename $<)
+	$(LATEX) $<
+	$(LATEX) $<
+
+copy_draft:
+	rsync $(BASENAME).pdf $(output_file)
+
 text: $(driver) $(tex_source) $(image_source)
-	$(TEX) $(driver)
-	$(TEX) $(driver)
+	$(LATEX) $(driver)
+	$(LATEX) $(driver)
 
 document: $(driver) $(tex_source) $(image_source) $(bib_source)
 	make text
-	if [ "$(REFERENCES)" = true ]; then bibtex $(basename $(driver)); $(TEX) $(driver); $(TEX) $(driver); fi
+	bibtex $(basename $(driver)); $(LATEX) $(driver); $(LATEX) $(driver);
 	cp $(basename $(driver)).pdf $(output_file)
 
 upload:
