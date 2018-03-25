@@ -26,4 +26,6 @@ jobs:
           command: |
               echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
               SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+              echo "### File viewable at: https://cern.ch/feickert/thesis/draft.pdf"
               SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
+              echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/draft.pdf"
