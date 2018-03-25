@@ -219,3 +219,6 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+# Thesis specific files
+draft*.pdf
