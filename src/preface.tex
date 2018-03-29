@@ -8,21 +8,27 @@ The following is a summary of useful concepts in high energy particle physics.
 
 \subsection{Natural Units}\label{subsection:natural_units}
 
-Natural units
+The nature of high energy physics is to give descriptions of the phenomena and interactions that occur at energies that result in speeds that are close to the speed of light over very short time and distance scales.
+Given this, it becomes readily apparent that SI units of measurement are somewhat cumbersome to cleanly explain calculations in, and a much more useful system of units would be to give calculation results relative to the scales that the phenomena occur at.
+When measuring the speed of a relativistic particle it is more convenient to compare to the speed of light $\left(\text{such that }c=1\right)$ then to the number of meters per second.
+Similarly, when measuring the momentum of a particle it is generally more useful to know the amount of its energy in the form of momentum compared to the amount in the form of its mass, resulting in expressing momentum in terms of energy.
+This system of units is called ``Natural Units'' builds its measurements in terms of speed, angular momentum, and energy and is used extensively (if not almost exclusively) throughout high energy physics.
+Quantities encountered routinely in high energy physics are given in Natural Units in Table~\ref{table:natural_units}.
+
 \begin{table}[htpb]
  \centering
  \caption{Common quantities in particle physics given in both natural units and SI units.}
- \begin{tabular}{@{}lll@{}} \toprule
-  Quantity         & Natural Units & SI Units                                        \\ \midrule
-  Speed            & $1$           & $3.0\times 10^{8}~\textrm{m}/\textrm{s}$        \\
-  Angular Momentum & $1$           & $10^{34}~\textrm{m}^2 \,\textrm{kg}/\textrm{s}$ \\
-  Energy           & \textrm{GeV}  & $1.6\times 10^{-10}~\textrm{J}$                 \\
-  Momentum         &               &                                                 \\
-  Mass             &               &                                                 \\
-  Time             &               &                                                 \\
-  Length           &               &                                                 \\
-  Electric Charge  &               &                                                 \\
-  Magnetic Field   &               &                                                 \\
+ \begin{tabular}{@{}llll@{}} \toprule
+  Quantity         & Natural Units                 & Natural Units (dimensionful)            & SI Units                                              \\ \midrule
+  Speed            & $1$                           & $c$                                     & $3.0\times 10^{8}~\textrm{m}/\textrm{s}$              \\
+  Angular Momentum & $1$                           & $\hbar$                                 & $10^{34}~\textrm{m}^2 \,\textrm{kg}/\textrm{s}$       \\
+  Energy           & \textrm{GeV}                  & \textrm{GeV}                            & $1.6\times 10^{-10}~\textrm{J}$                       \\
+  Momentum         & \textrm{GeV}                  & $\textrm{GeV}/c$                        & $1\times 10^{-19}~\textrm{kg}\,\textrm{m}/\textrm{s}$ \\
+  Mass             & \textrm{GeV}                  & $\textrm{GeV}/c^2$                      & $1.8\times 10^{-27}~\textrm{kg}$                      \\
+  Time             & $1/\textrm{GeV}$              & $\hbar/\textrm{GeV}$                    & $6.6\time 10^{-25}~\textrm{s}$                        \\
+  Length           & $1/\textrm{GeV}$              & $\hbar c/\textrm{GeV}$                  & $2\times 10^{-16}~\textrm{m}$                         \\
+  Electric Charge  & $1$                           & $e/\sqrt{4\pi \alpha}$                  & $5.3\times 10^{-19}~\textrm{C}$                       \\
+  Magnetic Field   & $\left(\textrm{GeV}\right)^2$ & $\left(\textrm{GeV}\right)^2/\hbar c^2$ & $5\times 10^{16}~\textrm{T}$                          \\
   \bottomrule
  \end{tabular}\label{table:natural_units}%
 \end{table}
@@ -98,7 +104,7 @@ where:
 
 \section{Coordinates}\label{section:coordinates}
 
-LHC coordinate systems
+LHC coordinate systems\\
 
 \section{Statistics}\label{section:statistics}
 
