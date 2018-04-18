@@ -25,7 +25,14 @@ jobs:
           name: Push draft to ATLAS and SMU internal public web areas
           command: |
               echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
-              SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
-              echo "### File viewable at: https://cern.ch/feickert/thesis/draft.pdf"
-              SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
-              echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/draft.pdf"
+              if [[ ! -z $CIRCLE_PULL_REQUEST ]]; then
+                SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf
+                echo "### File viewable at: https://cern.ch/feickert/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf"
+                SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf
+                echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf"
+              else
+                SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+                echo "### File viewable at: https://cern.ch/feickert/thesis/draft.pdf"
+                SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
+                echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/draft.pdf"
+              fi
