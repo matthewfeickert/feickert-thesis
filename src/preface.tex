@@ -1,0 +1,111 @@
+\chapter*{Preface}\label{chapter:preface}
+% c.f. https://tex.stackexchange.com/a/222961/152544
+\addcontentsline{toc}{chapter}{\protect\numberline{}Preface}
+
+The following is a summary of useful concepts in high energy particle physics.
+
+\section{Units}\label{section:units}
+
+\subsection{Natural Units}\label{subsection:natural_units}
+
+The nature of high energy physics is to give descriptions of the phenomena and interactions that occur at energies that result in speeds that are close to the speed of light over very short time and distance scales.
+Given this, it becomes readily apparent that SI units of measurement are somewhat cumbersome to cleanly explain calculations in, and a much more useful system of units would be to give calculation results relative to the scales that the phenomena occur at.
+When measuring the speed of a relativistic particle it is more convenient to compare to the speed of light $\left(\text{such that }c=1\right)$ then to the number of meters per second.
+Similarly, when measuring the momentum of a particle it is generally more useful to know the amount of its energy in the form of momentum compared to the amount in the form of its mass, resulting in expressing momentum in terms of energy.
+This system of units is called ``Natural Units'' builds its measurements in terms of speed, angular momentum, and energy and is used extensively (if not almost exclusively) throughout high energy physics.
+Quantities encountered routinely in high energy physics are given in Natural Units in Table~\ref{table:natural_units}.
+
+\begin{table}[htpb]
+ \centering
+ \caption{Common quantities in particle physics given in both natural units and SI units.}
+ \begin{tabular}{@{}llll@{}} \toprule
+  Quantity         & Natural Units                 & Natural Units (dimensionful)            & SI Units                                              \\ \midrule
+  Speed            & $1$                           & $c$                                     & $3.0\times 10^{8}~\textrm{m}/\textrm{s}$              \\
+  Angular Momentum & $1$                           & $\hbar$                                 & $10^{34}~\textrm{m}^2 \,\textrm{kg}/\textrm{s}$       \\
+  Energy           & \textrm{GeV}                  & \textrm{GeV}                            & $1.6\times 10^{-10}~\textrm{J}$                       \\
+  Momentum         & \textrm{GeV}                  & $\textrm{GeV}/c$                        & $1\times 10^{-19}~\textrm{kg}\,\textrm{m}/\textrm{s}$ \\
+  Mass             & \textrm{GeV}                  & $\textrm{GeV}/c^2$                      & $1.8\times 10^{-27}~\textrm{kg}$                      \\
+  Time             & $1/\textrm{GeV}$              & $\hbar/\textrm{GeV}$                    & $6.6\time 10^{-25}~\textrm{s}$                        \\
+  Length           & $1/\textrm{GeV}$              & $\hbar c/\textrm{GeV}$                  & $2\times 10^{-16}~\textrm{m}$                         \\
+  Electric Charge  & $1$                           & $e/\sqrt{4\pi \alpha}$                  & $5.3\times 10^{-19}~\textrm{C}$                       \\
+  Magnetic Field   & $\left(\textrm{GeV}\right)^2$ & $\left(\textrm{GeV}\right)^2/\hbar c^2$ & $5\times 10^{16}~\textrm{T}$                          \\
+  \bottomrule
+ \end{tabular}\label{table:natural_units}%
+\end{table}
+
+
+\subsection{Units of Luminosity}\label{subsection:luminosity_units}
+In high energy physics a crucial quantity of interest is the luminosity (both instantaneous and integrated) delivered by the particle accelerator.
+The instantaneous luminosity, $\mathscr{L}$, can be defined as the number of particles incident per unit area per unit time (generally taken to be seconds),
+\begin{equation}
+ \mathscr{L} = \frac{\text{number of particles}}{\text{unit area} \cdot \text{second}}.
+ \label{eq:instantaneous_luminosity}
+\end{equation}
+In accelerator physics, the unit area is generally chosen to be $\textrm{cm}^2$, giving instantaneous luminosities units of $\textrm{cm}^{-2} \cdot \textrm{s}^{-1}$,
+\[
+ \left[\mathscr{L}\right] = \textrm{cm}^{-2} \cdot \textrm{s}^{-1}.
+\]
+However, experimental particle physicists prefer to use units of inverse barns for luminosities. A barn is defined as
+\begin{equation}
+ 1~\textrm{barn} = 10^{-28}~\textrm{m}^2 = 10^{-24}~\textrm{cm}^2,
+ \label{eq:barn_to_area}
+\end{equation}
+which is roughly the cross sectional area of an atomic nuclei.~\cite{web:history_physics_purdue,history:etymology_barn}\\
+
+The context in which luminosity appears as being useful is in the form of an equation like
+\[
+ N_{\textrm{events}} = \sigma_{\textrm{process}} \cdot \int \mathscr{L}\,dt
+\]
+where:
+\begin{itemize}
+ \item $N_{\text{events}}$ is the number of events of a particular process that will be produced at the collider.
+       This is what ends up hitting the detector.
+ \item $\sigma_{\textrm{process}}$ is the cross section of the particular process to occur per interaction of colliding particles.
+       At the LHC this would be the cross section per proton-proton interaction.
+       This is a function of the fundamental physics that is available at the energy ranges being probed, and so is also a function of the collider's center of mass energy, $\sqrt{s}$.
+       When written in an equation as such it is assumed that the cross section is also including the relevant branching ratios for the final state particles.
+       That is, $\sigma\left(H \to b\bar{b}\,\right) = \sigma\left(pp \to H\right) \cdot \mathcal{BR}\left(H \to b\bar{b}\,\right)$.
+ \item $L \equiv \int \mathscr{L}\,dt$ is the total luminosity integrated over time (the integrated luminosity).~\cite{Herr:941318}
+       This is what is delivered by the particle accelerator.
+\end{itemize}
+
+\begin{table}[htpb]
+ \centering
+ \caption{Instantaneous luminosities at the LHC}
+ \begin{tabular}{@{}ll@{}} \toprule
+  Description                                                    & Units of $\textrm{cm}^{-2}\cdot\textrm{s}^{-1}$ \\ \midrule
+  LHC Design Luminosity~\cite{Bruning:782076}                    & $10^{34}$                                       \\
+  2017 ATLAS Trigger Menu Maximum~\cite{TWiki:MenuEvolution2017} & $2.0 \times 10^{34}$                            \\
+  2017 Plan~\cite{Indico:MenuCoordination_2017Lumi}              & $1.7 \times 10^{34}$                            \\
+  2017 Peak~\cite{TWiki:2017ATLASPeakLumi}                       & $1.7 \times 10^{34}$                            \\
+  \bottomrule
+ \end{tabular}\label{table:LHC_Luminosity_Goals}%
+\end{table}
+
+% Note to self: spacing in tables seems too large. See if can adjust with geometry package
+\begin{table}[htpb]
+ \centering
+ \caption{Luminosity measurements in $\text{barns}^{-1}$}
+ % \resizebox{\linewidth}{!}{%
+ % \resizebox*{!}{\dimexpr\textheight-2\baselineskip\relax}{%
+ \begin{tabular}{@{}lll@{}} \toprule
+  Units                & Units of $\textrm{cm}^{-2}$ & Units of $\textrm{fb}^{-1}$ \\ \midrule
+  $\textrm{barn}^{-1}$ & $10^{24}$                   & $10^{-15}$                  \\
+  $\textrm{mb}^{-1}$   & $10^{27}$                   & $10^{-12}$                  \\
+  $\mu\textrm{b}^{-1}$ & $10^{30}$                   & $10^{-9}$                   \\
+  $\textrm{nb}^{-1}$   & $10^{33}$                   & $10^{-6}$                   \\
+  $\textrm{pb}^{-1}$   & $10^{36}$                   & $10^{-3}$                   \\
+  $\textrm{fb}^{-1}$   & $10^{39}$                   & $10^{0}$                    \\
+  $\textrm{ab}^{-1}$   & $10^{42}$                   & $10^{3}$                    \\
+  \bottomrule
+ \end{tabular}\label{table:Luminosity}%
+ % }
+\end{table}
+
+\section{Coordinates}\label{section:coordinates}
+
+LHC coordinate systems\\
+
+\section{Statistics}\label{section:statistics}
+
+Statistics in particle physics
