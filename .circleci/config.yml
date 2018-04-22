@@ -23,17 +23,20 @@ jobs:
        # that you are suspectible to man-in-the-middle attacks.
        # Apply the ssh config to all host servers instead of applying to each
        # host name. (example host names: lxplus.cern.ch, rubin.physics.smu.edu)
-          name: Push draft to ATLAS and SMU internal public web areas
+          name: Push draft and abstract to ATLAS and SMU internal public web areas
           command: |
               echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
               if [[ ! -z $CIRCLE_PULL_REQUEST ]]; then
-                SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf
+                SSHPASS=$LXPLUS_PASS sshpass -e scp feickert_thesis.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf
+                SSHPASS=$LXPLUS_PASS sshpass -e scp abstract.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/PRs/abstract_PR${CIRCLE_PULL_REQUEST##*/}.pdf
                 echo "### File viewable at: https://cern.ch/feickert/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf"
-                SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf
+                SSHPASS=$PHYSSERVER_PASS sshpass -e scp abstract.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/PRs/abstract_PR${CIRCLE_PULL_REQUEST##*/}.pdf
                 echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf"
               else
-                SSHPASS=$LXPLUS_PASS sshpass -e scp draft_*.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+                SSHPASS=$LXPLUS_PASS sshpass -e scp feickert_thesis.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+                SSHPASS=$LXPLUS_PASS sshpass -e scp abstract.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/abstract.pdf
                 echo "### File viewable at: https://cern.ch/feickert/thesis/draft.pdf"
-                SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft_*.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
+                SSHPASS=$PHYSSERVER_PASS sshpass -e scp feickert_thesis.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
+                SSHPASS=$PHYSSERVER_PASS sshpass -e scp abstract.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/abstract.pdf
                 echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/draft.pdf"
               fi
