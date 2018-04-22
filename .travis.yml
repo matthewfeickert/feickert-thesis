@@ -27,12 +27,15 @@ jobs:
         - docker exec build ls -la
     # - stage: deploy
     #   script:
-        - docker exec build /bin/bash -c "mv draft*.pdf draft.pdf"
+        - docker exec build /bin/bash -c "mv feickert_thesis.pdf draft.pdf"
         # - docker cp build:/root/draft*.pdf .
         - docker cp build:/root/draft.pdf .
+        - docker cp build:/root/abstract.pdf .
         - echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
         - SSHPASS=$LXPLUS_PASS sshpass -e scp draft.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/draft.pdf
+        - SSHPASS=$LXPLUS_PASS sshpass -e scp abstract.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/thesis/abstract.pdf
         - SSHPASS=$PHYSSERVER_PASS sshpass -e scp draft.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
+        - SSHPASS=$PHYSSERVER_PASS sshpass -e scp abstract.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/abstract.pdf
 
 notifications:
   # email:
