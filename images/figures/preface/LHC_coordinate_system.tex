@@ -1,0 +1,52 @@
+% Modified version of https://wiki.physik.uzh.ch/cms/latex:example_spherical_coordinates
+\RequirePackage{luatex85}
+\documentclass[tikz, border=5pt]{standalone}
+
+\usepackage{tikz-3dplot}
+\tikzset{>=latex} % for LaTeX arrow head
+
+\begin{document}
+\tdplotsetmaincoords{75}{50} % to reset previous setting
+\begin{tikzpicture}[scale=3, tdplot_main_coords, rotate around x=90]
+
+ % variables
+ \def\rvec{1.2}
+ \def\thetavec{40}
+ \def\phivec{70}
+ \def\R{1.1}
+ \def\w{0.3}
+
+ % axes
+ \coordinate (origin) at (0,0,0);
+ \coordinate (x_hat) at (1,0,0);
+ \coordinate (y_hat) at (0,1,0);
+ \coordinate (z_hat) at (0,0,1);
+ \draw[thick,->] (origin) -- (x_hat) node[below left]{$x$};
+ \draw[thick,->] (origin) -- (y_hat) node[below right]{$y$};
+ \draw[thick,->] (origin) -- (z_hat) node[below right]{$z$};
+ \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+
+ % vectors
+ \draw[->,red] (origin) -- (P) node[above left] {$P$};
+ \draw[dashed,red] (origin)  -- (Pxy);
+ \draw[dashed,red] (P)  -- (Pxy);
+ \draw[dashed,red] (Py) -- (Pxy);
+
+ % circle - LHC
+ \tdplotdrawarc[thick, rotate around x=90, black]{(\R,0,0)}{\R}{0}{360}{}{}
+
+
+ % nodes
+ \node[right] at (\R,0,0) {LHC};
+ \fill[radius=0.8pt, black!20!blue]
+ (origin) circle node[left=4pt,below=4pt] {ATLAS};
+ \draw[thick] (0.02,0,0) -- (0.5,0,0); % partially overdraw x-axis and CMS point
+
+ % arcs
+ \tdplotdrawarc[->]{(origin)}{0.2}{0}{\phivec}
+ {above=2pt,right=-1pt,anchor=mid west}{$\phi$}
+ \tdplotdrawarc[->,rotate around z=\phivec-90,rotate around y=-90]{(0,0,0)}{0.5}{0}{\thetavec}
+ {anchor=mid east}{$\theta$}
+
+\end{tikzpicture}
+\end{document}
