@@ -106,6 +106,30 @@ where:
 
 LHC coordinate systems\\
 
+The LHC coordinate system, seen in Figure~\ref{fig:LHC_coordinate_system}, is a rectangular coordinate system defined relative to the LHC ring and the LHC beamline.
+At any point, the positive $x$ direction is defined as the direction that points radially inward to the center of the LHC ring.
+The positive $y$ direction is then defined as pointing upwards --- towards the Earth's surface if one is at the beamline --- leaving the positive $z$ direction pointing along the beamline.\\
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics{preface/LHC_coordinate_system.pdf}
+ \caption{The LHC coordinate system as seen from the ATLAS detector.}
+ \label{fig:LHC_coordinate_system}
+\end{figure}
+
+While the LHC coordinate system is Cartesian, the preferred coordinate system for describing LHC events is not.
+As the ATLAS detector is arranged cylindrically outside the beamline of the LHC --- such that most of its detector components are transverse to the beamline --- the coordinate system that is used to describe events in ATLAS is characterized by a particle's transverse momentum, pseudorapidity, and polar angle: $\left(p_T, \eta, \phi\right)$.
+\textbf{DESCRIBE PSEUDORAPIDITY}
+
 \section{Statistics}\label{section:statistics}
 
 Statistics in particle physics
+
+\section{Open Source Tools}\label{section:open_source}
+
+This thesis and the researched described in it were made possible only through use of open source software.
+The analysis was written in the open source languages \texttt{C++} and \texttt{Python} and made extensive use of the \texttt{ROOT} data analysis framework.
+Similarly, parts of the analysis were conducted in Python and leveraged the SciPy ecosystem, most notably the NumPy and matplotlib libraries.
+Additionally, the Keras library was used to interface with the TensorFlow machine learning framework for parts of the analysis.
+The thesis itself was written in \LaTeXe, built using \texttt{latexmk} and \texttt{Make}, and versioned with Git.
+Scientific research is built upon the open source community and tools, and this work would not have been made possible without it.
