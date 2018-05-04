@@ -15,6 +15,7 @@ jobs:
       - run:
           name: Compile Thesis
           command: |
+            git submodule update --init --recursive
             make final
             echo ""
             ls -la
