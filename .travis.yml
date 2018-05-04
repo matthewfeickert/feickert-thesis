@@ -23,6 +23,7 @@ jobs:
       script:
         - docker ps -a
         - docker exec build ls -la
+        - docker exec build git submodule update --init --recursive
         - docker exec build make final
         - docker exec build ls -la
     # - stage: deploy
