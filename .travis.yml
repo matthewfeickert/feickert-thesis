@@ -9,29 +9,19 @@ branches:
     - master
 
 before_install:
-  - docker pull matthewfeickert/latex-docker
-  - docker run -d -i -t --name build matthewfeickert/latex-docker /bin/bash
-  - docker cp ~/build/matthewfeickert/feickert-thesis/. build:/root/
-  - docker ps -a
-  # Install sshpass
+  - docker pull matthewfeickert/latex-docker:latest
   - sudo apt-get -qq update
   - sudo apt-get install -y sshpass
 
 jobs:
   include:
-    - stage: Compile Thesis
+    - stage: Build Thesis
       script:
-        - docker ps -a
-        - docker exec build ls -la
-        - docker exec build git submodule update --init --recursive
-        - docker exec build make final
-        - docker exec build ls -la
-    # - stage: deploy
-    #   script:
-        - docker exec build /bin/bash -c "mv feickert_thesis.pdf draft.pdf"
-        # - docker cp build:/root/draft*.pdf .
-        - docker cp build:/root/draft.pdf .
-        - docker cp build:/root/abstract.pdf .
+        # Compile thesis
+        - git submodule update --init --recursive
+        - docker run --user='root' --rm -v $PWD:/home/docker matthewfeickert/latex-docker /bin/bash -c "make final"
+        - mv feickert_thesis.pdf draft.pdf
+        # Deploy thesis
         - echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
         - SSHPASS=$LXPLUS_PASS sshpass -e scp draft.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/ATLAS/thesis/draft.pdf
         - SSHPASS=$LXPLUS_PASS sshpass -e scp abstract.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/ATLAS/thesis/abstract.pdf
