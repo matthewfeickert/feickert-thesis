@@ -34,10 +34,53 @@ The combined posterior distributions of $\mu_{V}$ and $\mu_{H}$ is seen in Figur
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.5\linewidth]{results/contourFinal}
+ \includegraphics[width=0.6\linewidth]{results/contourFinal}
  \caption{Combined posterior distributions of $\mu_{H}$ and $\mu_{V}$ from the signal region fit.
   It is seen that the best fit values for the signal processes lie within the $2\,\sigma$ interval of the Standard Model prediction.}
  \label{fig:signal_strength_contour}
 \end{figure}
 
-\section{Limit on leptophobic $Z'$ production}
+\section{Limits on $\Zprime$ production}
+
+Following the measurement of the Standard Model signals, a search for exotic signals in the \largeR jet mass distribution is performed.
+The first step in the search is to apply the \textsc{BumpHunter} search procedure \cite{Aaltonen:2008vt,Choudalakis:2011qn}.
+Given that the effect of the Higgs boson with a SM strength is smaller than the expected uncertainty on the $\Zprime$ limit the SM Higgs template is excluded from the model, and only the $\Vjets$ and $\ttbar$ templates are considered along with the QCD parametric model.
+With this model, a fit to the data is performed with the full set of systematic uncertainties resulting in the best fit values for the model nuisance parameters used in the analysis.
+With these post fit shapes, the \textsc{BumpHunter} algorithm scans the mass range looking for significant deviations from the background-only model.
+For the given model, the largest deviation from the background is found in the \largeR jet mass interval of $\left[115,130\right]~\GeV$, as seen in Figure~\ref{fig:BumpHunter_scan}.
+This deviation has a \textsc{BumpHunter} global $p$-value\footnote{Explain how this \textsc{BumpHunter} $p$-value is calculated.} of $0.54$, indicating that the model is quite consistent with the data.\\
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.5\linewidth]{results/BH_final}
+ \caption{The reconstructed mass distribution $m_{J}$ with the event reconstruction and selection as described in the text.
+  The solid red line depicts the background prediction, consisting of the non-resonant dijet, $\Vjets$, and $\ttbar$ processes.
+  The vertical blue lines indicate the most discrepant interval identified by the \textsc{BumpHunter} algorithm between $115~\GeV$ and $130~\GeV$.
+  Without including systematic uncertainties, the probability that fluctuations of the background model would produce an excess at least as significant as the one observed in the data anywhere in the distribution, the \textsc{BumpHunter} probability, is $0.54$.
+  The bottom panel shows the bin-by-bin significances \textbf{State how these significances are defined} of the differences between the data and the fit, considering only statistical fluctuations.
+ }
+ \label{fig:BumpHunter_scan}
+\end{figure}
+
+In the absence of excesses in the data that could correspond to new physics, $95\%$ confidence level limits are set on signals from dark matter mediators with democratic decays to quarks with masses between $100~\GeV$ and $200~\GeV$.
+These limits are shown in Figure~\ref{fig:Zprime_limits}, in terms of cross section times branching ratio, acceptance and efficiency (Figure~\ref{fig:cross_section_limits}), and in terms of the $g_{q}$ parameter that controls the coupling of the \gls{dark matter mediator} to quarks that determines the cross-section (Figure~\ref{fig:gq_limits}).
+From these limits, an exotic dark matter mediator $\Zprime$ with $g_{q}=0.25$ is excluded for $m_{\Zprime} < 200~\GeV$ at the $95\%~\mathrm{CL}$.
+
+\begin{figure}[htbp]
+ \centering
+ \begin{subfigure}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{results/Final_Limits}
+  \caption{The limit on the cross-section times acceptance times branching ratio times efficiency.}
+  \label{fig:cross_section_limits}
+ \end{subfigure}%
+ ~
+ \begin{subfigure}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{results/gqlimit}
+  \caption{The limit on the $g_{q}$ parameter that controls the decay width of the $\Zprime$ into SM quarks.}
+  \label{fig:gq_limits}
+ \end{subfigure}
+ \caption{The $95\%$ credibility-level upper limits obtained from the invariant mass distribution for the $\Zprime$ dark matter mediator model.}
+ \label{fig:Zprime_limits}
+\end{figure}
