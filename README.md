@@ -22,4 +22,4 @@
 - Professor [Stephen Sekula](http://www.physics.smu.edu/sekula/): Thesis advisor
 - Professor [Jingbo Ye](http://www.physics.smu.edu/~yejb/): Thesis committee chair
 - Professor [Roberto Vega](http://www.physics.smu.edu/~vega/): Theory committee member
-- TBA: External committee member
+- Dr. [Caterina Vernieri](https://profiles.stanford.edu/caterina-vernieri): External committee member
