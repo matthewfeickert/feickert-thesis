@@ -14,7 +14,7 @@ Instead, two counter circulating beams of protons are used which imposes the req
 The proton beams are guided along the LHC by a complex system of superconducting magnets.
 The system consists of 1,232 $8.3~\mathrm{T}$ dipole magnets responsible for bending the beam and 392 $7.5~\mathrm{T}$ main quadrupole magnets dedicated to focusing the beam and are complemented by many insertion quadrupole magnets to help suppress beam dispersion~\cite{Rossi:2003,Rossi:2004}.
 The high magnetic fields require huge currents, with the main dipole magnets designed for a nominal current of $11,600~\mathrm{A}$.
-To deliver this high of current while also staying superconducting the magnets are submerged in a liquid helium bath at $1.9~\mathrm{K}$ in a vacuum sealed inner vessel, as seen in Figure~\ref{fig:LHC_dipole_cross_section}.
+To deliver this high of current while also staying superconducting the magnets are submerged in a liquid helium bath at $1.9~\mathrm{K}$ in a vacuum sealed inner vessel, as seen in \Cref{fig:LHC_dipole_cross_section}.
 The magnetic coils that carry this current are assembled at CERN from copper stabilized NbTi Rutherford cables, as shown for similar cables in~\cite{CERN-FOOTAGE-2016-014-001}.
 
 \begin{figure}[htbp]
@@ -25,7 +25,7 @@ The magnetic coils that carry this current are assembled at CERN from copper sta
 
 \section{Accelerator}
 
-The LHC is the last step for protons in a sequence of accelerators, as shown in Figure~\ref{fig:LHC_accelerator_complex}, that increase the energy of the beams.
+The LHC is the last step for protons in a sequence of accelerators, as shown in \Cref{fig:LHC_accelerator_complex}, that increase the energy of the beams.
 The protons start from a single bottle of Hydrogen gas\footnote{This is the same bottle that has been used since the very start of LHC operations, and given that the LHC can be refilled hundreds of thousands of times from one $\textrm{ml}$ of Hydrogen, a typical industrial bottle of Hydrogen will last for over a billion years of LHC operations.} at the site for the Linac2 linear accelerator.
 The Hydrogen gas passes through an area of very high electrical field which ionizes the gas allowing for the electrons to be diverted away and for the protons to continue on.
 The protons then enter Linac2, the first accelerator of the LHC injector chain, where they are accelerated to an energy of $50~\MeV$.
@@ -46,7 +46,7 @@ The beams can circulate stably in the LHC for many hours and so only need to be 
 \section{Collider}
 
 The circulating proton beams in the LHC cross paths at the four interaction points where the main LHC experiments are located.
-The collisions of the proton beams in the experiments have a resulting center of mass energy of $\sqrt{s} = 13~\TeV$ and, as shown by Equation~\ref{eq:events_from_luminosity}, the number of events generated per second for a particular process is governed by the machine (instantaneous) luminosity, $\luminosity$, which for a beam shape that is Gaussianly distributed is
+The collisions of the proton beams in the experiments have a resulting center of mass energy of $\sqrt{s} = 13~\TeV$ and, as shown by \Cref{eq:events_from_luminosity}, the number of events generated per second for a particular process is governed by the machine (instantaneous) luminosity, $\luminosity$, which for a beam shape that is Gaussianly distributed is
 \begin{equation}
  \luminosity = \frac{N_{b}^{2} n_{b} f_{\mathrm{rev}} \,\gamma_{r}}{4 \pi \epsilon_{n} \beta^{*}} F
  \label{eq:machine_luminosity}
@@ -56,9 +56,9 @@ where $N_{b}$ is the number of particles per bunch, $n_{b}$ is the number of bun
  F = \left(1 + \left(\frac{\theta_{c} \,\sigma_{z}}{2 \sigma^{*}}\right)\right)^{-1/2},
 \]
 where $\theta_{c}$ is the full crossing angle at the interaction point, $\sigma_{z}$ is the RMS bunch length, and $\sigma^{*}$ is the transverse RMS beam size at the interaction point~\cite{Evans:2008}.
-Nominal design values for these quantities are given in Table~\ref{table:LHC_collider_parameters}, which additionally shows the incredibly successfully results of the LHC operations and accelerator teams' operation of the LHC in Run II.
-From Equation~\ref{eq:events_from_luminosity} and Equation~\ref{eq:machine_luminosity} it is seen that to obtain the high number of hard collisions to have sensitivity to new physics both high beam energies and high luminosities are required.
-As can be seen from Equation~\ref{eq:machine_luminosity}, one approach to increasing the luminosity in the future for the High-Luminosity LHC (HL-LHC) is to decrease $\beta^{*}$ through the use of more powerful quadrupole focusing magnets.
+Nominal design values for these quantities are given in \Cref{table:LHC_collider_parameters}, which additionally shows the incredibly successfully results of the LHC operations and accelerator teams' operation of the LHC in Run II.
+From \Cref{eq:events_from_luminosity} and \Cref{eq:machine_luminosity} it is seen that to obtain the high number of hard collisions to have sensitivity to new physics both high beam energies and high luminosities are required.
+As can be seen from \Cref{eq:machine_luminosity}, one approach to increasing the luminosity in the future for the High-Luminosity LHC (HL-LHC) is to decrease $\beta^{*}$ through the use of more powerful quadrupole focusing magnets.
 However, this requires a larger crossing angle, decreasing the geometric factor, but this can be compensated for by the use of crab cavities~\cite{PhysRevAccelBeams.19.101003}.
 
 \begin{table}[htpb]
