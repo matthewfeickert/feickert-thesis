@@ -1,39 +1,51 @@
 \newglossaryentry{LHC}{
- name=LHC,
+ text=LHC,
+ name=Large Hadron Collider (LHC),
  description={Large Hadron Collider}
 }
 
 \newglossaryentry{interaction point}{
- name=interaction point,
- description={Point along the LHC where the LHC beams can be brought into crossing for collisions}
+ text=IP,
+ plural=IPs,
+ long=Interaction Point,
+ name={\glsentrylong{interaction point} (\glsentrytext{interaction point})},
+ first={\glsentryname{interaction point}},
+ firstplural={\glsentrylong{interaction point}\glspluralsuffix{} (\glsentrytext{interaction point})},
+ sort=interaction point,
+ description={Point along the LHC where the LHC beams can be brought into crossing for collisions},
 }
 
 \newglossaryentry{Pseudorapidity}{
- name=pseudorapidity,
- description={High energy approximation of the rapidity that only requires angular information}
+ text=pseudorapidity,
+ name=Pseudorapidity,
+ description={High energy approximation of the rapidity that only requires angular information},
+ symbol={\ensuremath{\eta}}
 }
 
 \newglossaryentry{rapidity}{
- name=rapidity,
- description={A measurement of the speed of a particle along a given axis given its energy and total momentum}
+ text=rapidity,
+ name=Rapidity,
+ description={A measurement of the speed of a particle along a given axis given its energy and total momentum},
+ symbol={\ensuremath{y}}
 }
 
 \newglossaryentry{Lorentz invariant}{
+ text=Lorentz invariant,
+ plural=Lorentz invariants,
  name=Lorentz invariant,
  description={A scalar value quantity that is invariant under a Lorentz transformation, such as a spacetime interval or the mass of a particle},
- text=Lorentz invariant,
- plural=Lorentz invariants
 }
 
 \newglossaryentry{boost}{
+ text=boost,
+ plural=boosts,
  name=Lorentz boost,
  description={A Lorentz transformation without any rotations, such that the reference frame is ``boosted'' along a single direction},
- text=boost,
- plural=boosts
 }
 
 \newglossaryentry{Proton Synchrotron}{
- name=Proton Synchrotron,
+ text=Proton Synchrotron,
+ name=Proton Synchrotron (PS),
  description={Synchrotron accelerator in the LHC injection chain where the proton beams form a bunch train with $25~\textrm{ns}$ spacing}
 }
 
@@ -42,17 +54,122 @@
  description={a general-purpose detector at the \Gls{LHC}}
 }
 
+\newglossaryentry{inner detector}{
+ text=ID,
+ long=Inner Detector,
+ name={\glsentrylong{inner detector} (\glsentrytext{inner detector})},
+ first={\glsentryname{inner detector}},
+ sort=inner detector,
+ description={inner detector},
+}
+
+\newglossaryentry{SCT}{
+ text=SCT,
+ long=Semiconductor Tracker,
+ name={\glsentrylong{SCT} (\glsentrytext{SCT})},
+ first={\glsentryname{SCT}},
+ sort=semiconductor tracker,
+ description={Semiconductor Tracker},
+}
+
+\newglossaryentry{TRT}{
+ text=TRT,
+ long=Transition Radiation Tracker,
+ name={\glsentrylong{TRT} (\glsentrytext{TRT})},
+ first={\glsentryname{TRT}},
+ sort=transition radiation tracker,
+ description={Transition Radiation Tracker},
+}
+
+\newglossaryentry{MDT}{
+ text=MDT,
+ plural=MDTs,
+ long=Monitored Drift Tube,
+ name={\glsentrylong{MDT} (\glsentrytext{MDT})},
+ first={\glsentryname{MDT}},
+ firstplural={\glsentrylong{MDT}\glspluralsuffix{} (\glsentrytext{MDT})},
+ sort=monitored drift tube,
+ description={Monitored Drift Tube},
+}
+
+\newglossaryentry{CSC}{
+ text=CSC,
+ plural=CSCs,
+ long=Cathode Strip Chamber,
+ name={\glsentrylong{CSC} (\glsentrytext{CSC})},
+ first={\glsentryname{CSC}},
+ firstplural={\glsentrylong{CSC}\glspluralsuffix{} (\glsentrytext{CSC})},
+ sort=cathode strip chamber,
+ description={Cathode Strip Chamber},
+}
+
+\newglossaryentry{RPC}{
+ text=RPC,
+ plural=RPCs,
+ long=Resistive Plate Chamber,
+ name={\glsentrylong{RPC} (\glsentrytext{RPC})},
+ first={\glsentryname{RPC}},
+ firstplural={\glsentrylong{RPC}\glspluralsuffix{} (\glsentrytext{RPC})},
+ sort=resistive plate chamber,
+ description={Resistive Plate Chamber},
+}
+
+\newglossaryentry{TGC}{
+ text=TGC,
+ plural=TGCs,
+ long=Thin Gap Chamber,
+ name={\glsentrylong{TGC} (\glsentrytext{TGC})},
+ first={\glsentryname{TGC}},
+ firstplural={\glsentrylong{TGC}\glspluralsuffix{} (\glsentrytext{TGC})},
+ sort=thin gap chamber,
+ description={Thin Gap Chamber},
+}
+
+\newglossaryentry{TDAQ}{
+ text=TDAQ,
+ long=Trigger and Data Acquisition,
+ name={\glsentrylong{TDAQ} (\glsentrytext{TDAQ})},
+ first={\glsentryname{TDAQ}},
+ sort=trigger and data acquisition,
+ description={Trigger and Data Acquisition},
+}
+
+\newglossaryentry{HLT}{
+ text=HLT,
+ long=High Level Trigger,
+ name={\glsentrylong{HLT} (\glsentrytext{HLT})},
+ first={\glsentryname{HLT}},
+ sort=high level trigger,
+ description={High Level Trigger},
+}
+
+\newglossaryentry{RoI}{
+ text=RoI,
+ long=Regions of Interest,
+ name={\glsentrylong{RoI} (\glsentrytext{RoI})},
+ first={\glsentryname{RoI}},
+ sort=regions of interest,
+ description={Regions of Interest},
+}
+
 \newglossaryentry{Standard Model}{
- name=Standard Model,
- description={}
+ text=Standard Model,
+ name=Standard Model (SM),
+ description={The collection of quantum field theories that collectively describe the electromagnetic, weak nuclear, and strong nuclear forces and all their interactions with matter particles to fantastic accuracy}
 }
 
 \newglossaryentry{dark matter mediator}{
- name=dark matter mediator,
- description={massive exotic particle with couplings to both Standard Model particles and dark matter}
+ text=DMM,
+ plural=DMMs,
+ long=dark matter mediator,
+ name={Dark Matter Mediator (DMM)},
+ first={\glsentryname{dark matter mediator}},
+ firstplural={\glsentrylong{dark matter mediator}\glspluralsuffix{} (\glsentrytext{dark matter mediator})},
+ description={massive exotic particle with couplings to both Standard Model particles and dark matter},
 }
 
 \newglossaryentry{MCMC}{
- name=MCMC,
- description={Markov Chain Monte Carlo}
+ text=MCMC,
+ name=Markov Chain Monte Carlo (MCMC),
+ description={Markov Chain Monte Carlo},
 }
