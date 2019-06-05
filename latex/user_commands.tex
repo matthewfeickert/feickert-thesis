@@ -1,6 +1,9 @@
 % Place your own personal commands here.
 % This is not a part of the base template and so will never be overwritten during updates.
 
+% Bold vectors
+\renewcommand\vec[1]{\ensuremath\boldsymbol{#1}}
+
 % Units
 \newcommand{\eV}{\mathrm{eV}}% eV
 \newcommand{\MeV}{\mathrm{MeV}}% MeV
@@ -24,11 +27,13 @@
 
 % Frequently used words to avoid typos
 \newcommand{\largeR}{large-$R$\xspace}
+\newcommand{\MET}{\ensuremath E_{\mathrm{T}}^{\mathrm{miss}}}%
+\newcommand{\ET}{\ensuremath E_{\mathrm{T}}}%
 \newcommand{\BumpHunter}{\textsc{BumpHunter}}
 \newcommand{\pvalue}{$p$\,-value}
 
 % Helper commands for writing and revising
-\newcommand{\TODO}{\textbf{TODO:}}%
+\newcommand{\TODO}[1]{\textbf{TODO: {#1}}}%
 
 %Words to never hyphenate
 \hyphenation{BumpHunter}
