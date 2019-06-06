@@ -69,12 +69,18 @@ The significance for each bin is defined as the $z$-score for the observed Poiss
 \[
  p = \int_{z}^{\infty} \frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt = 1 - \mathrm{CDF}\left(z\right) = \frac{1}{2}\left(1 - \mathrm{erf}\left(\frac{z}{\sqrt{2}}\right)\right)\,,
 \]
-it is seen the $z$-score can be described numerically%
+shown in \Cref{fig:pvalues_from_zscores}, it is seen the $z$-score can be described numerically%
 \footnote{The error function does not have a closed form solution.}
 as
 \[
  z\textrm{-score} = \sqrt{2}\, \mathrm{erf}^{-1}\left(1-2p\right).
 \]
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.575\linewidth]{results/pvalues_from_zscores.eps}
+ \caption{Plot of $\frac{1}{2}\left(1 - \mathrm{erf}\left(z/\sqrt{2}\,\right)\right)$, which describes the corresponding \pvalue{} for a given $z$-score.}\label{fig:pvalues_from_zscores}
+\end{figure}
 
 In the absence of excesses in the data that could correspond to new physics, $95\%$ credibility level upper limits are set on signals from dark matter mediators with democratic decays to quarks for masses between $100~\GeV$ and $200~\GeV$.
 These limits are shown in \Cref{fig:Zprime_limits}, in terms of cross section times branching ratio, acceptance and efficiency (\Cref{fig:cross_section_limits}), and in terms of the $g_{q}$ parameter%
