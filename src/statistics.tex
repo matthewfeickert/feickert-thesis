@@ -78,3 +78,25 @@ Confidence intervals following this example construction are simulated and shown
 \end{figure}
 
 \subsubsection{Bayesian Credible Intervals}
+
+In the Bayesian paradigm, a $1-\alpha$ credibility level (CL) credible interval (CI)%
+\footnote{CL and CI are used for abbreviations for both the frequentist and Bayesian intervals.
+ It will be made clear to the reader from context which paradigm is being considered.}
+is an interval estimate where there is a $1-\alpha$ probability of containing the true parameter value --- which is a random variable.
+As a result, it is simply the interval of the posterior predictive distribution $\left[\theta_{1}, \theta_{2}\right]$ that when integrated over gives a probability of $1-\alpha$,
+
+\begin{equation}
+ p\left(\theta_{1} < \theta < \theta_{2}\middle|\vec{x}\right) = \int\limits_{\theta_{1}}^{\theta_{2}} p\left(\theta\middle|\,\vec{x}\right)\,d\theta = 1-\alpha\,.
+ \label{eq:credible_interval_coverage}
+\end{equation}
+
+As in the frequentist paradigm, there are different ways to select the credible interval range.
+One can choose the shortest interval,%
+\footnote{For a unimodal distribution this interval is known as the highest posterior density interval (HPD).}
+the interval where probabilities excluded below $\theta_{1}$ and above $\theta_{2}$ are both $\alpha/2$ (this interval includes the median), the interval centered at the mean of the posterior (if the mean exists), or the intervals corresponding to upper (or lower) limits which reduce \Cref{eq:credible_interval_coverage} to the CDF (or CCDF) of $\theta$.\\
+
+As a final word on interval estimates, it is worth remembering that the frequentist and Bayesian paradigms address different questions and so make different statements with their intervals.
+\begin{itemize}
+ \item Frequentist: When a confidence interval is constructed on future data, the constructed interval will contain the true parameter value with a probability (frequency) of $1-\alpha$.
+ \item Bayesian: Given the observed data, there is a $1-\alpha$ probability that the true parameter value is contained by the constructed credible interval.
+\end{itemize}
