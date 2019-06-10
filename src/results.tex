@@ -75,6 +75,12 @@ as
 \[
  z\textrm{-score} = \sqrt{2}\, \mathrm{erf}^{-1}\left(1-2p\right).
 \]
+\vspace{-40pt}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.6\linewidth]{results/pvalues_from_zscores.eps}
+ \caption{Plot of $\frac{1}{2}\left(1 - \mathrm{erf}\left(z/\sqrt{2}\,\right)\right)$, which describes the corresponding \pvalue{} for a given $z$-score.}\label{fig:pvalues_from_zscores}
+\end{figure}
 
 \begin{figure}[htbp]
  \centering
@@ -87,6 +93,8 @@ These limits are shown in \Cref{fig:Zprime_limits}, in terms of cross section ti
 \footnote{The limits on $g_{q}$ are determined from the limits on $\sigma \times \epsilon \times A \times BR$ which used signal events simulated with $g_{q} = 0.25$, meaning that as $\sigma\left(\Zprime \to q\bar{q}\right) \propto g_{q}^{2}$ that $g_{q} = 0.25 \sqrt{\sigma/\sigma_{g_{q} = 0.25}}$\,.}
 that controls the coupling of the \gls{dark matter mediator} to quarks that determines the cross-section (\Cref{fig:gq_limits}).
 From these limits, an exotic dark matter mediator $\Zprime$ with $g_{q}=0.25$ is excluded for $m_{\Zprime} < 200~\GeV$ at the $95\%~\mathrm{CL}$.
+As in seen in \Cref{fig:gq_limits}, the smallest coupling to quarks excluded at the $95\%~\mathrm{CL}$ is $g_{q} = 0.124$ for a mass hypothesis of $m_{\Zprime} = 105~\GeV$.
+The limits become less restrictive at higher masses as the systematic uncertainty on the $t\bar{t}$ scale factor becomes dominant and greatly affects the total uncertainty, as seen in \Cref{table:systematic_uncertainties}.
 
 \begin{figure}[htbp]
  \centering
