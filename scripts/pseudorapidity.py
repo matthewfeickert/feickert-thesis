@@ -74,10 +74,8 @@ def main():
 
     image_write_path = 'figures/preface/'
     extensions = ['pdf', 'png']
-    [
+    for ext in extensions:
         pseudorapidity_figure.savefig(f'{image_write_path}pseudorapidity.{ext}')
-        for ext in extensions
-    ]
 
 
 if __name__ == '__main__':

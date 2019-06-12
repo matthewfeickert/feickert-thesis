@@ -51,10 +51,8 @@ def main():
 
     image_write_path = 'figures/results/'
     extensions = ['pdf', 'png', 'eps']
-    [
+    for ext in extensions:
         pvalues_plot.savefig(f'{image_write_path}pvalues_from_zscores.{ext}')
-        for ext in extensions
-    ]
 
 
 if __name__ == '__main__':

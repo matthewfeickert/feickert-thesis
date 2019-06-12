@@ -58,10 +58,8 @@ def plot_confidence_belt(pdf, confidence_level, sample_size=100, fontsize=14):
     )
 
     # Plot confidence belt
-    [
+    for theta, interval in zip(theta_range, confidence_belt):
         ax.hlines(theta, *interval)
-        for theta, interval in zip(theta_range, confidence_belt)
-    ]
 
     # Plot observation line and confidence interval lines
     ax.axvline(observation, color='red')
@@ -70,13 +68,12 @@ def plot_confidence_belt(pdf, confidence_level, sample_size=100, fontsize=14):
         np.linalg.norm(observation - a) / np.linalg.norm(a - b)
         for a, b in [ax.get_xlim()]
     ][0]
-    [
+
+    for height in [
+        paramter_confidence_interval.min(),
+        paramter_confidence_interval.max(),
+    ]:
         ax.axhline(y=height, xmax=obs_frac_distance, color='blue', linestyle='--')
-        for height in [
-            paramter_confidence_interval.min(),
-            paramter_confidence_interval.max(),
-        ]
-    ]
 
     ax.set_xlabel(r'test statistic $t$', fontsize=fontsize)
     ax.set_ylabel(r'paramter value $\theta$', fontsize=fontsize)
@@ -114,15 +111,11 @@ def plot_confidence_intervals(
         'red' if sample in samples[outside_intervals] else 'black' for sample in samples
     ]
     # point estimates
-    [
+    for index, mean, color in zip(x, means, colors):
         ax.scatter(index, mean, color=color, zorder=3)
-        for index, mean, color in zip(x, means, colors)
-    ]
     # interval estimates
-    [
+    for index, interval, color in zip(x, confidence_intervals, colors):
         ax.vlines(index, *interval, color=color, zorder=2)
-        for index, interval, color in zip(x, confidence_intervals, colors)
-    ]
     # true value
     ax.axhline(
         y=true_mean,
@@ -153,16 +146,11 @@ def main():
     )
     image_write_path = 'figures/preface/'
     extensions = ['pdf', 'png', 'eps']
-    [
+    for ext in extensions:
         confidence_belt_plot.savefig(f'{image_write_path}confidence_belt.{ext}')
-        for ext in extensions
-    ]
-    [
         confidence_interval_plot.savefig(
             f'{image_write_path}confidence_intervals.{ext}'
         )
-        for ext in extensions
-    ]
 
 
 if __name__ == '__main__':
