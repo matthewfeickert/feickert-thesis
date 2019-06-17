@@ -20,7 +20,7 @@ This confidence interval construction can be described as a random variable that
  \label{eq:confidence_interval}
 \end{equation}
 
-By construction, a hypothesis test of size $\alpha$ should accept the null hypothesis, given that the null is true, $(1-\alpha)$ of the time~\cite{Cranmer:2015nia}.\\
+By construction, a hypothesis test of size $\alpha$ should accept the null hypothesis, given that the null is true, $(1-\alpha)$ of the time~\cite{Cranmer:2015nia}.
 
 It is very important to take care in interpreting the meaning of the confidence interval, as it is often misunderstood and misused in analysis.
 The confidence interval is constructed from the observed data%
@@ -30,7 +30,7 @@ The confidence interval does \emph{not} give the interval in which there is a $1
 This is manifestly Bayesian and in fact is the interpretation of a Bayesian credible interval.
 Keeping the definition of frequentist probability tightly in mind, the confidence interval should be interpreted as an interval of parameter values that $1-\alpha$ \emph{of the times is is constructed} contains the true parameter value.
 Given this, in the frequentist paradigm one is \emph{unable} to make any statement on the probability that the true parameter value is contained in any specific confidence interval beyond the tautology that the true parameter is either contained in it or it is not.
-Any misuse of this result is not from a failing of the paradigm, but a misplaced desire of the analyst to have different questions answered than were asked.\\
+Any misuse of this result is not from a failing of the paradigm, but a misplaced desire of the analyst to have different questions answered than were asked.
 
 In terms of computing a confidence interval, from observations that are governed by $\theta$ a test statistic, $t$, that is an estimator of $\theta$ is constructed.
 For each value of the parameter to be tested, there exists an interval $\left[t_{1}, t_{2}\right]$ such that the probability of $t \in \left[t_{1}, t_{2}\right]$ is
@@ -41,7 +41,7 @@ For each value of the parameter to be tested, there exists an interval $\left[t_
 This interval represents a constant line segment in the $\left(t, \theta\right)$ parameter space plane at the given value of $\theta$.
 By repeating this procedure for every value of $\theta$ to be tested, a band of line segments --- a ``confidence belt'' --- is created that is bound between the curves $\theta\left(t_{1}\right)$ and $\theta\left(t_{2}\right)$, as shown in the example in \Cref{fig:confidence_belt}.
 Then, for any given observed value of the test statistic, $t'$, a boundary at $t = t'$ can be drawn in the plane that intersects the confidence belt at the points $\left(t', \theta_{2}\right)$ and $\left(t', \theta_{1}\right)$.
-This resulting range of parameter values $\left[\theta_{1}, \theta_{2}\right]$ is the confidence interval~\cite{Cranmer:2015nia,PDG2018:Ch39}.\\
+This resulting range of parameter values $\left[\theta_{1}, \theta_{2}\right]$ is the confidence interval~\cite{Cranmer:2015nia,PDG2018:Ch39}.
 
 \begin{figure}[htbp]
  \centering
@@ -58,7 +58,7 @@ Alternatively, if the test statistic used is based on the likelihood ratio
  \lambda = \frac{L\left(\theta\middle|\, t\right)}{L(\hat{\theta}|\, t)},
 \]
 the test statistic can be profiled to determine the range $\left[t_{1}, t_{2}\right]$.
-Using such a test statistic results in the Feldman-Cousins confidence intervals~\cite{Feldman:1997qc}.\\
+Using such a test statistic results in the Feldman-Cousins confidence intervals~\cite{Feldman:1997qc}.
 
 As the confidence interval can be a difficult concept to describe, a simple illustrative example follows.
 Consider $n$ observations $\vec{x} = \left\{x_{1}, \cdots, x_{n}\right\}$ that are drawn from a Normal distribution with unknown mean $\theta$ and width $\sigma_{\theta}$.
@@ -95,7 +95,7 @@ As a result, it is simply the interval of the posterior predictive distribution 
 As in the frequentist paradigm, there are different ways to select the credible interval range.
 One can choose the shortest interval,%
 \footnote{For a unimodal distribution this interval is known as the highest posterior density interval (HPD).}
-the interval where probabilities excluded below $\theta_{1}$ and above $\theta_{2}$ are both $\alpha/2$ (this interval includes the median), the interval centered at the mean of the posterior (if the mean exists), or the intervals corresponding to upper (or lower) limits which reduce \Cref{eq:credible_interval_coverage} to the CDF (or CCDF) of $\theta$.\\
+the interval where probabilities excluded below $\theta_{1}$ and above $\theta_{2}$ are both $\alpha/2$ (this interval includes the median), the interval centered at the mean of the posterior (if the mean exists), or the intervals corresponding to upper (or lower) limits which reduce \Cref{eq:credible_interval_coverage} to the CDF (or CCDF) of $\theta$.
 
 As a final word on interval estimates, it is worth remembering that the frequentist and Bayesian paradigms address different questions and so make different statements with their intervals.
 \begin{itemize}
