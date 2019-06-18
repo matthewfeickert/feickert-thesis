@@ -1,0 +1,24 @@
+\RequirePackage{luatex85}
+\documentclass[tikz, border=10pt]{standalone}
+
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{document}
+
+\begin{tikzpicture}[thick]
+ \begin{feynman}
+  \vertex (origin);
+  \vertex [right=1.5cm of origin] (Vstar);
+  \vertex [above right=0.50cm and 1.0cm of Vstar] (V1) {\(V\)};
+  \vertex [below right=0.50cm and 1.0cm of Vstar] (H) {\(H\)};
+  \vertex [above left=0.50cm and 1.0cm of origin] (g1) {\(\bar{q}\)};
+  \vertex [below left=0.50cm and 1.0cm of origin] (g2) {\(q\)};
+  \diagram* {
+  (origin) -- [boson, edge label={\(V^{*}\)}] (Vstar) -- [boson] (V1),
+  (Vstar) -- [scalar] (H),
+  (origin) -- [fermion] (g1),
+  (g2) -- [fermion] (origin),
+  };
+ \end{feynman}
+\end{tikzpicture}
+\end{document}
