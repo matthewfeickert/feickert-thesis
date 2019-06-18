@@ -15,7 +15,7 @@ Similarly, when measuring the momentum of a particle it is generally more useful
 This system of units is called ``Natural Units'', and builds its measurements in terms of speed, angular momentum, and energy.
 It is used extensively (if not almost exclusively) throughout high energy physics.
 Quantities encountered routinely in high energy physics are given in Natural Units in \Cref{table:natural_units}.
-\TODO{Describe cross section.}
+\clearpage
 
 \begin{table}[htpb]
  \centering
@@ -35,9 +35,26 @@ Quantities encountered routinely in high energy physics are given in Natural Uni
  \end{tabular}\label{table:natural_units}%
 \end{table}
 
+\subsection{Units of Cross Section}\label{subsection:cross_section}
+
+The ``cross section'' is the effective cross-sectional area of the event space for an given interaction to occur, and so has units of area.
+It is commonly used though in the context of the fraction of the total event space that a particular process contributes (the dimensionful event space solid angle), and so is not a reflection of the physical size of an interaction.
+For example, in high energy physics cross section can describe the production of a particle through a particular process, such as Higgs production through gluon-gluon fusion.
+A particularly clear analogy for cross section\footnote{Made known to me by Stephen Sekula.} comes from theoretical physicist Rudolf Peierls~\cite{rhodes2012making}:
+\begin{quote}
+ For example, if I throw a ball at a glass window one square foot in area, there may be once chance in ten that the window will break, and nine chances in ten that the ball will just bounce.
+ In the physicists' language, this particular window, for a ball thrown in this particular way, has a ``disintegration [inelastic] cross-section'' of $1/10$ square foot and an ``elastic cross-section'' of $9/10$ square foot.
+\end{quote}
+For the cross sections that are common in particle physics the units of ``barns'' is generally more convenient to work in, as further discussed in \Cref{subsection:luminosity_units}.
+A barn is defined as
+\begin{equation}
+ 1~\textrm{barn} = 10^{-28}~\textrm{m}^2 = 10^{-24}~\textrm{cm}^2,
+ \label{eq:barn_to_area}
+\end{equation}
+which is roughly the cross sectional area of an atomic nuclei~\cite{web:history_physics_purdue,history:etymology_barn}.
 
 \subsection{Units of Luminosity}\label{subsection:luminosity_units}
-In high energy physics a crucial quantity of interest is the luminosity (both instantaneous and integrated) delivered by the particle accelerator.
+Tightly related to cross section is a crucial quantity of interest in high energy physics: the luminosity (both instantaneous and integrated) delivered by the particle accelerator.
 The instantaneous luminosity, $\mathscr{L}$, can be defined as the number of particles incident per unit area per unit time (generally taken to be seconds),
 \begin{equation}
  \mathscr{L} = \frac{\text{number of particles}}{\text{unit area} \cdot \text{second}}.
@@ -47,12 +64,7 @@ In accelerator physics, the unit area is generally chosen to be $\textrm{cm}^2$,
 \[
  \left[\mathscr{L}\right] = \textrm{cm}^{-2} \cdot \textrm{s}^{-1}.
 \]
-However, experimental particle physicists prefer to use units of inverse barns for luminosities. A barn is defined as
-\begin{equation}
- 1~\textrm{barn} = 10^{-28}~\textrm{m}^2 = 10^{-24}~\textrm{cm}^2,
- \label{eq:barn_to_area}
-\end{equation}
-which is roughly the cross sectional area of an atomic nuclei~\cite{web:history_physics_purdue,history:etymology_barn}.
+However, experimental particle physicists prefer to use units of inverse barns for luminosities.
 
 The context in which luminosity appears as being useful is in the form of an equation like
 \begin{equation}
@@ -67,8 +79,8 @@ where:
        At the \Gls{LHC} this would be the cross section per proton-proton interaction.
        This is a function of the fundamental physics that is available at the energy ranges being probed, and so is also a function of the collider's center of mass energy, $\sqrt{s}$.
        When written in an equation as such it is assumed that the cross section is also including the relevant branching ratios for the final state particles.
-       That is, $\sigma\left(pp \to H \to b\bar{b}\,\right) = \sigma\left(pp \to H\right) \cdot \mathcal{BR}\left(H \to b\bar{b}\,\right)$.
- \item $L \equiv \int \mathscr{L}\,dt$ is the total luminosity integrated over time (the integrated luminosity).~\cite{Herr:941318}
+       That is, ${\sigma\left(pp \to H \to b\bar{b}\,\right) = \sigma\left(pp \to H\right) \cdot \mathcal{BR}\left(H \to b\bar{b}\,\right)}$.
+ \item $L \equiv \int \mathscr{L}\,dt$ is the total luminosity integrated over time (the integrated luminosity)~\cite{Herr:941318}.
        This is what is delivered by the particle accelerator.
 \end{itemize}
 
@@ -106,6 +118,7 @@ where:
  % }
 \end{table}
 
+\clearpage
 \section{Coordinates}\label{section:coordinates}
 
 The LHC coordinate system, seen in \Cref{fig:LHC_coordinate_system}, is a rectangular coordinate system defined relative to the LHC ring and the LHC beamline.
