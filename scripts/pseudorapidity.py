@@ -32,13 +32,13 @@ def plot_pseudorapidity(polar_angles, eta, fontsize=14):
         x,
         pseudorapidity(x),
         color='black',
-        label=r'$\eta=-\log(\tan \,\theta/2)$',
+        label=r'$\eta=-\ln(\tan \,\theta/2)$',
         zorder=1,
     )
     ax.scatter(
         polar_angles,
         eta,
-        label=r'$\eta(\theta)$ for $\theta \in \{\pi/32, \pi/16, \pi/8, \pi/4, \pi/2\}$',
+        label=r'$\eta(\theta)$ for $\theta \in \{\pi/2, \pi/4, \pi/8, \pi/16, \pi/32\}$',
         zorder=2,
     )
 
@@ -53,7 +53,14 @@ def plot_pseudorapidity(polar_angles, eta, fontsize=14):
         label='ATLAS fiducial region coverage',
     )
 
-    ax.set_xlim(left=-0.01)
+    ax.invert_xaxis()
+
+    x_ticks = np.pi * np.arange(0, 0.6, 1 / 8.0)
+    x_tick_labels = [r'$0$', r'$\pi/8$', r'$\pi/4$', r'$3\pi/8$', r'$\pi/2$']
+    ax.set_xticks(x_ticks)
+    ax.set_xticklabels(x_tick_labels)
+
+    ax.set_xlim(left=1.6, right=0.0)
     ax.set_ylim(bottom=-0.05, top=5)
 
     ax.set_xlabel(r'$\theta$', fontsize=fontsize)
