@@ -124,32 +124,25 @@ As the ATLAS detector is arranged cylindrically outside the beamline of the LHC 
 The polar angle, $\theta$, is defined as the angle relative to the beam axis, and the azimuthal angle, $\phi$, is measured around the beam axis.
 
 \Gls{Pseudorapidity} is defined as
-
 \begin{equation}
- \eta = - \log \left(\tan \frac{\theta}{2}\right)
+ \eta = - \ln \left(\tan \frac{\theta}{2}\right)
  \label{eq:pseudorapidity}
 \end{equation}
-
 to be a good approximation in the high energy regime of the \gls{rapidity} of a particle --- a measurement of the velocity of a particle longitudinal to the beam axis,
-
 \begin{equation}
- y = \frac{1}{2} \log \left(\frac{E + p_{z}}{E - p_{z}}\right).
+ y = \frac{1}{2} \ln \left(\frac{E + p_{z}}{E - p_{z}}\right).
  \label{eq:rapidity}
 \end{equation}
-
 As the beam axis is defined as $\hat{\vec{z}}$, such that $p_{z} = \abs{\vec{p}} \cos\theta$, then it is seen that in the relativistic limit, $\abs{\vec{p}} \gg m$, the rapidity reduces to the pseudorapidity
-
 \[
  \begin{split}
-  y   &\approx \frac{1}{2} \log \left(\frac{p + p\cos\theta}{p - p\cos\theta}\right)\\
-  &\approx \frac{1}{2} \log \left(\frac{2 \cos^{2} \frac{\theta}{2}}{2 \sin^{2} \frac{\theta}{2}}\right) \\
-  &\approx - \log \left(\tan \frac{\theta}{2}\right) = \eta.
+  y   &\approx \frac{1}{2} \ln \left(\frac{p + p\cos\theta}{p - p\cos\theta}\right)\\
+  &\approx \frac{1}{2} \ln \left(\frac{2 \cos^{2} \frac{\theta}{2}}{2 \sin^{2} \frac{\theta}{2}}\right) \\
+  &\approx - \ln \left(\tan \frac{\theta}{2}\right) = \eta.
  \end{split}
 \]
-
 It is clear that the rapidity and the pseudorapidity are not \Glspl{Lorentz invariant}.
 However, for a Lorentz \gls{boost} --- a Lorentz transformation without any rotations --- of speed $\beta$ along the beam axis, $\hat{\vec{z}}$,
-
 \[
  \begin{pmatrix}
   E' \\
@@ -165,17 +158,15 @@ However, for a Lorentz \gls{boost} --- a Lorentz transformation without any rota
   p_{z}
  \end{pmatrix}\,,
 \]
-
 it is seen\footnote{Glossing over some algebra and hyperbolic trigonometric identities.} that the rapidity for a particle under the boost is the sum of the original rapidity and a constant of the boost
 \[
  \begin{split}
-  y'  &= \frac{1}{2} \log \left(\frac{E' + p_{z}'}{E' - p_{z}'}\right) \\
-  &= \frac{1}{2} \log \left(\frac{E - \beta p_{z} + p_{z} - \beta E}{E - \beta p_{z} - p_{z} + \beta E}\right) \\
-  &= \frac{1}{2} \log \left(\frac{E + p_{z}}{E - p_{z}}\right) + \frac{1}{2} \log \left(\frac{1 - \beta}{1 + \beta}\right) \\
+  y'  &= \frac{1}{2} \ln \left(\frac{E' + p_{z}'}{E' - p_{z}'}\right) \\
+  &= \frac{1}{2} \ln \left(\frac{E - \beta p_{z} + p_{z} - \beta E}{E - \beta p_{z} - p_{z} + \beta E}\right) \\
+  &= \frac{1}{2} \ln \left(\frac{E + p_{z}}{E - p_{z}}\right) + \frac{1}{2} \ln \left(\frac{1 - \beta}{1 + \beta}\right) \\
   &= y - \tanh^{-1}\beta\,.
  \end{split}
 \]
-
 Thus, the \emph{difference in rapidities} between two particles is seen to be independent of the boost and so is a \Gls{Lorentz invariant}.
 Defining the distance metric\footnote{$\Delta R$ is an angular distance in $\left(\eta, \phi\right)$ space, and can be thought of as a solid angle.} for two particles in $\left(\eta, \phi\right)$ space as
 \begin{equation}
@@ -195,11 +186,11 @@ Values of the pseudorapidity for values of the polar angle are summarized in \Cr
  \caption{Polar angles relative to the LHC beam axis, $\theta$, and their corresponding pseudorapiditities, $\eta$.}
  \begin{tabular}{@{}cr@{}} \toprule
   Polar angle $(\theta)$ & Pseudorapidity $(\eta)$ \\ \midrule
-  $\frac{\pi}{32}$       & $3.01335$               \\
-  $\frac{\pi}{16}$       & $2.31779$               \\
-  $\frac{\pi}{8}$        & $1.61489$               \\
-  $\frac{\pi}{4}$        & $0.88137$               \\
   $\frac{\pi}{2}$        & $0$                     \\
+  $\frac{\pi}{4}$        & $0.88137$               \\
+  $\frac{\pi}{8}$        & $1.61489$               \\
+  $\frac{\pi}{16}$       & $2.31779$               \\
+  $\frac{\pi}{32}$       & $3.01335$               \\
   \bottomrule
  \end{tabular}\label{table:pseudorapidity_angles}%
 \end{table}
@@ -208,7 +199,7 @@ Values of the pseudorapidity for values of the polar angle are summarized in \Cr
  \centering
  \includegraphics[width=0.8\linewidth]{preface/pseudorapidity.pdf}
  \caption[Pseudorapidity as a function of the polar angle.]{%
-  Pseudorapidity, $\eta = - \log \left(\tan \frac{\theta}{2}\right)$, as a function of the polar angle, $\theta$.
+  Pseudorapidity, $\eta = - \ln \left(\tan \frac{\theta}{2}\right)$, as a function of the polar angle, $\theta$.
   The example markers are the points given in \Cref{table:pseudorapidity_angles}.
   The blue shaded region indicates the polar angle coverage up to $\eta = 2.5$, which is the end of the fiducial region coverage by the ATLAS inner detector.}
  \label{fig:pseudorapidity_angles}
