@@ -45,7 +45,7 @@ This resulting range of parameter values $\left[\theta_{1}, \theta_{2}\right]$ i
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.4\linewidth]{preface/confidence_belt.eps}
+ \includegraphics[width=0.6\linewidth]{preface/confidence_belt.eps}
  \caption[Neyman construction of a confidence interval using a confidence belt.]{%
   Example sketch of the construction of a confidence belt showing an observation in red intersecting the belt and the corresponding confidence interval as the parameter values bounded between the two blue dashed lines.}\label{fig:confidence_belt}
 \end{figure}
@@ -53,11 +53,11 @@ This resulting range of parameter values $\left[\theta_{1}, \theta_{2}\right]$ i
 The conditions of coverage from \Cref{eq:confidence_interval_coverage} do not uniquely specify $t_{1}$ and $t_{2}$, which allows for analysis specific choices to be made.
 If central intervals are chosen, then the probabilities excluded below $t_{1}$ and $t_{2}$ are both $\alpha/2$.
 In the event that only an upper (or lower) limit is of interest, as is common in searches for new physics where no excess has been observed, then the probability excluded below $t_{1}$ (or above $t_{2}$) is zero.
-Alternatively, if the test statistic used is based on the likelihood ratio
+Alternatively, if the test statistic used is the profile likelihood ratio,
 \[
- \lambda = \frac{L\left(\theta\middle|\, t\right)}{L(\hat{\theta}|\, t)},
+ \lambda\left(t\right) = \frac{L\left(t\middle|\, \hat{\hat{\theta}}\,\right)}{L\left(\hat{t}\,\middle|\, \hat{\theta}\right)}\,,
 \]
-the test statistic can be profiled to determine the range $\left[t_{1}, t_{2}\right]$.
+profiling determines the allowed range $\left[t_{1}, t_{2}\right]$.
 Using such a test statistic results in the Feldman-Cousins confidence intervals~\cite{Feldman:1997qc}.
 
 As the confidence interval can be a difficult concept to describe, a simple illustrative example follows.
