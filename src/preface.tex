@@ -123,7 +123,7 @@ While the LHC coordinate system is Cartesian, the preferred coordinate system fo
 As the ATLAS detector is arranged cylindrically around the beamline of the LHC --- such that most of its detector components are transverse to the beamline --- the coordinate system that is used to describe events in ATLAS is characterized by a particle's transverse momentum, pseudorapidity, and azimuthal angle: $\left(p_T, \eta, \phi\right)$.
 The polar angle, $\theta$, is defined as the angle relative to the beam axis, and the azimuthal angle, $\phi$, is measured around the beam axis.
 
-\Gls{Pseudorapidity} is defined as
+\Gls{Pseudorapidity} is then defined as
 \begin{equation}
  \eta = - \ln \left(\tan \frac{\theta}{2}\right)
  \label{eq:pseudorapidity}
@@ -136,7 +136,7 @@ to be a good approximation in the high energy regime of the \gls{rapidity} of a 
 As the beam axis is defined as $\hat{\vec{z}}$, such that $p_{z} = \abs{\vec{p}} \cos\theta$, then it is seen that in the relativistic limit, $\abs{\vec{p}} \gg m$, the rapidity reduces to the pseudorapidity
 \[
  \begin{split}
-  y   &\approx \frac{1}{2} \ln \left(\frac{p + p\cos\theta}{p - p\cos\theta}\right)\\
+  y\left(\abs{\vec{p}} \gg m\right)   &\approx \frac{1}{2} \ln \left(\frac{p + p\cos\theta}{p - p\cos\theta}\right)\\
   &\approx \frac{1}{2} \ln \left(\frac{2 \cos^{2} \frac{\theta}{2}}{2 \sin^{2} \frac{\theta}{2}}\right) \\
   &\approx - \ln \left(\tan \frac{\theta}{2}\right) = \eta.
  \end{split}
@@ -173,7 +173,6 @@ Defining the distance metric\footnote{$\Delta R$ is an angular distance in $\lef
  \Delta R = \sqrt{\left(\Delta\eta\right)^{2} + \left(\Delta\phi\right)^{2}}
  \label{eq:DeltaR}
 \end{equation}
-
 it is seen that $\Delta R$ is by construction invariant to boosts along the beam axis.
 As a result, \emph{translations} in $\eta$ of particles correspond to \glspl{boost} of the particles along the beamline.
 
