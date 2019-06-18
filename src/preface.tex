@@ -9,33 +9,52 @@ The following is a summary of useful concepts in high energy particle physics.
 \subsection{Natural Units}\label{subsection:natural_units}
 
 The nature of high energy physics is to give descriptions of the phenomena and interactions that occur at energies that result in speeds that are close to the speed of light over very short time and distance scales.
-Given this, it becomes readily apparent that SI units of measurement are somewhat cumbersome to cleanly explain calculations in, and a much more useful system of units would be to give calculation results relative to the scales that the phenomena occur at.
+Given this, it becomes readily apparent that International System of Units (SI) of measurement are somewhat cumbersome to use in calculations, and a much more useful system of units would be consistent with the scale of the phenomena.
 When measuring the speed of a relativistic particle it is more convenient to compare to the speed of light $\left(\text{such that }c=1\right)$ then to the number of meters per second.
 Similarly, when measuring the momentum of a particle it is generally more useful to know the amount of its energy in the form of momentum compared to the amount in the form of its mass, resulting in expressing momentum in terms of energy.
-This system of units is called ``Natural Units'' builds its measurements in terms of speed, angular momentum, and energy and is used extensively (if not almost exclusively) throughout high energy physics.
+This system of units is called ``Natural Units'', and builds its measurements in terms of speed, angular momentum, and energy.
+It is used extensively (if not almost exclusively) throughout high energy physics.
 Quantities encountered routinely in high energy physics are given in Natural Units in \Cref{table:natural_units}.
+\clearpage
 
 \begin{table}[htpb]
  \centering
  \caption{Common quantities in particle physics given in both natural units and SI units.}
  \begin{tabular}{@{}llll@{}} \toprule
   Quantity         & Natural Units                 & Natural Units (dimensionful)            & SI Units                                              \\ \midrule
-  Speed            & $1$                           & $c$                                     & $3.0\times 10^{8}~\textrm{m}/\textrm{s}$              \\
-  Angular Momentum & $1$                           & $\hbar$                                 & $10^{34}~\textrm{m}^2 \,\textrm{kg}/\textrm{s}$       \\
-  Energy           & \textrm{GeV}                  & \textrm{GeV}                            & $1.6\times 10^{-10}~\textrm{J}$                       \\
-  Momentum         & \textrm{GeV}                  & $\textrm{GeV}/c$                        & $1\times 10^{-19}~\textrm{kg}\,\textrm{m}/\textrm{s}$ \\
-  Mass             & \textrm{GeV}                  & $\textrm{GeV}/c^2$                      & $1.8\times 10^{-27}~\textrm{kg}$                      \\
-  Time             & $1/\textrm{GeV}$              & $\hbar/\textrm{GeV}$                    & $6.6\time 10^{-25}~\textrm{s}$                        \\
-  Length           & $1/\textrm{GeV}$              & $\hbar c/\textrm{GeV}$                  & $2\times 10^{-16}~\textrm{m}$                         \\
-  Electric Charge  & $1$                           & $e/\sqrt{4\pi \alpha}$                  & $5.3\times 10^{-19}~\textrm{C}$                       \\
-  Magnetic Field   & $\left(\textrm{GeV}\right)^2$ & $\left(\textrm{GeV}\right)^2/\hbar c^2$ & $5\times 10^{16}~\textrm{T}$                          \\
+  Speed            & $1$                           & $c$                                     & $3.0\times 10^{8}~\mathrm{m}/\mathrm{s}$              \\
+  Angular Momentum & $1$                           & $\hbar$                                 & $10^{34}~\mathrm{m}^2 \,\mathrm{kg}/\mathrm{s}$       \\
+  Energy           & $\mathrm{GeV}$                & $\mathrm{GeV}$                          & $1.6\times 10^{-10}~\mathrm{J}$                       \\
+  Momentum         & $\mathrm{GeV}$                & $\mathrm{GeV}/c$                        & $1\times 10^{-19}~\mathrm{kg}\,\mathrm{m}/\mathrm{s}$ \\
+  Mass             & $\mathrm{GeV}$                & $\mathrm{GeV}/c^{2}$                    & $1.8\times 10^{-27}~\mathrm{kg}$                      \\
+  Time             & $1/\mathrm{GeV}$              & $\hbar/\mathrm{GeV}$                    & $6.6\time 10^{-25}~\mathrm{s}$                        \\
+  Length           & $1/\mathrm{GeV}$              & $\hbar c/\mathrm{GeV}$                  & $2\times 10^{-16}~\mathrm{m}$                         \\
+  Electric Charge  & $1$                           & $e/\sqrt{4\pi \alpha_{\mathrm{em}}}$    & $5.3\times 10^{-19}~\mathrm{C}$                       \\
+  Magnetic Field   & $\left(\mathrm{GeV}\right)^2$ & $\left(\mathrm{GeV}\right)^2/\hbar c^2$ & $5\times 10^{16}~\mathrm{T}$                          \\
   \bottomrule
  \end{tabular}\label{table:natural_units}%
 \end{table}
 
+\subsection{Units of Cross Section}\label{subsection:cross_section}
+
+The ``cross section'' is the effective cross-sectional area of the event space for an given interaction to occur, and so has units of area.
+It is commonly used though in the context of the fraction of the total event space that a particular process contributes (the dimensionful event space solid angle), and so is not a reflection of the physical size of an interaction.
+For example, in high energy physics cross section can describe the production of a particle through a particular process, such as Higgs production through gluon-gluon fusion.
+A particularly clear analogy for cross section\footnote{Made known to me by Stephen Sekula.} comes from theoretical physicist Rudolf Peierls~\cite{rhodes2012making}:
+\begin{quote}
+ For example, if I throw a ball at a glass window one square foot in area, there may be once chance in ten that the window will break, and nine chances in ten that the ball will just bounce.
+ In the physicists' language, this particular window, for a ball thrown in this particular way, has a ``disintegration [inelastic] cross-section'' of $1/10$ square foot and an ``elastic cross-section'' of $9/10$ square foot.
+\end{quote}
+For the cross sections that are common in particle physics the units of ``barns'' is generally more convenient to work in, as further discussed in \Cref{subsection:luminosity_units}.
+A barn is defined as
+\begin{equation}
+ 1~\textrm{barn} = 10^{-28}~\textrm{m}^2 = 10^{-24}~\textrm{cm}^2,
+ \label{eq:barn_to_area}
+\end{equation}
+which is roughly the cross sectional area of an atomic nuclei~\cite{web:history_physics_purdue,history:etymology_barn}.
 
 \subsection{Units of Luminosity}\label{subsection:luminosity_units}
-In high energy physics a crucial quantity of interest is the luminosity (both instantaneous and integrated) delivered by the particle accelerator.
+Tightly related to cross section is a crucial quantity of interest in high energy physics: the luminosity (both instantaneous and integrated) delivered by the particle accelerator.
 The instantaneous luminosity, $\mathscr{L}$, can be defined as the number of particles incident per unit area per unit time (generally taken to be seconds),
 \begin{equation}
  \mathscr{L} = \frac{\text{number of particles}}{\text{unit area} \cdot \text{second}}.
@@ -45,12 +64,7 @@ In accelerator physics, the unit area is generally chosen to be $\textrm{cm}^2$,
 \[
  \left[\mathscr{L}\right] = \textrm{cm}^{-2} \cdot \textrm{s}^{-1}.
 \]
-However, experimental particle physicists prefer to use units of inverse barns for luminosities. A barn is defined as
-\begin{equation}
- 1~\textrm{barn} = 10^{-28}~\textrm{m}^2 = 10^{-24}~\textrm{cm}^2,
- \label{eq:barn_to_area}
-\end{equation}
-which is roughly the cross sectional area of an atomic nuclei.~\cite{web:history_physics_purdue,history:etymology_barn}
+However, experimental particle physicists prefer to use units of inverse barns for luminosities.
 
 The context in which luminosity appears as being useful is in the form of an equation like
 \begin{equation}
@@ -60,13 +74,13 @@ The context in which luminosity appears as being useful is in the form of an equ
 where:
 \begin{itemize}
  \item $N_{\text{events}}$ is the number of events of a particular process that will be produced at the collider.
-       This is what ends up hitting the detector.
+       This is what ends up exiting the collision process.
  \item $\sigma_{\textrm{process}}$ is the cross section of the particular process to occur per interaction of colliding particles.
        At the \Gls{LHC} this would be the cross section per proton-proton interaction.
        This is a function of the fundamental physics that is available at the energy ranges being probed, and so is also a function of the collider's center of mass energy, $\sqrt{s}$.
        When written in an equation as such it is assumed that the cross section is also including the relevant branching ratios for the final state particles.
-       That is, $\sigma\left(H \to b\bar{b}\,\right) = \sigma\left(pp \to H\right) \cdot \mathcal{BR}\left(H \to b\bar{b}\,\right)$.
- \item $L \equiv \int \mathscr{L}\,dt$ is the total luminosity integrated over time (the integrated luminosity).~\cite{Herr:941318}
+       That is, ${\sigma\left(pp \to H \to b\bar{b}\,\right) = \sigma\left(pp \to H\right) \cdot \mathcal{BR}\left(H \to b\bar{b}\,\right)}$.
+ \item $L \equiv \int \mathscr{L}\,dt$ is the total luminosity integrated over time (the integrated luminosity)~\cite{Herr:941318}.
        This is what is delivered by the particle accelerator.
 \end{itemize}
 
@@ -78,18 +92,15 @@ where:
   LHC Design Luminosity~\cite{Bruning:782076}                    & $10^{34}$                                       \\
   2017 ATLAS Trigger Menu Maximum~\cite{TWiki:MenuEvolution2017} & $2.0 \times 10^{34}$                            \\
   2017 Plan~\cite{Indico:MenuCoordination_2017Lumi}              & $1.7 \times 10^{34}$                            \\
-  2017 Peak~\cite{TWiki:2017ATLASPeakLumi}                       & $20.9 \times 10^{33}$                           \\
-  2018 Peak~\cite{TWiki:2018ATLASPeakLumi}                       & $21.0 \times 10^{33}$                           \\
+  2017 Peak~\cite{TWiki:2017ATLASPeakLumi}                       & $2.09 \times 10^{34}$                           \\
+  2018 Peak~\cite{TWiki:2018ATLASPeakLumi}                       & $2.1 \times 10^{34}$                            \\
   \bottomrule
  \end{tabular}\label{table:LHC_Luminosity_Goals}%
 \end{table}
 
-% Note to self: spacing in tables seems too large. See if can adjust with geometry package
 \begin{table}[htpb]
  \centering
  \caption{Luminosity measurements in $\text{barns}^{-1}$.}
- % \resizebox{\linewidth}{!}{%
- % \resizebox*{!}{\dimexpr\textheight-2\baselineskip\relax}{%
  \begin{tabular}{@{}lll@{}} \toprule
   Units                & Units of $\textrm{cm}^{-2}$ & Units of $\textrm{fb}^{-1}$ \\ \midrule
   $\textrm{barn}^{-1}$ & $10^{24}$                   & $10^{-15}$                  \\
@@ -101,29 +112,27 @@ where:
   $\textrm{ab}^{-1}$   & $10^{42}$                   & $10^{3}$                    \\
   \bottomrule
  \end{tabular}\label{table:Luminosity}%
- % }
 \end{table}
 
+\clearpage
 \section{Coordinates}\label{section:coordinates}
-
-LHC coordinate systems\\
 
 The LHC coordinate system, seen in \Cref{fig:LHC_coordinate_system}, is a rectangular coordinate system defined relative to the LHC ring and the LHC beamline.
 At any point, the positive $x$ direction is defined as the direction that points radially inward to the center of the LHC ring.
-The positive $y$ direction is then defined as pointing upwards --- towards the Earth's surface if one is at the beamline --- leaving the positive $z$ direction pointing along the beamline.
+The positive $y$ direction is then defined as pointing upwards --- radially outward from the center of the Earth --- leaving the positive $z$ direction pointing along the beamline.
 
 \begin{figure}[htbp]
  \centering
- \includegraphics{preface/LHC_coordinate_system.pdf}
+ \includegraphics[width=0.8\linewidth]{preface/LHC_coordinate_system.pdf}
  \caption{The LHC coordinate system as seen from the ATLAS detector.}
  \label{fig:LHC_coordinate_system}
 \end{figure}
 
 While the LHC coordinate system is Cartesian, the preferred coordinate system for describing LHC events is not.
-As the ATLAS detector is arranged cylindrically outside the beamline of the LHC --- such that most of its detector components are transverse to the beamline --- the coordinate system that is used to describe events in ATLAS is characterized by a particle's transverse momentum, pseudorapidity, and polar angle: $\left(p_T, \eta, \theta\right)$.
+As the ATLAS detector is arranged cylindrically around the beamline of the LHC --- such that most of its detector components are transverse to the beamline --- the coordinate system that is used to describe events in ATLAS is characterized by a particle's transverse momentum, pseudorapidity, and azimuthal angle: $\left(p_T, \eta, \phi\right)$.
 The polar angle, $\theta$, is defined as the angle relative to the beam axis, and the azimuthal angle, $\phi$, is measured around the beam axis.
 
-\Gls{Pseudorapidity} is defined as
+\Gls{Pseudorapidity} is then defined as
 \begin{equation}
  \eta = - \ln \left(\tan \frac{\theta}{2}\right)
  \label{eq:pseudorapidity}
@@ -136,7 +145,7 @@ to be a good approximation in the high energy regime of the \gls{rapidity} of a 
 As the beam axis is defined as $\hat{\vec{z}}$, such that $p_{z} = \abs{\vec{p}} \cos\theta$, then it is seen that in the relativistic limit, $\abs{\vec{p}} \gg m$, the rapidity reduces to the pseudorapidity
 \[
  \begin{split}
-  y   &\approx \frac{1}{2} \ln \left(\frac{p + p\cos\theta}{p - p\cos\theta}\right)\\
+  y\left(\abs{\vec{p}} \gg m\right)   &\approx \frac{1}{2} \ln \left(\frac{p + p\cos\theta}{p - p\cos\theta}\right)\\
   &\approx \frac{1}{2} \ln \left(\frac{2 \cos^{2} \frac{\theta}{2}}{2 \sin^{2} \frac{\theta}{2}}\right) \\
   &\approx - \ln \left(\tan \frac{\theta}{2}\right) = \eta.
  \end{split}
@@ -173,7 +182,6 @@ Defining the distance metric\footnote{$\Delta R$ is an angular distance in $\lef
  \Delta R = \sqrt{\left(\Delta\eta\right)^{2} + \left(\Delta\phi\right)^{2}}
  \label{eq:DeltaR}
 \end{equation}
-
 it is seen that $\Delta R$ is by construction invariant to boosts along the beam axis.
 As a result, \emph{translations} in $\eta$ of particles correspond to \glspl{boost} of the particles along the beamline.
 
