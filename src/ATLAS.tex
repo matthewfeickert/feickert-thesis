@@ -3,7 +3,7 @@
 \section{Overview}\label{sec:ATLAS_overview}
 
 The ATLAS Experiment~\cite{PERF-2007-01} is one of the four main LHC experiments with the ATLAS detector, seen in \Cref{fig:ATLAS_detector}, located in the experiment cavern at Point 1 of the LHC roughly $100~\textrm{m}$ underground.
-The ATLAS detector, here forward also referred to as just ``ATLAS'', is a general purpose, high luminosity particle physics detector designed to be able to search for as many types of interesting physics events as possible.
+The ATLAS detector, henceforth also referred to as just ``ATLAS'', is a general purpose, high luminosity particle physics detector designed to be able to search for as many types of interesting physics events as possible.
 ATLAS is the largest of the LHC experiments with dimensions of $44~\mathrm{m}$ in length and $25~\mathrm{m}$ in height.
 
 \begin{figure}[htbp]
@@ -68,7 +68,7 @@ Combined with the precision tracking from the pixel detectors and SCT, the track
 The ATLAS calorimeter system, shown in \Cref{fig:ATLAS_calorimeter}, provides excellent energy deposition measurements for particles with coverage up to $\abs{\eta} < 4.9$ with different calorimetry subsystems for various physics processes.
 In the pseudorapidity range of the inner detector ($\abs{\eta} < 2.5$) the high granularity electromagnetic (EM) liquid argon calorimeter system provides measurement of electrons and photons.
 The more coarse resolution of the hadronic calorimeter systems provides measurements for jet reconstruction and missing transverse momentum, $\MET$, in conjunction with the large pseudorapidity coverage.
-These calorimeter designs are both ``sampling calorimeters'', where the ``active' 'materials that provides the signals are different from the ``absorber'' materials that reduce the particle energy and cause showering.
+These calorimeter designs are both ``sampling calorimeters'', where the ``active'' materials that provide the signals are different from the ``absorber'' materials that reduce the particle energy and cause showering.
 The calorimeter subsystems are also designed to be sufficiently thick as to contain the electromagnetic and hadronic showers that originate inside them, and to limit punch-through to the muon systems.
 
 \begin{figure}[htbp]
@@ -80,7 +80,7 @@ The calorimeter subsystems are also designed to be sufficiently thick as to cont
 
 \subsection{Electromagnetic Calorimeter}\label{sec:ATLAS_electromagnetic_calorimeter}
 
-The electromagnetic calorimeter system, shown in \Cref{fig:ATLAS_LAr}, are lead-liquid argon detectors with a characteristically unique ``accordion'' lead absorber plate design that allows for continuous coverage in $\phi$ with folding angles of the accordion ``waves'' that vary with the radius to keep the LAr gap constant, as shown in \Cref{fig:ATLAS_LAr_module}.
+The electromagnetic calorimeter system, shown in \Cref{fig:ATLAS_LAr}, consists of lead-liquid argon detectors with a characteristically unique ``accordion'' lead absorber plate design that allows for continuous coverage in $\phi$ with folding angles of the accordion ``waves'' that vary with the radius to keep the LAr gap constant, as shown in \Cref{fig:ATLAS_LAr_module}.
 Liquid argon (LAr) is the active detector material for the EM calorimeters as it has a linear behavior, very stable response over time, and is intrinsically radiation-hard.
 In the barrel region the LAr EM calorimeter is split into symmetric half-barrels, and in the end-caps the LAr EM calorimeter exists as two coaxial wheels, respectively covering the regions of $1.375 < \abs{\eta} < 2.5$ and $2.5 < \abs{\eta} < 3.2$.
 
@@ -105,7 +105,7 @@ The hadronic calorimeter system is composed of the tile calorimeters in the barr
 The tile sampling calorimeter resides outside the EM calorimeter system and provides coverage out to $\abs{\eta} < 1.7$ and radial coverage from $2.28~\mathrm{m}$ out to $4.25~\mathrm{m}$.
 The tile calorimeter absorber material is steel and uses scintillating tiles as the active material, which are read out using wavelength shifting fibers into photomultiplier tubes.
 The HEC exists as two wheels in each end-cap behind the end-cap EM calorimeter, extending the coverage in the end-caps out to $\abs{\eta} < 3.2$.
-The coper absorber plates of the HEC are interleaved with $8.5~\mathrm{mm}$ spacers of LAr providing active material.
+The copper absorber plates of the HEC are interleaved with $8.5~\mathrm{mm}$ spacers of LAr providing active material.
 The FCal extends coverage from $3.1 < \abs{\eta} < 4.9$ and is composed of three modules in each end-cap: a copper module optimized for electromagnetic measurements, and then two made of tungsten for hadronic interaction measurements.
 The modules are a metal matrix with regularly spaced longitudinal channels consisting of tubes with a concentric rod and LAr filling the gap between them.
 
@@ -126,8 +126,10 @@ For the hadronic calorimeters the stochastic term is required to be under $50\%$
 \section{Muon Spectrometer}\label{sec:ATLAS_muon_spectrometer}
 
 The ATLAS muon spectrometer, shown in \Cref{fig:ATLAS_muon_spectrometer}, is arranged as the exterior detector subsystem to provide coverage for muons deflected from the air-core toroid magnets.
-As muons are minimum ionizing particles\footnote{The mass stopping power for muons in the typical energy ranges at the LHC is less than $4~\MeV\,\mathrm{cm}^{2}/\mathrm{g}$.
- To put this in context, a $1~\GeV$ muon can punch through $1~\mathrm{m}$ of iron.}, as seen in \Cref{fig:Bethe-Bloch_stopping_power}, they pass through the inner detector and calorimeter systems while being radially deflected by the solenoid magnetic field before entering the toroidal magnetic field and getting deflected along $\hat{\vec{z}}$.
+As muons are minimum ionizing particles%
+\footnote{The mass stopping power for muons in the typical energy ranges at the LHC is less than $4~\MeV\,\mathrm{cm}^{2}/\mathrm{g}$.
+ To put this in context, a $1~\GeV$ muon can punch through roughly $1~\mathrm{m}$ of iron before stopping~\cite{Garutti:lecture}.}
+, as seen in \Cref{fig:Bethe-Bloch_stopping_power}, they pass through the inner detector and calorimeter systems while being radially deflected by the solenoid magnetic field before entering the toroidal magnetic field and getting deflected along $\hat{\vec{z}}$.
 Given the resulting trajectories, in the barrel region muon tracks are measured by three cylindrical layers of \glspl{MDT}, shown in \Cref{fig:ATLAS_MDT_chamber} and \Cref{fig:ATLAS_muon_barrel_track}, and in the end-caps region three planes of MDT wheels before escaping the detector altogether --- hence the name \emph{spectrometer}.
 For most of the $\eta$ range the MDTs perform most of the precision measurements of the tracks, though from $2 < \abs{\eta} < 2.7$ higher granularity \glspl{CSC} provide tracking to withstand the intense rate and radiation~\cite{PERF-2007-01}.
 
@@ -140,11 +142,12 @@ For most of the $\eta$ range the MDTs perform most of the precision measurements
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.6\textwidth]{ATLAS/Bethe-Bloch_stopping_power.eps}
+ \includegraphics[width=\textwidth]{ATLAS/Bethe-Bloch_stopping_power.eps}
  \caption[Mass stopping power for positive muons in copper as a function of $\beta \gamma = p/Mc$.]{%
   Mass stopping power $\left(= \left<-dE/dx\right>\right)$ for positive muons in copper as a function of $\beta \gamma = p/Mc$ over nine orders of magnitude in momentum (12 orders of magnitude in kinetic energy).
   Solid curves indicate the total stopping power.
-  Data below the break at $\beta \gamma \approx 0.1$ are taken from ICRU 49~\cite{ICRU49}, and data at higher energies are from~\cite{Groom:2001kq}. Vertical bands indicate boundaries between different approximations discussed in the text.
+  Data below the break at $\beta \gamma \approx 0.1$ are taken from ICRU 49~\cite{ICRU49}, and data at higher energies are from~\cite{Groom:2001kq}.
+  Vertical bands indicate boundaries between different approximations discussed in~\cite{PDG2018:Ch33}.
   The short dotted lines labeled ``$\mu^{-}$'' illustrate the ``Barkas effect'', the dependence of stopping power on projectile charge at very low energies~\cite{PhysRev.101.778}.
   $dE/dx$ in the radiative region is not simply a function of $\beta$~\cite{PDG2018:Ch33}.}\label{fig:Bethe-Bloch_stopping_power}
 \end{figure}
@@ -152,7 +155,7 @@ For most of the $\eta$ range the MDTs perform most of the precision measurements
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=0.6\textwidth]{ATLAS/ATLAS_MDT_chamber.eps}
- \caption[Mechanical structure of a \gls{MDT} chamber.]{%
+ \caption[Mechanical structure of a \acrlong{MDT} chamber.]{%
   Mechanical structure of a \gls{MDT} chamber.
   Three spacer bars connected by longitudinal beams form an aluminium space frame, carrying two multi-layers of three or four drift tube layers.
   Four optical alignment rays, two parallel and two diagonal, allow for monitoring of the internal geometry of the chamber.
@@ -162,7 +165,7 @@ For most of the $\eta$ range the MDTs perform most of the precision measurements
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=0.6\textwidth]{ATLAS/ATLAS_muon_barrel_track.eps}
- \caption[Trajectories of muons through the three layers of \glspl{MDT} of the barrel muon spectrometer.]{%
+ \caption[Trajectories of muons through the three layers of \acrlong{MDT} of the barrel muon spectrometer.]{%
   Trajectories of muons with momenta of $4~\GeV$ and $20~\GeV$ in the bending plane of the barrel muon spectrometer.
   In general, the tracks cross $2 \times 4$ inner, $2 \times 3$ middle, and $2 \times 3$ outer layers of \gls{MDT} tubes.
   The cyan and dark blue areas in each MDT layer illustrate the granularity of the mezzanine cards~\cite{PERF-2007-01}.}\label{fig:ATLAS_muon_barrel_track}
@@ -178,10 +181,10 @@ With raw event sizes of approximately $1.6~\mathrm{Mbytes}$ this still results i
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.8\textwidth]{ATLAS/ATLAS_TDAQ_system.pdf}
- \caption[The ATLAS \gls{TDAQ} system in Run 2 with emphasis on the components relevant for triggering.]{%
+ \includegraphics[width=\textwidth]{ATLAS/ATLAS_TDAQ_system.pdf}
+ \caption[The ATLAS \acrlong{TDAQ} system in Run 2 with emphasis on the components relevant for triggering.]{%
   The ATLAS \gls{TDAQ} system in Run 2 with emphasis on the components relevant for triggering.
-  L1Topo was commissioned during Run 2 and installed in 2016 and FTK is an upgrade for Run 3~\cite{TRIG-2016-01}.}\label{fig:ATLAS_TDAQ_system}
+  L1Topo was installed in 2016 and commissioned during Run 2 and FTK is an upgrade for Run 3~\cite{TRIG-2016-01}.}\label{fig:ATLAS_TDAQ_system}
 \end{figure}
 
 \subsection{Level-1 Trigger (L1)}\label{sec:ATLAS_L1_trigger}
@@ -203,8 +206,8 @@ From these six elements algorithms then make decisions on the order of nanosecon
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=0.4\textwidth]{ATLAS/ATLAS_L1Calo_trigger_tower.pdf}
- \caption[Schematic view of the trigger towers used as input to the L1Calo trigger algorithms.]{%
-  Schematic view of the trigger towers used as input to the L1Calo trigger algorithms~\cite{TRIG-2016-01}.}\label{fig:ATLAS_L1Calo_trigger_tower}
+ \caption[Schematic view of the trigger towers in a region of interest window used as input to the L1Calo trigger algorithms.]{%
+  Schematic view of the trigger towers in a RoI window used as input to the L1Calo trigger algorithms~\cite{TRIG-2016-01}.}\label{fig:ATLAS_L1Calo_trigger_tower}
 \end{figure}
 
 Simultaneously in L1, the L1Muon trigger uses trigger chambers in the barrel and end-cap regions of the muon spectrometer.
