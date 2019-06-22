@@ -2,6 +2,51 @@
 
 Statistics in particle physics
 
+\subsection{Likelihood Ratio}\label{section:likelihood_ratio}
+
+\subsubsection{Wilk's Theorem}\label{subsection:wilks_theorem}
+
+In brief, Wilk's theorem~\cite{Wilks:1938dza} states that for two functions in a nested family of functions, $f\left(x\,\middle|\,\vec{\theta}_{a}\right)$ and $f\left(x\,\middle|\,\vec{\theta}_{b}\right)$, with the number of parameters $a < b$, in the limit of large sample size the likelihood ratio test statistic,
+\begin{equation}
+ t_{\vec{\theta}} = -2 \log \frac{\displaystyle L\left(\vec{\theta}_{a}\right)}{\displaystyle L\left(\vec{\theta}_{b}\right)},
+\end{equation}
+is asymptotically distributed as a $\chi^2$ random variable with $d=b-a$ degrees of freedom,
+\begin{equation}
+ f\left(t_{\vec{\theta}} \,\middle|\,\vec{\theta}\, \right) \to \chi^2_{d}.\label{eq:wilks_theorem}
+\end{equation}
+This asymptotic approximation to the empirical distribution of the test statistic allows for efficient computation of a \pvalue{} (that approximates the \pvalue{} under the empirical distribution).
+
+The one-sided (one-tailed) \pvalue{} --- given the null hypothesis that $t_{\vec{\theta}}$ is $\chi_{d}^{2}$ distributed --- is then the value of the complementary cumulative distribution function (CCDF) of the $\chi^2_{d}$ distribution evaluated at the observed $t_{\vec{\theta}}$,
+\begin{equation}
+ p\textrm{-value} = \textrm{CCDF}_{\chi^2_{d}}\left(x=t_{\vec{\theta}}\right).
+\end{equation}
+That is to say, the \pvalue{} is the probability, given $t_{\vec{\theta}} \sim \chi^2_{d}$, to observe a $t_{\vec{\theta}}$ value greater than or equal to that which was observed.
+
+\subsubsection{Profile Likelihood Ratio}
+
+The \gls{MLE} $\hat{\theta}$ is the value of the parameter $\theta$ that maximizes the likelihood function given the observed data.
+So for parameter of interest $\mu$ and nuisance parameters $\vec{\theta}$, the maximum likelihood estimators are $\hat{\mu}$ and $\hat{\vec{\theta}}$.
+Likewise, the conditional maximum likelihood estimator $\hat{\hat{\theta}}$ is the value of the parameter $\theta$ that maximizes the likelihood for a given value of another parameter $\mu$.
+So for a specific value of the parameter of interest $\mu$, the conditional maximum likelihood estimator for nuisance parameters $\vec{\theta}$ is $\hat{\hat{\vec{\theta}}}$.
+As $\hat{\hat{\vec{\theta}}}$ is a function of the given $\mu$ then it is seen that the likelihood function's dependence on the nuisance parameters $\vec{\theta}$ can be ``profiled'' vs. $\mu$ and removed.
+Given this, the profile likelihood ratio,
+\begin{equation}
+ \lambda\left(\mu\right) = \frac{L\left(\mu, \hat{\hat{\vec{\theta}}}\right)}{L\left(\hat{\mu}, \hat{\vec{\theta}}\right)}\,,
+ \label{eq:profile_likelihood_ratio}
+\end{equation}
+can be constructed and used as a test statistic to indicate the compatibility of a possible value $\mu$ with the MLE $\hat{\mu}$ --- a function of the observed data.
+Given that the negative log likelihood is usually what is actually calculated --- for numerical reasons --- the test statistic that is generally used from the profile likelihood ratio is
+\begin{equation}
+ q_{\mu} = -2 \ln \lambda\left(\mu\right) = 2 \left(\ln L\left(\hat{\mu}, \hat{\vec{\theta}}\right) - \ln L\left(\mu, \hat{\hat{\vec{\theta}}}\right)\right)\,,
+ \label{eq:q_mu}
+\end{equation}
+as it is seen by Wilk's theorem, \Cref{eq:wilks_theorem}, to be distributed according to a $\chi^{2}$ distribution with one degree of freedom.
+This results in a \pvalue{} for $q_{\mu}$ of
+\begin{equation}
+ p = \int\limits_{q_{\mu}}^{\infty} f_{\chi^{2}}\left(t\middle|1\right)\,dt\,.
+ \label{eq:q_mu_pvalue}
+\end{equation}
+
 \subsection{Intervals and limits}\label{section:intervals_and_limits}
 
 In addition to point estimates that determine an estimator, $\hat{\theta}$, of a parameter $\theta$, interval estimates give statistical precision to the measured value.
@@ -53,11 +98,12 @@ This resulting range of parameter values $\left[\theta_{1}, \theta_{2}\right]$ i
 The conditions of coverage from \Cref{eq:confidence_interval_coverage} do not uniquely specify $t_{1}$ and $t_{2}$, which allows for analysis specific choices to be made.
 If central intervals are chosen, then the probabilities excluded below $t_{1}$ and $t_{2}$ are both $\alpha/2$.
 In the event that only an upper (or lower) limit is of interest, as is common in searches for new physics where no excess has been observed, then the probability excluded below $t_{1}$ (or above $t_{2}$) is zero.
-Alternatively, if the test statistic used is the profile likelihood ratio,
+Alternatively, if the test statistic used is the profile likelihood ratio test statistic,
 \[
- \lambda\left(t\right) = \frac{L\left(t\middle|\, \hat{\hat{\theta}}\,\right)}{L\left(\hat{t}\,\middle|\, \hat{\theta}\right)}\,,
+ q_{\theta} = -2 \ln\lambda\left(\theta\right) = -2 \ln\frac{L\left(\theta, \hat{\hat{\phi}}\,\right)}{L\left(\hat{\theta},\hat{\phi}\right)}\,,
 \]
-profiling determines the allowed range $\left[t_{1}, t_{2}\right]$.
+profiling determines the allowed range $\left[q_{\theta, 1}, q_{\theta, 2}\right]$.
+It is seen from \Cref{eq:q_mu} and \Cref{eq:q_mu_pvalue} that for an observed $q_{\theta}$, $q_{\mathrm{obs}}$, to satisfy \Cref{eq:confidence_interval} the resulting confidence belt are the values $q_{\theta} < q_{\mathrm{obs}}$, and the resulting confidence interval the range of $\theta$ that enforce this.
 Using such a test statistic results in the Feldman-Cousins confidence intervals~\cite{Feldman:1997qc}.
 
 As the confidence interval can be a difficult concept to describe, a simple illustrative example follows.
