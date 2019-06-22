@@ -28,14 +28,14 @@ The \gls{MLE} $\hat{\theta}$ is the value of the parameter $\theta$ that maximiz
 So for parameter of interest $\mu$ and nuisance parameters $\vec{\theta}$, the maximum likelihood estimators are $\hat{\mu}$ and $\hat{\vec{\theta}}$.
 Likewise, the conditional maximum likelihood estimator $\hat{\hat{\theta}}$ is the value of the parameter $\theta$ that maximizes the likelihood for a given value of another parameter $\mu$.
 So for a specific value of the parameter of interest $\mu$, the conditional maximum likelihood estimator for nuisance parameters $\vec{\theta}$ is $\hat{\hat{\vec{\theta}}}$.
-As $\hat{\hat{\vec{\theta}}}$ is a function of the given $\mu$ then it is seen that the likelihood function's dependence on the nuisance parameters $\vec{\theta}$ can be ``profiled'' as a function of $\mu$ and removed.
+As $\hat{\hat{\vec{\theta}}}$ is a function of the given $\mu$ then it is seen that the likelihood function's dependence on the nuisance parameters $\vec{\theta}$ can be ``profiled'' vs. $\mu$ and removed.
 Given this, the profile likelihood ratio,
 \begin{equation}
  \lambda\left(\mu\right) = \frac{L\left(\mu, \hat{\hat{\vec{\theta}}}\right)}{L\left(\hat{\mu}, \hat{\vec{\theta}}\right)}\,,
  \label{eq:profile_likelihood_ratio}
 \end{equation}
 can be constructed and used as a test statistic to indicate the compatibility of a possible value $\mu$ with the MLE $\hat{\mu}$ --- a function of the observed data.
-Given that the negative log likelihood is usually calculated for numerical reasons, the test statistic that is generally used from the profile likelihood ratio is
+Given that the negative log likelihood is usually what is actually calculated --- for numerical reasons --- the test statistic that is generally used from the profile likelihood ratio is
 \begin{equation}
  q_{\mu} = -2 \ln \lambda\left(\mu\right) = 2 \left(\ln L\left(\hat{\mu}, \hat{\vec{\theta}}\right) - \ln L\left(\mu, \hat{\hat{\vec{\theta}}}\right)\right)\,,
  \label{eq:q_mu}
