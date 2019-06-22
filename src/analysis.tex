@@ -356,21 +356,11 @@ This is done to decouple the study from any possible bias introduced by the fitt
 
 \subsubsection{Likelihood ratio test}
 
-In brief, Wilk's theorem~\cite{Wilks:1938dza} states that for two functions in a nested family of functions, $f\left(x\,;\,\vec{\theta}_{a}\right)$ and $f\left(x\,;\,\vec{\theta}_{b}\right)$, with the number of parameters $a < b$, in the limit of large sample size the likelihood ratio test statistic,
-\begin{equation}
- t_{\vec{\theta}} = -2 \log \frac{\displaystyle L\left(\vec{\theta}_{a}\right)}{\displaystyle L\left(\vec{\theta}_{b}\right)},
-\end{equation}
-is asymptotically distributed as a $\chi^2$ random variable with $d=b-a$ degrees of freedom,
-\begin{equation}
- f\left(t_{\vec{\theta}} \,\middle|\,\vec{\theta}\, \right) \to \chi^2_{d}.\label{eq:wilks_theorem}
-\end{equation}
-This asymptotic approximation to the empirical distribution of the test statistic allows for efficient computation of a \pvalue{} (that approximates the \pvalue{} under the empirical distribution).
-
-The one-sided (one-tailed) \pvalue{} --- given Equation~\ref{eq:wilks_theorem} as the null hypothesis --- is then the value of the complementary cumulative distribution function of the $\chi^2_{d}$ distribution evaluated at the observed $t_{\vec{\theta}}$,
-\begin{equation}
- p\textrm{-value} = \textrm{CCDF}_{\chi^2_{d}}\left(x=t_{\vec{\theta}}\right).
-\end{equation}
-That is to say, the \pvalue{} is the probability, given $t_{\vec{\theta}} \sim \chi^2_{d}$, to observe a $t_{\vec{\theta}}$ value greater than or equal to that which was observed.
+Using Wilk's theorem, as described in \Cref{subsection:wilks_theorem}, the \pvalue{} for a likelihood ratio test statistic,
+\[
+ t_{\vec{\theta}} = -2 \ln \frac{\displaystyle L\left(\vec{\theta}_{a}\right)}{\displaystyle L\left(\vec{\theta}_{b}\right)},
+\]
+for models $f\left(x\,\middle|\,\vec{\theta}_{a}\right)$ and $f\left(x\,\middle|\,\vec{\theta}_{b}\right)$ can be computed efficiently.
 If the \pvalue{} is below a given threshold, $\alpha$, the difference in the fits of the two models is considered statistically significant and the model with a greater number of parameters is favored.
 Likewise, if the \pvalue{} is above the threshold, the difference is considered not to be statistically significant and the model with fewer number of parameters is favored.
 The comparison is done for iteratively higher numbers of parameters until the result of the test shows that an additional parameter no longer significantly improves the fit.
