@@ -50,7 +50,7 @@ def plot_pseudorapidity(polar_angles, eta, fontsize=14):
         fiducial_eta,
         facecolor='blue',
         alpha=0.2,
-        label='ATLAS fiducial region coverage',
+        label='ATLAS tracking fiducial region coverage',
     )
 
     ax.invert_xaxis()
