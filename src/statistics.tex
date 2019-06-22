@@ -98,12 +98,12 @@ This resulting range of parameter values $\left[\theta_{1}, \theta_{2}\right]$ i
 The conditions of coverage from \Cref{eq:confidence_interval_coverage} do not uniquely specify $t_{1}$ and $t_{2}$, which allows for analysis specific choices to be made.
 If central intervals are chosen, then the probabilities excluded below $t_{1}$ and $t_{2}$ are both $\alpha/2$.
 In the event that only an upper (or lower) limit is of interest, as is common in searches for new physics where no excess has been observed, then the probability excluded below $t_{1}$ (or above $t_{2}$) is zero.
-Alternatively, if the test statistic used is the profile likelihood ratio,%
-\footnote{$\hat{\theta}$ is the maximum likelihood estimator of $\theta$, and $\hat{\hat{\theta}}$ is the conditional maximum likelihood estimate for $\theta$ for a given $t$.}
+Alternatively, if the test statistic used is the profile likelihood ratio test statistic,
 \[
- \lambda\left(t\right) = \frac{L\left(t, \hat{\hat{\theta}}\,\right)}{L\left(\hat{t},\hat{\theta}\right)}\,,
+ q_{\theta} = -2 \ln\lambda\left(\theta\right) = -2 \ln\frac{L\left(\theta, \hat{\hat{\phi}}\,\right)}{L\left(\hat{\theta},\hat{\phi}\right)}\,,
 \]
-profiling determines the allowed range $\left[t_{1}, t_{2}\right]$.
+profiling determines the allowed range $\left[q_{\theta, 1}, q_{\theta, 2}\right]$.
+It is seen from \Cref{eq:q_mu} and \Cref{eq:q_mu_pvalue} that for an observed $q_{\theta}$, $q_{\mathrm{obs}}$, to satisfy \Cref{eq:confidence_interval} the resulting confidence belt are the values $q_{\theta} < q_{\mathrm{obs}}$, and the resulting confidence interval the range of $\theta$ that enforce this.
 Using such a test statistic results in the Feldman-Cousins confidence intervals~\cite{Feldman:1997qc}.
 
 As the confidence interval can be a difficult concept to describe, a simple illustrative example follows.
