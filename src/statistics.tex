@@ -3,17 +3,29 @@
 Robust predictive modeling and statistical inference are crucial for successful analyses in particle physics.
 This section will be a very brief tour of these concepts and some of their applications, which will be necessary to understand the analysis that was performed.
 
-\subsection{Likelihood Ratio}\label{section:likelihood_ratio}
+\subsection{Probability and Prediction}\label{subsection:probability}
+
+\subsubsection{Frequentist Paradigm}\label{subsubsection:probability_frequentist}
+
+\subsubsection{Bayesian Paradigm}\label{subsubsection:probability_bayesian}
+
+\subsubsection{Probability Distributions}\label{subsubsection:probability_distribution}
+
+\subsection{Likelihood and Inference}\label{subsection:likelihood}
+
+\subsection{Likelihood Ratio}\label{subsection:likelihood_ratio}
 
 \subsubsection{Wilk's Theorem}\label{subsection:wilks_theorem}
 
-In brief, Wilk's theorem~\cite{Wilks:1938dza} states that for two functions in a nested family of functions, $f\left(x\,\middle|\,\vec{\theta}_{a}\right)$ and $f\left(x\,\middle|\,\vec{\theta}_{b}\right)$, with the number of parameters $a < b$, in the limit of large sample size the likelihood ratio test statistic,
+In brief, Wilk's theorem~\cite{Wilks:1938dza} states that for two functions in a nested family of functions, $f\left(x\,\middle|\,\vec{\theta}_{a}\right)$ and $f\left(x\,\middle|\,\vec{\theta}_{b}\right)$, with the number of parameters $a < b$, in the limit of large sample size the likelihood ratio test statistic,%
+\footnote{As likelihoods are not p.d.f.s and so not required to be normalized, it is seen that $L\left(\vec{\theta}\right) = f\left(\vec{\theta}\middle|x\right)$.}
 \begin{equation}
  t_{\vec{\theta}} = -2 \log \frac{\displaystyle L\left(\vec{\theta}_{a}\right)}{\displaystyle L\left(\vec{\theta}_{b}\right)},
 \end{equation}
 is asymptotically distributed as a $\chi^2$ random variable with $d=b-a$ degrees of freedom,
 \begin{equation}
- f\left(t_{\vec{\theta}} \,\middle|\,\vec{\theta}\, \right) \to \chi^2_{d}.\label{eq:wilks_theorem}
+ % f\left(t_{\vec{\theta}} \,\middle|\,\vec{\theta}\, \right) \to \chi^2_{d}.\label{eq:wilks_theorem}
+ \lim_{\mathrm{samples}\to \infty} t_{\vec{\theta}} \sim \chi^2_{d}.\label{eq:wilks_theorem}
 \end{equation}
 This asymptotic approximation to the empirical distribution of the test statistic allows for efficient computation of a \pvalue{} (that approximates the \pvalue{} under the empirical distribution).
 
