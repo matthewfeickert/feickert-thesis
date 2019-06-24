@@ -7,19 +7,19 @@ Extensive analyses searching for dijet resonances have been performed by ATLAS a
 This leaves the sub-$\mathrm{TeV}$ mass range as a possible landscape for new resonances with small couplings to SM particles, such as $\Zprime$ bosons as seen in \Cref{fig:darkmatter_coupling_summary}.
 Probing low mass regions imposes its own set of challenges, as low mass resonances can produce lower energy final states, which in the high event rate environment of the LHC can be difficult to distinguish and trigger on.
 In particular for dijet analyses, this introduces an enormous multijet background produced by QCD interactions, as seen in \Cref{fig:SM_fiducial_cross_section_summary}.
-Requiring that the transverse momentum of these resonances is very large (highly boosted) offers a path forward to both triggering on the interesting signal events and also reducing the multijet background which exponentially falls of with increasing momentum.
-To achieve this highly boosted state, the resonance can recoil off a high energy jet that it is produced through initial state radiation or other similar process, as shown in the leading order at LHC Feynman diagrams in \Cref{fig:signal_LO_diagrams} for signal models of a leptophobic $\Zprime$ and the Higgs boson.
+Requiring that the transverse momentum of these resonances is very large (highly boosted) offers a path forward to both triggering on the interesting signal events and also reducing the multijet background which exponentially falls off with increasing momentum.
+To achieve this highly boosted state, the resonance can recoil off a high energy jet that is produced through initial state radiation or another similar process, as shown in the leading order at Feynman diagrams in \Cref{fig:signal_LO_diagrams} for signal models of a leptophobic $\Zprime$ and the Higgs boson at the LHC.
 For highly boosted systems, where the resonance's $p_{T}$ is greater than twice its mass, the angular separation between the jets coming from the resonance's decay is reduced enough such that the dijets can be reconstructed with a single anti-$k_{t}$ jet with $R=1.0$ --- a ``\largeR{}'' jet --- as shown in \Cref{fig:Xbb_jet_recoil}.
 If the leptophobic $\Zprime$ has Higgs-like couplings%
 \footnote{Where the coupling strength is proportional to the mass of the decay products, $g \propto m$.}
 to SM quarks, then it should have preferential decays of $\Zprime \to b\bar{b}$.
-By applying $b$-tagging to the signal \largeR{} jet and requiring the presence of two $b$-tagged jets inside the performance of the analysis can be improved.
+By applying $b$-tagging to the signal \largeR{} jet and requiring the presence of two $b$-tagged sub-jets the performance of the analysis can be improved.
 Even in the circumstances where the $\Zprime$ has democratic (independent of quark generation) couplings to the SM quarks the application of $b$-tagging is still preferred, as it significantly reduces the dominant multijet background, as shown in \Cref{fig:SR_flavour_composition}.
 
 In addition to the search for $\Zprime \to b\bar{b}$, a measurement of boosted $\Hbb$ is performed as well.
 At high enough energies the production of Higgs bosons through gluon-gluon fusion begins to be sensitive to the heavy fermion loop~\cite{Schlaffer:2014osa}.
 If there are new resonances that run in the loop they contribute to the coupling strength of the effective gluon-gluon-Higgs interaction and would give an anomalous coupling compared to the SM predicted value.
-In some models the effect of the anomalous couplings is very significant and would affect the production cross section of high-$p_{T}$ Higgs through gluon-gluon fusion up to $50\%$~\cite{Grojean:2013nya,Dawson:2015gka}.
+In some models the effect of the anomalous couplings is very significant and would affect the production cross section of high-$p_{T}$ Higgs through gluon-gluon fusion by as much as $50\%$~\cite{Grojean:2013nya,Dawson:2015gka}.
 
 \begin{figure}[htbp]
  \centering
@@ -55,15 +55,15 @@ In some models the effect of the anomalous couplings is very significant and wou
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\linewidth]{analysis/Hbb_ISR.pdf}
   \caption[Feynman diagram for the leading order production process at the LHC for ${\Hbb + \textrm{jet}}$.]{%
    Feynman diagram for the leading order production process at the LHC for ${\Hbb + \textrm{jet}}$ through gluon-gluon fusion.}
   \label{fig:signal_LO_diagram_Higgs}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\linewidth]{analysis/Zprimebb_ISR.pdf}
   \caption[Feynman diagram for the leading order production process at the LHC for ${\Zprime + \textrm{jet}}$.]{%
@@ -91,17 +91,18 @@ In some models the effect of the anomalous couplings is very significant and wou
  \label{fig:SR_flavour_composition}
 \end{figure}
 
-This chapter will cover the signal models and datasets in \Cref{sec:data_and_simulation}, and the $p_{T}$ requirements to have a fully efficient \largeR{} jet trigger across the 2015, 2016, and 2017 datasets is discussed in \Cref{sec:analysis_trigger}.
-The construction of the signal region and supporting validation regions is covered in \Cref{sec:event_selection}, and the effects of the resonant and non-resonant SM backgrounds in \Cref{sec:analysis_backgrounds}.
+This chapter will cover the signal models and datasets in \Cref{sec:data_and_simulation}.
+The $p_{T}$ requirements to have a fully efficient \largeR{} jet trigger across the 2015, 2016, and 2017 datasets is discussed in \Cref{sec:analysis_trigger}.
+The construction of the signal region and supporting validation regions is covered in \Cref{sec:event_selection} and the effects of the resonant and non-resonant SM backgrounds in \Cref{sec:analysis_backgrounds}.
 \Cref{sec:multijet_background_modeling} is devoted to my parametric modeling of the irreducible multijet background.
 \Cref{sec:systematic_uncertainties} covers the effect of the leading systematic uncertainties on the analysis, and the results of the analysis are covered in \Cref{chapter:results}.
 
 \clearpage
 \section{Data and Simulation}\label{sec:data_and_simulation}
 
-The analysis was done using $80.5~\ifb$ of data from ATLAS spanning datasets collected in 2015, 2016, and 2017.
+The analysis was done using $80.5~\ifb$ of data from ATLAS datasets collected in 2015, 2016, and 2017.
 From the data quality monitoring, ATLAS produces XML files called ``Good Run Lists'' (GRLs) that are lists of all events in the data that have met the data quality criteria, ensuring high quality data for analysis.
-The analysis uses three GRLs --- one for each year of data taking.
+The analysis uses three GRLs --- one for each year of data taking --- corresponding to annual luminosities of $3.2~\ifb$, $33.0~\ifb$, and $44.3~\ifb$.
 
 \subsection{Simulated Signals}\label{sec:simulation_signal}
 
@@ -111,9 +112,9 @@ As the mass of the SM Higgs is known the analysis is optimized for the Higgs sig
 The Higgs events were simulated with the three main production mechanisms at the LHC, seen in \Cref{fig:Higgs_production_diagrams}: gluon-gluon fusion (ggF), vector boson fusion (VBF), and Higgsstrahlung (associated $W$/$Z$ production).
 These production modes respectively contribute to $50\%$, $30\%$, and $20\%$ of the total number of simulated signal events.
 The ggF plus jet signal events are generated using the HJ+MiNLO~\cite{Hamilton:2015nsa} prescription with finite top quark mass using \textsc{Powheg-Box} 2~\cite{Campbell:2012am} and the NNPDF30 NNLO parton distribution function~\cite{Hamilton:2012rf} and then showered using \textsc{Pythia} 8.212~\cite{Sjostrand:2014zea} with the AZNLO tune and the CTEQ6L1~\cite{Pumplin:2002vw} parton distribution function.
-The decay of the resulting $b$-hadrons if performed with EvtGen~\cite{Lange:2001uf}.
+The decay of the resulting $b$-hadrons is performed with EvtGen~\cite{Lange:2001uf}.
 Similarly, with the exception of HJ+MiNLO, the VBF Higgs events are generated in the same manner.
-Likewise, the Higgsstrahlung Higgs events are generated using \textsc{Pythia} 8.212 with the AZNLO tune and the CTEQ6L1 parton distribution function, with the decay of $b$-hadrons done with EvtGen.
+Likewise, the Higgsstrahlung events are generated using \textsc{Pythia} 8.212 with the AZNLO tune and the CTEQ6L1 parton distribution function, with the decay of $b$-hadrons done with EvtGen.
 As \textsc{Pythia} does not include $gg \to ZH$ the cross section is corrected to the LHC Higgs cross section working group recommendation~\cite{MelladoGarcia:2150771}.
 
 The samples of $\Zprime$ decaying to two quarks and produced with an associated jet were generated using a simplified dark matter \textsc{MadGraph5_aMC@NLO} model~\cite{Abercrombie:2015wmb} and the NNPDF30 LO parton distribution function.
@@ -148,28 +149,28 @@ As the cross section is proportional to $g_{q}^2$, the cross section at other va
 
 \subsection{Simulated Backgrounds}\label{sec:simulation_background}
 
-Simulation of the expected Standard Model backgrounds are used in the development of the non-resonant background processes and are used to model the resonant background processes.
+Simulation of the expected Standard Model backgrounds is used in the development of the non-resonant background processes and are used to model the resonant background processes.
 Dijet events from QCD interactions are simulated using \textsc{Pythia 8.186} with the A14 tune and the NNPDF23 LO PDF and the decay of $b$-hadrons is done with EvtGen.
 To achieve a constant statistical uncertainty over the large energy range weighted events are generated with a flat jet $p_{T}$ spectrum and split into multiple samples before reconstruction using an anti-$k_{t}$ $R=0.6$ jet algorithm run on the final-state truth particles.
 
 The hadronically decaying $W$ and $Z$ events, with a maximum of four additional partons at leading order, were generated using \textsc{Sherpa} 2.1.1 with the CTO parton distribution function and were separated into multiple orthogonal samples based on the $p_{T}$ of the vector boson.
 Leptonically decaying $W$ and $Z$ events are also produced with a maximum of two additional partons at leading order and a maximum of four at NLO.
 These are used to correct the cross section of the hadronic sample by applying a multiplicative factor to scale the hadronic cross section to the leptonic sample cross section.
-These ``$k$-factors'' are $1.28$ for the $W+\mathrm{jets}$ and $1.37$ for the $Z+\mathrm{jets}$.
+These ``$k$-factors'' are $1.28$ for the $W+\mathrm{jets}$ and $1.37$ for the $Z+\mathrm{jets}$~\cite{EXOT-2017-01}.
 Alternate hadronic decay samples of $W+\mathrm{jets}$ and $Z+\mathrm{jets}$ were generated using \textsc{Herwig++} 2.7.1~\cite{Bahr:2008pv}.
 However, unlike the \textsc{Sherpa} samples, only one additional parton is included in the matrix element.
-The underlaying-event time was used with the CTEQ6L1 parton distribution function.
+The UEEE-4 underlying event tune~\cite{Buckley:2018wdv} was used with the CTEQ6L1 parton distribution function.
 
 The simulated $\ttbar$ events were generated at tree-level using \textsc{Powheg-Box} 2 and the NNPDF30 NLO parton distribution function.
 The hadronization of was performed using \textsc{Pythia} 8.230 with the A14 tune and the NNPDF23 parton distribution function and the decay of $b$-hadrons is performed using EvtGen.
-The events are separated into categories based on if both tops decayed hadronically, if only one of decayed hadronically, and if both tops decayed leptonically.
+The events are separated into categories based on whether both tops decayed hadronically, if only one of decayed hadronically, and if both tops decayed leptonically.
 An additional set of $\ttbar$ events was generated using \textsc{Sherpa} 2.2.1 using the NNPDF30 parton distribution function, where independent samples were generated for the three decay categories.
 This sample was used to cross-check the main $\ttbar$ samples generated with \textsc{Powheg-Box} 2 + \textsc{Pythia} 8.
 
 \section{Large-$R$ Jet Trigger}\label{sec:analysis_trigger}
 
 The trigger used in the analysis is a \largeR{} jet trigger.
-However, as the amount of pile-up increased over the the course of LHC Run 2 different \largeR{} trigger algorithms were used over the three years to maintain low offline thresholds for data recording.
+However, as the amount of pile-up increased over the course of LHC Run 2 different \largeR{} trigger algorithms were used to maintain low offline thresholds for data recording.
 This requires that a different trigger algorithm be used for the 2015, 2016, and 2017 data.
 All triggers require the presence of a \largeR{} jet reconstructed in the \gls{HLT} with variations of ungroomed (a10) and \largeR{} jets trimmed (a10t) with the same settings as offline \largeR{} jets.
 The 2015 trigger requires an ungroomed \largeR{} jet with $p_{T} > 360~\GeV$, while in 2016 the threshold is $420~\GeV$.
@@ -180,7 +181,7 @@ As they are all fully efficient for $p_{T} > 480~\GeV$ and in an effort to simpl
 \begin{table}[htpb]
  \centering
  \caption[Summary of the triggers used in the analysis.]{%
-  Summary of the \largeR{} jet triggers used in the analysis for the for the data taking periods of 2015, 2016, and 2017.}
+  Summary of the \largeR{} jet triggers used in the analysis for the data taking periods of 2015, 2016, and 2017.}
  \begin{tabular}{@{}rlrr@{}}
   \toprule
   Year   & Trigger Name                 & Offline $p_{T}$ Threshold~$(\GeV)$ & Luminosity~$\left(\ifb\right)$ \\ \midrule
@@ -198,7 +199,7 @@ All simulation and data are preprocessed to require events with at least two \la
 Jets are further selected after calibration to be trimmed \largeR{} jets with $p_{T} > 250~\GeV$ and $\abs{\eta} < 2$.
 Events are further preselected by requiring the leading $p_{T}$ \largeR{} jet to satisfy $p_{T} > 480~\GeV$ and the sub-leading $p_{T}$ \largeR{} jet to have $p_{T} > 250~\GeV$, which ensures that all events meet the trigger requirements.
 To select the signal jet candidate --- the \largeR{} jet assumed to contain the decay products of the $\Zprime$ or the Higgs boson --- the following criteria must be met.
-The \largeR{} jet must have be sufficiently boosted with $p_{T} > 2m_{J}$, and it must contain at least two variable radius track-jets each with $p_{T} > 10~\GeV$.
+The \largeR{} jet must be sufficiently boosted with $p_{T} > 2m_{J}$, and it must contain at least two variable radius track-jets each with $p_{T} > 10~\GeV$.
 To help prevent contamination of gluon splitting to heavy flavor quarks, an additional requirement is made that the distance between the two leading $p_{T}$ VR track-jet axes is greater than the radius of the smaller of the two VR track-jet (the leading $p_{T}$ VR track-jet), $\Delta R_{VR}/\mathrm{min\,} R_{VR} > 1$.
 The highest $p_{T}$ \largeR{} jet that passes all of these requirements is then taken to be the signal candidate, and the next highest $p_{T}$ \largeR{} jet is taken to be the associated jet.
 Additionally, any events with muons with $p_{T} > 40~\GeV$ opposite the signal candidate, $\Delta \phi > 2\pi/3$, are removed to ensure that the signal candidate events are orthogonal to a $\ttbar$ control region that will be constructed from these muon events.
@@ -212,7 +213,7 @@ The signal candidate selection process is summarized visually in \Cref{fig:event
  \label{fig:event_selection}
 \end{figure}
 
-Once the signal candidate jet is chosen, events are further classified based on how many of the leading $p_{T}$ VR track-jets in the signal candidate \largeR{} jet pass $b$-tagging cuts.
+Once the signal candidate jet is chosen, events are further classified based on how many of the leading $p_{T}$ VR track-jets in the signal candidate \largeR{} jet pass $b$-tagging criteria.
 A ``loose'' $b$-tagging working point is established at $85\%$ $b$-tagging efficiency, and a ``tight'' $b$-tagging working point is established at $77\%$ $b$-tagging efficiency.%
 \footnote{The $b$-tagging efficiencies are determined through applying the $b$-tagging algorithm to offline-reconstructed jets from an unbiased sample of Monte Carlo simulated $t\bar{t}$ events, where jets are labeled according to their hadron content.}
 The $77\%$ efficiency working point is selected to optimize signal significance.
@@ -229,27 +230,29 @@ In both regions the dominant component of $\Hbb$ is from gluon-gluon fusion prod
  \centering
  \caption[Efficiencies and yields of resonant backgrounds and the signal processes.]{%
   The efficiencies and yields in the $0$-tag control region (\CRQCD{}) and signal region (SR) for the non-QCD background, the Higgs boson, and $\Zprime$ signals and data.
-  The yields in the \CRQCD{} are given for for the luminosity used for the background estimate of the non-resonant dijet process.
-  The efficiencies are relative to leading \largeR{} jet $p_{T} > 480~\GeV$ requirement.}
- \begin{tabular}{@{}lrrrrr@{}}
-  \toprule
-  Process                             & \CRQCD{} Eff. $(\%)$ & \CRQCD{} Yield in $1.4~\ifb$ & SR Eff. $(\%)$ & SR Yield in $80.5~\ifb$ \\ \midrule
-  $W \to q\bar{q} + \mathrm{jets}$    & $51.3$               & $3810$                       & $0.4$          & $1500$                  \\
-  $Z \to q\bar{q} + \mathrm{jets}$    & $46.2$               & $1470$                       & $3.4$          & $6200$                  \\
-  $t\bar{t}$                          & $25.9$               & $1929$                       & $2.5$          & $10550$                 \\
-  $\Hbb$                              & $24.3$               & $5$                          & $17.9$         & $216$                   \\
-  \phantom{$\Hbb$\quad}~ggF           & $23.6$               & $2$                          & $19.4$         & $115$                   \\
-  \phantom{$\Hbb$\quad}~VBF           & $15.8$               & $1$                          & $20.7$         & $53$                    \\
-  \phantom{$\Hbb$\quad}~$WH$          & $32.4$               & $1$                          & $12.0$         & $26$                    \\
-  \phantom{$\Hbb$\quad}~$ZH$          & $30.5$               & $1$                          & $15.8$         & $21$                    \\
-  $\Zprime$ $\left(m=100~\GeV\right)$ & $43.9$               & $1530$                       & $4.1$          & $8200$                  \\
-  $\Zprime$ $\left(m=125~\GeV\right)$ & $43.6$               & $1440$                       & $3.8$          & $7300$                  \\
-  $\Zprime$ $\left(m=150~\GeV\right)$ & $43.5$               & $1360$                       & $3.7$          & $6700$                  \\
-  $\Zprime$ $\left(m=175~\GeV\right)$ & $42.8$               & $1240$                       & $3.3$          & $5550$                  \\
-  $\Zprime$ $\left(m=200~\GeV\right)$ & $41.8$               & $1127$                       & $3.2$          & $4910$                  \\
-  Data                                & $38.7$               & $519710$                     & $0.6$          & $484600$                \\
-  \bottomrule
- \end{tabular}
+  The yields in the \CRQCD{} are given for the luminosity used for the background estimate of the non-resonant dijet process.
+  The efficiencies are relative to the leading \largeR{} jet $p_{T} > 480~\GeV$ requirement.}
+ \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{@{}lrrrrr@{}}
+   \toprule
+   Process                             & \CRQCD{} Eff. $(\%)$ & \CRQCD{} Yield in $1.4~\ifb$ & SR Eff. $(\%)$ & SR Yield in $80.5~\ifb$ \\ \midrule
+   $W \to q\bar{q} + \mathrm{jets}$    & $51.3$               & $3810$                       & $0.4$          & $1500$                  \\
+   $Z \to q\bar{q} + \mathrm{jets}$    & $46.2$               & $1470$                       & $3.4$          & $6200$                  \\
+   $t\bar{t}$                          & $25.9$               & $1929$                       & $2.5$          & $10550$                 \\
+   $\Hbb$                              & $24.3$               & $5$                          & $17.9$         & $216$                   \\
+   \phantom{$\Hbb$\quad}~ggF           & $23.6$               & $2$                          & $19.4$         & $115$                   \\
+   \phantom{$\Hbb$\quad}~VBF           & $15.8$               & $1$                          & $20.7$         & $53$                    \\
+   \phantom{$\Hbb$\quad}~$WH$          & $32.4$               & $1$                          & $12.0$         & $26$                    \\
+   \phantom{$\Hbb$\quad}~$ZH$          & $30.5$               & $1$                          & $15.8$         & $21$                    \\
+   $\Zprime$ $\left(m=100~\GeV\right)$ & $43.9$               & $1530$                       & $4.1$          & $8200$                  \\
+   $\Zprime$ $\left(m=125~\GeV\right)$ & $43.6$               & $1440$                       & $3.8$          & $7300$                  \\
+   $\Zprime$ $\left(m=150~\GeV\right)$ & $43.5$               & $1360$                       & $3.7$          & $6700$                  \\
+   $\Zprime$ $\left(m=175~\GeV\right)$ & $42.8$               & $1240$                       & $3.3$          & $5550$                  \\
+   $\Zprime$ $\left(m=200~\GeV\right)$ & $41.8$               & $1127$                       & $3.2$          & $4910$                  \\
+   Data                                & $38.7$               & $519710$                     & $0.6$          & $484600$                \\
+   \bottomrule
+  \end{tabular}
+ \end{adjustbox}
  \label{table:efficiencies_and_yields}
 \end{table}
 
@@ -281,7 +284,7 @@ In both regions the dominant component of $\Hbb$ is from gluon-gluon fusion prod
 
 \subsection{$\Vjets$}
 
-As this analysis is looking for resonances on the tails of the $\Vjets$ and $\ttbar$ processes it is important to ensure that the Monte Carlo based templates don't have statistical fluctuations that could hide possible signals.
+As this analysis is looking for resonances on the tails of the $\Vjets$ and $\ttbar$ mass distributions it is important to ensure that the Monte Carlo based templates don't have statistical fluctuations that could hide possible signals.
 To avoid this, parametric shapes are fitted to the MC-based templates ensuring that the tails are well modeled without fluctuations.
 For the $\Vjets$ and signal templates the sum of three Gaussians plus a constant term are fitted to the templates, and for the $\ttbar$ a double-sided Crystal Ball~\cite{Gaiser:1982yw} is used.
 All systematic variation histograms are also fitted with the same functional choices.
@@ -336,7 +339,7 @@ As approximately $1.2~\ifb$ of data in the \CRQCD{} gives a similar yield as is 
 \subsection{Models Tested}\label{sec:models_tested}
 
 To find a parametric function that fits the multijet background well, I investigated a selection of families of functions.
-I considered multiple models, many of which proved intractable in fitting, but two family of models performed well across the \CRQCD{} data slices.
+I considered multiple models, many of which proved intractable in fitting, but two families of models performed well across the \CRQCD{} data slices.
 The functional forms of the families are the ``polynomial exponential'' --- taken to be the nominal model for the studies ---
 \begin{equation}
  f_{n} \left(x \middle|\,\vec{\theta}\right) = \theta_{0}\, \exp\left(\sum_{i=1}^{n} \theta_{i}\,x^{i}\right), \quad x = \frac{m_{J} - 150~\GeV}{80~\GeV},
@@ -351,7 +354,7 @@ The parameterization of the polynomial exponential function maps the independent
 This reparameterization is done, as I observed that it improved the numerical stability of the fit.
 The scaling factor, $a$, for the Formal Laurent is not a free parameter; it is empirically chosen to keep the scale of the parameters at $\mathcal{O}(1)$.
 The Formal Laurent series serves as a cross check for the polynomial exponential function models.
-To focus only on the QCD part of the spectrum, the MC templates for the $W+\mathrm{jets}$, $Z+\mathrm{jets}$, and $\ttbar$ (scaled by their cross section times the luminosity of each slice and any relevant $k$-factors) is subtracted from the data.
+To focus only on the QCD part of the spectrum, the MC templates for the $W+\mathrm{jets}$, $Z+\mathrm{jets}$, and $\ttbar$ (scaled by their cross section times the luminosity of each slice and any relevant $k$-factors) are subtracted from the data.
 This is done to decouple the study from any possible bias introduced by the fitting procedure.
 
 \subsubsection{Likelihood ratio test}
@@ -408,15 +411,15 @@ Given this contention and the very strong favoring of the 5 parameter model in t
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/stat_test_exp_4_v_5params_CR_data.eps}
   \caption[Comparison of the 4 and 5 parameter polynomial exponential fit models.]{%
    Comparison of the 4 and 5 parameter polynomial exponential fit models to \CRQCD{} data minus resonant Monte Carlo templates.}
   \label{fig:stat_test_exp_4_v_5params}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/stat_test_exp_5_v_6params_CR_data.eps}
   \caption[Comparison of the 5 and 6 parameter polynomial exponential fit models.]{%
@@ -433,15 +436,15 @@ Given this contention and the very strong favoring of the 5 parameter model in t
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/LLR_CDF_compare_polyexp.pdf}
   \caption[Empirical cumulative distribution function from the likelihood ratio test comparison for the polynomial exponential fit models.]{%
    Empirical cumulative distribution function for the observed \pvalue{}s from the likelihood ratio test for the polynomial exponential model.}
   \label{fig:LLR_CDF}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/Ftest_CDF_compare_polyexp.pdf}
   \caption[Empirical cumulative distribution function from the $F$-test comparison for the polynomial exponential fit models.]{%
@@ -456,15 +459,15 @@ Given this contention and the very strong favoring of the 5 parameter model in t
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/fit_5param_exp_to_CR_data_1_2ifb.eps}
   \caption[The fit of the 5 parameter polynomial exponential model to a slice of the \CRQCD{} data.]{%
    The fit of the 5 parameter polynomial exponential model to a $1.2~\ifb$ slice of the \CRQCD{} data with the resonant Monte Carlo templates subtracted.}
   \label{fig:5param_model_fit}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/sig_dist_5param_exp_to_CR_data_1_2ifb.eps}
   \caption[Distribution of the weighted residuals of the fit.]{%
@@ -475,7 +478,7 @@ Given this contention and the very strong favoring of the 5 parameter model in t
   The fit of the 5 parameter polynomial exponential model to a $1.2~\ifb$ slice of the \CRQCD{} data with the resonant Monte Carlo templates subtracted.
   The fit exhibits both a low reduced $\chi^{2}$ value and a high \pvalue{} for the $\chi^{2}$ indicating a good fit.
   The distribution of the weighted residuals of the fit with a Normal distribution fitted to it.
-  Though with low statistics at only 32 entries, the residuals appear to be Normally distributed, which again indicates a good fit.}
+  Though with low statistics at only 32 entries given the mass binning of $5~\GeV$, the residuals appear to be Normally distributed, which again indicates a good fit.}
  \label{fig:5param_QCD_model_fit}
 \end{figure}
 
@@ -537,6 +540,7 @@ After the fit to the pseudo-experiment with the fit model is performed the pull 
 \end{equation}
 This process of generating a pseudo-experiment, fitting with the fit model, and then calculating the pull for the signal components is repeated for $10,000$ trials.
 If the gradient minimizer does not converge during the fit then the trial is discarded.
+For the QCD multijet models used in the analysis all trials converged.
 The pulls for each pseudo-experiment are then histogrammed and a Normal distribution is fit to the histogram.
 If the fit is unbiased, then one should expect the pulls to be Normally distributed with a mean of 0 and width of 1,
 \[
@@ -552,22 +556,22 @@ The number of trials was chosen to be $10,000$ as for an unbiased fit that gives
 To check the effects of the fit of the $\Vjets$ in the presence of an exotic signal, signal injection tests were performed with a fit model comprised of the parameterized QCD model + $\Vjets$ signal template.
 For these tests the $\Vjets$ template was injected with a signal strength of $\mu_{V} = 1$, and the $\Zprime$ template with signal strength of $\mu_{\Zprime} = \mu \in \left\{0, 0.2, 0.5, 0.8, 1, 2, 3, 4, 5\right\}$.
 
-To check the effect of shape differences between generator choice on the bias the signal injection tests were performed with the components of the toy from the $\Vjets$ sampled from a Monte Carlo template generated with Sherpa while the $\Vjets$ template that was used in the fit model was generated with Herwig with the same normalization as the Sherpa template.
+To check the effect of shape differences between generator choice on the bias the signal injection tests were performed with the components of the toy from the $\Vjets$ sampled from a Monte Carlo template generated with \textsc{Sherpa} while the $\Vjets$ template that was used in the fit model was generated with \textsc{Herwig} with the same normalization as the \textsc{Sherpa} template.
 \Cref{fig:pulls_summary_Herwig} shows the pull distributions for all $\Zprime$ mass hypotheses of $m_{\Zprime} \in \left\{100, 125, 150, 175, 200\right\}~\GeV$ and all injected signal strengths of $\mu_{\Zprime} = \mu \in \left\{0, 0.2, 0.5, 0.8, 1, 2, 3, 4, 5\right\}$ with $\mu_{V} = 1$.
-The pulls means show large deviations from $0$ indicating a strong bias when trying to fit the toys drawn from Sherpa templates with a Herwrig template component in the fit model.
-This shows that there is a substantial difference in shape between the Sherpa templates and the Herwig templates, providing motivation for a systematic uncertainty associated with the generator choice for the $W+\mathrm{jets}$ and $Z+\mathrm{jets}$ templates.
+The pulls means show large deviations from $0$ indicating a strong bias when trying to fit the toys drawn from \textsc{Sherpa} templates with a \textsc{Herwig} template component in the fit model.
+This shows that there is a substantial difference in shape between the \textsc{Sherpa} templates and the \textsc{Herwig} templates, providing motivation for a systematic uncertainty associated with the generator choice for the $W+\mathrm{jets}$ and $Z+\mathrm{jets}$ templates.
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/Herwig_pull_means_CR_Vjets.pdf}
   \caption[The distribution of the pull mean for $\Vjets$ and signal strengths vs. the injected $\Zprime$ signal strength.]{%
    The distribution of the pull mean for $\Vjets$ and signal strengths vs. the injected $\Zprime$ signal strength.}
   \label{fig:pulls_Vjets_Herwig}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/Herwig_pull_means_CR_Zprime.pdf}
   \caption[The distribution of the pull mean for $\Zprime$ signal strengths vs. the injected $\Zprime$ signal strength.]{%
@@ -582,27 +586,27 @@ This shows that there is a substantial difference in shape between the Sherpa te
  \label{fig:pulls_summary_Herwig}
 \end{figure}
 
-Given the statistical precision of the Monte Carlo templates, scaling them to correspond to the observed luminosity results in statistical fluctuations in the tails of the templates to become blown up into features.
+Given the statistical precision of the Monte Carlo templates, scaling them to correspond to the observed luminosity results in statistical fluctuations in the tails of the templates to become enlarged into apparent features.
 This is not desirable, as these features are not physical, and so the Monte Carlo templates were smoothed for use in fitting by modeling them with functional forms fit to data.
-To check the bias associated with fits using models that contain smoothed Monte Carlo templates generated from Sherpa, the signal injection tests were performed again.
+To check the bias associated with fits using models that contain smoothed Monte Carlo templates generated from \textsc{Sherpa}, the signal injection tests were performed again.
 \Cref{fig:pulls_summary_smoothed_Sherpa} shows the pull distributions for all $\Zprime$ mass hypotheses of $m_{\Zprime} \in \left\{100, 125, 150, 175, 200\right\}~\GeV$ and all injected signal strengths of $\mu_{\Zprime} = \mu \in \left\{0, 0.2, 0.5, 0.8, 1, 2, 3, 4, 5\right\}$ with $\mu_{V} = 1$.
 As the pull means are contained within a $\pm 3\%$ window of the statistical uncertainties of the fit signal strength, then for a QCD model of a 5 parameter polynomial exponential the fit bias is small enough that an additional systematic uncertainty for the choice of QCD model parameterization is unnecessary.
 
-To check the bias for a signal model of a Higgs boson the signal injection tests with smoothed Sherpa Monte Carlo templates were run again, but with a smoothed Higgs templates for a signal model instead of a $\Zprime$.
+To check the bias for a signal model of a Higgs boson the signal injection tests with smoothed \textsc{Sherpa} Monte Carlo templates were run again, but with a smoothed Higgs template for a signal model instead of a $\Zprime$.
 \Cref{fig:pulls_summary_Higgs_smoothed_Sherpa} shows the pull distributions for injected signal strengths of the Higgs of $\mu_{H} = \mu \in \left\{0, 0.2, 0.5, 0.8, 1, 2, 3, 4, 5\right\}$ with $\mu_{V} = 1$.
 The pull means being well contained within a $\left[-3,+2\right]\%$ window of the statistical uncertainties of the fit signal strength gives additional evidence that for a QCD model of a 5 parameter polynomial exponential the fit bias is small enough that an additional systematic uncertainty for the choice of QCD model parameterization is unnecessary, regardless of signal model chosen.
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/smoothed_Sherpa_pull_means_CR_Vjets.pdf}
   \caption[The distribution of the pull mean for $\Vjets$ and signal strengths vs. the injected $\Zprime$ signal strength.]{%
    The distribution of the pull mean for $\Vjets$ and signal strengths vs. the injected $\Zprime$ signal strength.}
   \label{fig:pulls_Vjets_Sherpa}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/smoothed_Sherpa_pull_means_CR_Zprime.pdf}
   \caption[The distribution of the pull mean for $\Zprime$ signal strengths vs. the injected $\Zprime$ signal strength.]{%
@@ -619,15 +623,15 @@ The pull means being well contained within a $\left[-3,+2\right]\%$ window of th
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/smoothed_Sherpa_pull_means_CR_Vjets_for_Higgs.pdf}
   \caption[The distribution of the pull mean for $\Vjets$ and signal strengths vs. the injected Higgs signal strength.]{%
    The distribution of the pull mean for $\Vjets$ and signal strengths vs. the injected Higgs signal strength.}
   \label{fig:pulls_Vjets_smoothed_Sherpa}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/smoothed_Sherpa_pull_means_CR_Higgs.pdf}
   \caption[The distribution of the pull mean for Higgs signal strengths vs. the injected Higgs signal strength.]{%
@@ -635,7 +639,7 @@ The pull means being well contained within a $\left[-3,+2\right]\%$ window of th
   \label{fig:pulls_Higgs_smoothed_Sherpa}
  \end{subfigure}
  \caption[The distribution of the pull mean for fit signal strengths vs. the injected Higgs signal strength.]{%
-  The distribution of the pull mean for fit signal strengths vs. the injected Higgs signal strength $\mu_{H}$ for $\mu_{H} = \mu \in \left\{0, 0.2, 0.5, 0.8, 1, 2, 3, 4, 5\right\}$ with $\mu_{V} = 1$ using a full fit model with smoothed Monte Carlo templates generated using Sherpa for the $\Vjets$ and Higgs.
+  The distribution of the pull mean for fit signal strengths vs. the injected Higgs signal strength $\mu_{H}$ for $\mu_{H} = \mu \in \left\{0, 0.2, 0.5, 0.8, 1, 2, 3, 4, 5\right\}$ with $\mu_{V} = 1$ using a full fit model with smoothed Monte Carlo templates generated using \textsc{Sherpa} for the $\Vjets$ and Higgs.
   The lightly shaded rectangular region encloses the extrema of the pull means and their statistical uncertainties, showing that the range of bias on the pulls are within a few percent of the statistical uncertainties on the fit signal strengths.
   The dashed straight lines are meant only as visual guides, and are not to be treated as linear interpolations between signal strengths.}
  \label{fig:pulls_summary_Higgs_smoothed_Sherpa}
@@ -651,15 +655,15 @@ As the pull means are contained within a $\left[-5,+3\right]\%$ window of the st
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/Vjets_pull_hist_Zprime100_mu1.eps}
   \caption[The pull distributions for the fit signal strength for $\Vjets$ using a full model with a $\Zprime$ mass hypothesis of $m_{\Zprime}=100~\GeV$.]{%
    The pull distributions for the fit signal strength for $\Vjets$ using a full model with a $\Zprime$ mass hypothesis of $m_{\Zprime}=100~\GeV$ and injected signal strengths of $\mu_{V} = \mu_{\Zprime} = \mu = 1$.}
   \label{fig:Vjets_pulls_Zprime100_mu1}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/Zprime_pull_hist_Zprime100_mu1.eps}
   \caption[The pull distributions for the fit signal strengths for $\Zprime$ using a full model with a $\Zprime$ mass hypothesis of $m_{\Zprime}=100~\GeV$.]{%
@@ -674,15 +678,15 @@ As the pull means are contained within a $\left[-5,+3\right]\%$ window of the st
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/pull_means_CR_Vjets.pdf}
   \caption[The distribution of the pull mean for $\Vjets$ signal strength vs. the injected signal strength $\mu$ using a full model with a $\Zprime$ mass hypothesis $m_{\Zprime}$.]{%
    The distribution of the pull mean for $\Vjets$ signal strength vs. the injected signal strength $\mu$ using a full model with a $\Zprime$ mass hypothesis $m_{\Zprime}$.}
   \label{fig:pull_means_CR_Vjets}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/pull_means_CR_Zprime.pdf}
   \caption[The distribution of the pull mean for $\Zprime$ signal strength vs. the injected signal strength $\mu$ using a full model with a $\Zprime$ mass hypothesis $m_{\Zprime}$.]{%
@@ -757,15 +761,15 @@ Given the Formal Laurent series also robustly models the multijet continuum dist
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/LLR_CDF_compare_Laurent.pdf}
   \caption[Empirical cumulative distribution function for the observed \pvalue{}s from the likelihood ratio test for the Formal Laurent series.]{%
    Empirical cumulative distribution function for the observed \pvalue{}s from the likelihood ratio test for the Formal Laurent series.}
   \label{fig:LLR_CDF_compare_Laurent}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/Ftest_CDF_compare_Laurent.pdf}
   \caption[Empirical cumulative distribution function for the observed \pvalue{}s from the $F$-test for the Formal Laurent series.]{%
@@ -781,15 +785,15 @@ Given the Formal Laurent series also robustly models the multijet continuum dist
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/fit_5param_laurent_to_CR_data_1_2ifb.eps}
   \caption[The fit of the 5 parameter Formal Laurent model to a slice of the \CRQCD{} data.]{%
    The fit of the 5 parameter Formal Laurent model to a $1.2~\ifb$ slice of the \CRQCD{} data with the resonant Monte Carlo templates subtracted.}
   \label{fig:fit_5param_laurent_to_CR_data_1_2ifb}
  \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{analysis/sig_dist_5param_laurent_to_CR_data_1_2ifb.eps}
   \caption[Distribution of the weighted residuals of the fit.]{%
@@ -800,7 +804,7 @@ Given the Formal Laurent series also robustly models the multijet continuum dist
   The fit of the 5 parameter Formal Laurent model to a $1.2~\ifb$ slice of the \CRQCD{} data with the resonant Monte Carlo templates subtracted.
   The fit exhibits both a low reduced $\chi^{2}$ value and a high \pvalue{} for the $\chi^{2}$ indicating a good fit.
   The distribution of the weighted residuals of the fit with a Normal distribution fitted to it.
-  Though with low statistics at only 32 entries, the residuals appear to be Normally distributed, which again indicates a good fit.}
+  Though with low statistics at only 32 entries given the mass binning of $5~\GeV$, the residuals appear to be Normally distributed, which again indicates a good fit.}
  \label{fig:5param_QCD_model_fit_laurent}
 \end{figure}
 
@@ -819,7 +823,7 @@ These two sets of fits to the the toys provide a measure of the statistical unce
 Uncertainties related to the \largeR{} jet energy and mass calibrations~\cite{JETM-2018-02} and the calibration of the \texttt{MV2c10} $b$-tagging algorithm~\cite{PERF-2016-05}, which affects different jet flavors differently, affect all of the MC templates.
 The \largeR{} jet energy and mass calibration uncertainties affect both the shape and the normalization of the MC templates, so their impact on the analysis is determined by varying the jet energy and jet mass within their uncertainties and propagating those variations through the analysis.
 The effect of the jet energy resolution uncertainty is tested as well, but was found to be negligible.
-The affect of uncertainties on the calibration of the \texttt{MV2c10} algorithm are independent of the \largeR{} jet mass in both the signal and background simulation, and so only affect the signal normalization.
+The effect of uncertainties on the calibration of the \texttt{MV2c10} algorithm are independent of the \largeR{} jet mass in both the signal and background simulation, and so only affect the signal normalization.
 
 Additional shape uncertainties related to modeling generator choice are applied to the $\Vjets$ and $\ttbar$ MC templates.
 To determine the systematic, the \largeR{} jet mass shapes are generated from two different MC generators and compared.
@@ -835,38 +839,38 @@ This systematic is then applied to all processed modeled using MC simulation.
 Theoretical systematic uncertainties are added for the normalizations of the $\Vjets$ and Higgs components to the fit in the signal region.
 The theory uncertainties on the $\Vjets$ result from the impact of higher order electroweak and QCD corrections to the differential cross sections for the $W+\mathrm{jets}$ and $Z+\mathrm{jets}$~\cite{Lindert:2017olm}.
 The theory uncertainties for the Higgs boson production are dominated by the uncertainty on gluon-gluon fusion production, which is taken to be $30\%$, as this is consistent with the cross section uncertainty calculated with the MiNLO procedure including effects from the top-mass for Higgs boson production with $p_{T}> 400~\GeV$.
-This same $30\%$ uncertainty is applied to the other Higgs production mechanisms as high $p_{T}$, which results in the total theory uncertainty on the Higgs cross section to be $30\%$.
+This same $30\%$ uncertainty is applied to the other Higgs production mechanisms at high $p_{T}$, which results in the total theory uncertainty on the Higgs cross section to be $30\%$.
 
 The impact of a systematic uncertainty is defined as the difference in quadrature between the uncertainty in $\mu$ computed when all other uncertainties are considered and when they are fixed to their pre-fit values.
 The total systematic uncertainty is then defined as the difference in quadrature between the total uncertainty in $\mu$ and the total statistical uncertainty~\cite{ATLAS-CONF-2018-052}.
 The systematic uncertainties and their impacts on the measurement of the signal strengths are summarized in \Cref{table:systematic_uncertainties}.
 It is seen that the jet mass resolution is a large systematic for all the signals.
 Given that the ATLAS detector is designed for excellent energy resolution, as compared to mass resolution, this systematic will not diminish much.
-However, as there are efforts to bring particle flow (``pflow'')~\cite{PERF-2015-09} into \largeR{} jets in ATLAS then future versions of this analysis might be able to improved upon this systematic given the additional tracking information.
-The theory systematic for the Higgs is large at $30\%$, however, as noted at the start of this chapter, for some models for anomalous couplings in Higgs production the effect size at high $p_{T}$ would be greater than $30\%$~\cite{Grojean:2013nya,Dawson:2015gka}, and so this analysis could have sensitivity to such models despite the systematic's size.
+However, as there are efforts to bring particle flow (``pflow'')~\cite{PERF-2015-09} into \largeR{} jets in ATLAS then future versions of this analysis might be able to improve upon this systematic given the additional use of tracking information to improve mass resolution.
+The theory systematic for the Higgs is large at $30\%$; however, as noted at the start of this chapter, for some models for anomalous couplings in Higgs production the effect size at high $p_{T}$ would be greater than $30\%$~\cite{Grojean:2013nya,Dawson:2015gka}, and so this analysis could have sensitivity to such models despite the systematic's size.
 
 \begin{table}[htpb]
  \centering
  \caption[Summary of the impact of the main systematic uncertainties on the signal strength uncertainties.]{%
   Summary of the impact $(\sqrt{\Delta \sigma^2}/\mu)$ of the main systematic uncertainties on the uncertainty, $\sigma$, on the measurement of the signal strength, $\mu$, for the $\Vjets$, Higgs boson and $\Zprime$ signals~\cite{ATLAS-CONF-2018-052}.}
- \begin{tabular}{@{}llrrrr@{}}
-  \toprule
-  Source                    & Type           & $\Vjets$ & Higgs  & $\Zprime$ $\left(100~\GeV\right)$ & $\Zprime$ $\left(175~\GeV\right)$ \\ \midrule
-  Jet energy and mass scale & Norm. \& Shape & $15\%$   & $14\%$ & $23\%$                            & $18\%$                            \\
-  Jet mass resolution       & Norm. \& Shape & $20\%$   & $17\%$ & $30\% $                           & $20\% $                           \\
-  $V$ + jets modeling       & Shape          & $9\%$    & $4\%$  & $4\%$                             & $<1\%$                            \\
-  $t\bar{t}$ modeling       & Shape          & $<1\%$   & $1\%$  & $<1\%$                            & $11\%$                            \\
-  $b$-tagging $(b)$         & Normalization  & $11\%$   & $12\%$ & $11\%$                            & $15\%$                            \\
-  $b$-tagging $(c)$         & Normalization  & $3\%$    & $1\%$  & $3\%$                             & $5\%$                             \\
-  $b$-tagging $(l)$         & Normalization  & $4\%$    & $1\%$  & $4\%$                             & $7\%$                             \\
-  $t\bar{t}$ $k$-factor     & Normalization  & $2\%$    & $3\%$  & $2\%$                             & $58\%$                            \\
-  Luminosity                & Normalization  & $2\%$    & $2\%$  & $2\%$                             & $3\%$                             \\
-  Alternate QCD function    & Norm. \& Shape & $4\%$    & $4\%$  & $3\%$                             & $17\%$                            \\
-  $W$/$Z$ and QCD (Theory)  & Normalization  & $14\%$   &        &                                   &
-  \\
-  Higgs (Theory)            & Normalization  &          & $30\%$ &                                   &
-  \\
-  \bottomrule
- \end{tabular}
+ \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{@{}llrrrr@{}}
+   \toprule
+   Source                    & Type           & $\Vjets$ & Higgs  & $\Zprime$ $\left(100~\GeV\right)$ & $\Zprime$ $\left(175~\GeV\right)$ \\ \midrule
+   Jet energy and mass scale & Norm. \& Shape & $15\%$   & $14\%$ & $23\%$                            & $18\%$                            \\
+   Jet mass resolution       & Norm. \& Shape & $20\%$   & $17\%$ & $30\% $                           & $20\% $                           \\
+   $V$ + jets modeling       & Shape          & $9\%$    & $4\%$  & $4\%$                             & $<1\%$                            \\
+   $t\bar{t}$ modeling       & Shape          & $<1\%$   & $1\%$  & $<1\%$                            & $11\%$                            \\
+   $b$-tagging $(b)$         & Normalization  & $11\%$   & $12\%$ & $11\%$                            & $15\%$                            \\
+   $b$-tagging $(c)$         & Normalization  & $3\%$    & $1\%$  & $3\%$                             & $5\%$                             \\
+   $b$-tagging $(l)$         & Normalization  & $4\%$    & $1\%$  & $4\%$                             & $7\%$                             \\
+   $t\bar{t}$ $k$-factor     & Normalization  & $2\%$    & $3\%$  & $2\%$                             & $58\%$                            \\
+   Luminosity                & Normalization  & $2\%$    & $2\%$  & $2\%$                             & $3\%$                             \\
+   Alternate QCD function    & Norm. \& Shape & $4\%$    & $4\%$  & $3\%$                             & $17\%$                            \\
+   $W$/$Z$ and QCD (Theory)  & Normalization  & $14\%$   &        &                                   &                                   \\
+   Higgs (Theory)            & Normalization  &          & $30\%$ &                                   &                                   \\
+   \bottomrule
+  \end{tabular}
+ \end{adjustbox}
  \label{table:systematic_uncertainties}
 \end{table}
