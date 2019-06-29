@@ -1,0 +1,21 @@
+\RequirePackage{luatex85}
+\documentclass[tikz, border=10pt]{standalone}
+
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{document}
+
+\begin{tikzpicture}[thick]
+ \begin{feynman}
+  \vertex (origin);
+  \vertex [right=1.5cm of origin] (H);
+  \vertex [above right=0.50cm and 1.5cm of H] (Z1) {\(Z\)};
+  \vertex [below right=0.50cm and 1.5cm of H] (Z2) {\(Z^{*}\)};
+  \diagram* {
+  (origin) -- [scalar, edge label={\(H\)}] (H),
+  (Z1) -- [boson] (H),
+  (Z2) -- [boson] (H),
+  };
+ \end{feynman}
+\end{tikzpicture}
+\end{document}

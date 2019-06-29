@@ -1,0 +1,21 @@
+\RequirePackage{luatex85}
+\documentclass[tikz, border=10pt]{standalone}
+
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{document}
+
+\begin{tikzpicture}[thick]
+ \begin{feynman}
+  \vertex (origin);
+  \vertex [above=1.5cm of origin] (Z);
+  \vertex [below left=1cm and 1.2cm of origin] (f1);
+  \vertex [below right=1cm and 1.2cm of origin] (f2);
+  \diagram* {
+  (origin) -- [boson, edge label={\(Z\)}] (Z),
+  (f1) -- [fermion, edge label={\(f\)}] (origin),
+  (origin) -- [fermion, edge label={\(f\)}] (f2),
+  };
+ \end{feynman}
+\end{tikzpicture}
+\end{document}
