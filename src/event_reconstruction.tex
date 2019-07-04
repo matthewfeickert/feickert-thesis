@@ -283,6 +283,8 @@ As a result, these impact parameters can be used as inputs to discriminating alg
 For the data taking periods of my thesis analysis the main $b$-tagging algorithm used in ATLAS was the \texttt{MV2c10} \gls{BDT} based algorithm.%
 \footnote{\texttt{MV2c10} is named to reflect that it is a multivariate algorithm with the fraction of $c$-jets in the training sample at roughly $10\%$.
  In reality the $c$-jet fraction is $7\%$ and the light-jet fraction is $93\%$ to give a good balance between light-jet and $c$-jet rejection.}
+A \gls{BDT} is a machine learning algorithm that uses the weighted score of an ensemble of decision trees (flows of orthogonal selection criteria) to give a discriminant score.
+The ensemble is iteratively constructed to emphasize areas of poor performance in previous iterations.
 In addition to the quantities of the jet itself, \texttt{MV2c10} uses the output of other lower level $b$-tagging algorithms as inputs, as seen in \Cref{fig:MV2_inputs}.
 These include the likelihood ratio based two-dimensional and three-dimensional impact parameter algorithms, IP2D and IP3D.
 The IP2D and IP3D algorithms assume that the track IPs are uncorrelated.
