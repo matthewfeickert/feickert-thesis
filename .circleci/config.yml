@@ -6,7 +6,6 @@ jobs:
     branches:
       ignore:
         - /test-.*/
-        - master
     steps:
       - checkout
       - run:
