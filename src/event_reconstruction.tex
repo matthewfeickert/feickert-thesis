@@ -145,9 +145,19 @@ A typical choice of jet algorithm in ATLAS is the anti-$k_{t}$ algorithm with si
 
 \subsection{Large Radius Jets}\label{subsection:largeR_jets}
 
-For analyses that are dealing with very high momentum resonances, the resulting decay products can become highly collimated and be reconstructed as a single jet with a large radius parameter, $R$, (a ``\largeR{}'' jet) typically set to $R=1.0$~\cite{JETM-2018-02,SUSY-2016-13}.
+For analyses that are dealing with very high momentum resonances, the resulting decay products can become highly collimated and be reconstructed as a single jet with a large radius parameter, $R$, (a ``\largeR{}'' jet) typically set to $R=1.0$~\cite{JETM-2018-02,SUSY-2016-13}, as seen in \Cref{fig:largeR_jet}.
 For my thesis analysis \largeR{} jets were used, where the \largeR{} jets were reconstructed from topological clusters in the calorimeters using the anti-$k_{t}$ algorithm with radius parameter of $R=1.0$ and were trimmed~\cite{Krohn:2009th} to improve mass resolution and reduce dependence on pile-up.
 The trimming is done by reclustering the \largeR{} jet constituents using the $k_{t}$ algorithm with a radius parameter of $R=0.2$ into subjets, and then removing any subjet that has $p_{T}$ less than $5\%$ of the \largeR{} parent jet's energy.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.6\textwidth]{event_reconstruction/largeR_jet.eps}
+ \caption[The calorimeter clusters corresponding to a \largeR{} jet and its subjets in a simulated $\Zprime \to t\bar{t}$ decay with $m_{\Zprime}=1.75~\TeV$.]{%
+  The calorimeter clusters corresponding to a \largeR{} jet and its subjets in a simulated $\Zprime \to t\bar{t}$ decay with $m_{\Zprime}=1.75~\TeV$.
+  One of the top quarks decays hadronically, and the resulting clusters are matched to the top-quark decay products as well as the additional radiation.
+  Jet constituents are shown as black dots~\cite{ATLAS-CONF-2014-003,Schwienhorst:2016efd}.}
+ \label{fig:largeR_jet}
+\end{figure}
 
 \subsection{Variable Radius Track Jets}\label{subsection:VR_jets}
 
