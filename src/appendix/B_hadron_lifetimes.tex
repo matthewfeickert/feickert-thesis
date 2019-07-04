@@ -1,0 +1,88 @@
+\chapter{$B$-hadron Lifetimes}\label{appendix:B_hadron_lifetimes}
+
+$B$-hadrons (hadronically bound states containing at least one $b$-flavor quark) have what are viewed as long lived lifetimes before they decay.
+Using the charged $B$ meson, $B^{-}$, as an example, with quark content of $B^{-} = \Ket{\bar{u}\, b}$, a decay mediated by the strong force is forbidden by electrical charge conservation.
+Thus, the decay must proceed through a flavor-changing charged current mediated by a $W$ boson.
+Thus, some possible decays are
+\[
+ \underbrace{\bar{u}\,b}_{B^{-}} \to \underbrace{u\bar{u}}_{\pi^0} \left(W^{-} \to\right) \ell^{-} \bar{\nu}_{\ell}, \qquad \underbrace{\bar{u}\,b}_{B^{-}} \to \underbrace{u\bar{u}}_{\pi^0} \left(W^{-} 	\to \right) \underbrace{\bar{u}d}_{\pi^-},
+\]
+%
+\[
+ \underbrace{\bar{u}\,b}_{B^{-}} \to \underbrace{c\bar{u}}_{D^0} \left(W^{-} \to \right) \ell^{-} \bar{\nu}_{\ell}, \qquad \underbrace{\bar{u}\,b}_{B^{-}} \to \underbrace{c\bar{u}}_{D^0} \left(W^{-} \to \right) \underbrace{\bar{u}d}_{\pi^-}.
+\]
+As the $b$-decay is cross generational, it is ``Cabibbo suppressed'' further increasing the lifetime~\cite{Vaandering}.
+Cabibbo suppression is also relevant in the decays of kaons and charged $D$-mesons.
+
+With the introduction of the ``strangness'' quantum number, it was observed that the decay rates of particles with nonzero strangness were different then non-strange particles.
+Cabibbo suggested~\cite{Cabibbo:1963yz} that these decays were also mediated by weak interactions but that the participating states (weak eigenstates) were mixtures of the mass eigenstates,
+\[
+ \Ket{d'} = \alpha \Ket{d} + \beta \Ket{s},
+\]
+such that through normalization, $\Braket{d'|d'} = 1$, and absorbing phases, one free parameter remains.
+The choices of
+\[
+ \alpha = \cos\theta_C, \qquad \beta = \sin\theta_C,
+\]
+are made and $\theta_C$ --- the free parameter --- is empirically determined from fits to data to be $\theta_C \approx 0.23~\mathrm{rad} \approx 13.15^{\circ}$.
+With Glashow, Iliopoulos, and Maiani's (GIM) introduction of a fourth quark, $c$,~\cite{Glashow:1970gm} the Cabibbo-GIM scheme established the ``Cabibbo-rotated'' weak eigenstates
+\[
+ \Ket{d'} = \cos\theta_C \Ket{d} + \sin\theta_C \Ket{s}, \qquad \Ket{s'} = -\sin\theta_C \Ket{d} + \cos\theta_C \Ket{s}
+\]
+which comprised the flavor doublets
+\[
+ \begin{pmatrix}
+  u \\d'
+ \end{pmatrix}, \quad
+ \begin{pmatrix}
+  c \\s'
+ \end{pmatrix}
+\]
+that the $W$ bosons couple to in the same manner as they couple to lepton flavor doublets.
+The Cabibbo rotation matrix obviously follows,
+\[
+ \begin{pmatrix}
+  d' \\ s'
+ \end{pmatrix}
+ =
+ \begin{pmatrix}
+  \cos\theta_C & \sin\theta_C \\ -\sin\theta_C & \cos\theta_C
+ \end{pmatrix}
+ \begin{pmatrix}
+  d \\ s
+ \end{pmatrix}
+\]
+With Kobayashi and Maskawa's generalization of the Cabibbo-GIM scheme to three generations~\cite{Kobayashi:1973fv} the CKM transformation matrix was formed,
+\[
+ \begin{pmatrix}
+  d' \\ s'\\ b'
+ \end{pmatrix}
+ =
+ \begin{pmatrix}
+  V_{ud} & V_{us} & V_{ub} \\
+  V_{cd} & V_{cs} & V_{cb} \\
+  V_{td} & V_{ts} & V_{tb} \\
+ \end{pmatrix}
+ \begin{pmatrix}
+  d \\ s\\ b
+ \end{pmatrix}\,.
+\]
+Taking the third to first and second generational mixing elements to be small (i.e., in terms of the generalized Cabibbo angles $(\theta_{12},\theta_{23},\theta_{13})$ $\theta_{13} \approx \theta_{23} \sim 0$), it is seen that the Cabibbo-GIM mixing matrix is recovered.
+It is seen from the CKM matrix (whose on-diagonal elements are close to unity) that cross-generational decays (off-diagonal elements) are ``Cabibbo suppressed'' while intragenerational decays (on-diagonal elements) are ``Cabibbo favored.''
+
+Thus, noting that
+\[
+ \beta = \frac{\abs{\vec{p}}c}{E}, \qquad E = \gamma\, mc^2,
+\]
+it is seen that for a hadron with mass $m$, mean lifetime $\tau$, and 3-momentum $\abs{\vec{p}}$, the distance it travels, $x'$, in the lab frame, $O'$, before decaying is,
+\[
+ \begin{split}
+  x'	&= v' t'	\\
+  &= \left(\beta c\right) \left(\gamma \tau\right)	\\
+  &= \frac{\abs{\vec{p}}c^2}{E} \gamma \tau	\\
+  &= \frac{\abs{\vec{p}}c^2}{\gamma\, mc^2} \gamma \tau	\\
+  &= \frac{\abs{\vec{p}}}{m}\, \tau.
+ \end{split}
+\]
+It is also seen that the characteristic length scale of the particle, where $\beta\gamma=1$ and so $p=mc$, is equal to $c\tau$.
+The boost of the particle then act as a scale factor of this length, scaling it up and down.
