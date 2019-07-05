@@ -9,12 +9,10 @@
 2. The Standard Model and Extensions
 3. The Large Hadron Collider (LHC)
 4. The ATLAS Experiment
-5. _b_-jet Triggers
-6. Event Reconstruction
-7. Search for boosted low mass resonances in the _b_ _b̄_ final state
-8. Results
-9. Statistical Software
-10. Conclusions
+5. Event Reconstruction
+6. Search for boosted low mass resonances in the _b_ _b̄_ final state
+7. Results
+9. Conclusions
 
 ## Thesis Defense Committee
 
