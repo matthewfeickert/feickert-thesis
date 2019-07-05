@@ -8,6 +8,8 @@ While writing this thesis I came across, and had shared with me, resources that 
    - [_The ATLAS Experiment at the CERN Large Hadron Collider_, JINST 3 (2008) S08003](http://inspirehep.net/record/796888)
 - [Every figure in the PDG in an EPS file format](http://pdg.lbl.gov/2019/figures/figures.html)
    - The above link is for the 2018 edition of _Review of Particle Physics_, but the most recent version can be found from the [PDG homepage](http://pdg.lbl.gov/index.html) by clicking the "Figures in reviews" link
+- Every figure in any ATLAS publication is publicly available as an isolated image file. To find a figure, go to the [ATLAS Experiment public results page](https://twiki.cern.ch/twiki/bin/view/AtlasPublic), find the publication the figure appears in, then click the "Documents" link in the "Links" column. This will take you to a webpage for the publication that lists all figures with links to them.
+   - Example: My thesis analysis [ATLAS-CONF-2018-052](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2018-052)
 
 ## LaTeX
 
