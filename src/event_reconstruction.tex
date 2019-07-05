@@ -42,7 +42,7 @@ The isolation criteria compare the scalar sum of the transverse momentum in a co
 This provides an effective discriminant between prompt electron candidates and other electron candidates.
 
 Electrons are also calibrated to data using the well known and characterized resonant decays of $J/\Psi \to e^{+}e^{-}$, $Z \to e^{+}e^{-}$, and $Z \to \ell^{+}\ell^{-}\gamma$.
-This calibration is done to derive data-driven scale factors that can be applied to ensure uniformity in the detector response across different subsystems and regions and to establish systematic uncertainties that can cover discrepancies between simulation and data.
+This calibration is done to derive data-driven \glspl{scale factor} that can be applied to ensure uniformity in the detector response across different subsystems and regions and to establish systematic uncertainties that can cover discrepancies between simulation and data.
 
 \section{Muons}\label{section:muons}
 
@@ -80,7 +80,7 @@ Muons are also further calibrated to data using $J/\Psi \to \mu^{+}\mu^{-}$ to c
 
 \section{Jets}\label{section:jets}
 
-As particles that carry \gls{QCD} color charge do not exist by themselves in isolation, but form with other colored particles to form colorless composite particles known as ``hadrons,'' it is not possible to directly observe quarks or gluons in ATLAS.
+As particles that carry \gls{QCD} color charge do not exist by themselves in isolation, but combine with other colored particles to form colorless composite particles known as ``hadrons,'' it is not possible to directly observe quarks or gluons in ATLAS.
 Instead, this process of hadronization, and subsequent decays and rehadronization, creates a shower of both charged and neutral particles that hit the detector, creating charged tracks and energy deposits.
 These hadronic showers are stochastic, and there is no way to give a full descriptive definition of them, though there is very impressive recent work on operational definitions~\cite{Metodiev:2018ftz,Komiske:2018vkc,Larkoski:2019nwj}.
 Instead, clustering algorithms are used to create collections of tracks and energy deposits, known as ``jets'', based off of the criteria of interest in the algorithm.
@@ -145,9 +145,19 @@ A typical choice of jet algorithm in ATLAS is the anti-$k_{t}$ algorithm with si
 
 \subsection{Large Radius Jets}\label{subsection:largeR_jets}
 
-For analyses that are dealing with very high momentum resonances, the resulting decay products can become highly collimated and be reconstructed as a single jet with a large radius parameter, $R$, (a ``\largeR{}'' jet) typically set to $R=1.0$~\cite{JETM-2018-02,SUSY-2016-13}.
+For analyses that are dealing with very high momentum resonances, the resulting decay products can become highly collimated and be reconstructed as a single jet with a large radius parameter, $R$, (a ``\largeR{}'' jet) typically set to $R=1.0$~\cite{JETM-2018-02,SUSY-2016-13}, as seen in \Cref{fig:largeR_jet}.
 For my thesis analysis \largeR{} jets were used, where the \largeR{} jets were reconstructed from topological clusters in the calorimeters using the anti-$k_{t}$ algorithm with radius parameter of $R=1.0$ and were trimmed~\cite{Krohn:2009th} to improve mass resolution and reduce dependence on pile-up.
 The trimming is done by reclustering the \largeR{} jet constituents using the $k_{t}$ algorithm with a radius parameter of $R=0.2$ into subjets, and then removing any subjet that has $p_{T}$ less than $5\%$ of the \largeR{} parent jet's energy.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.6\textwidth]{event_reconstruction/largeR_jet.eps}
+ \caption[The calorimeter clusters corresponding to a \largeR{} jet and its subjets in a simulated $\Zprime \to t\bar{t}$ decay with $m_{\Zprime}=1.75~\TeV$.]{%
+  The calorimeter clusters corresponding to a \largeR{} jet and its subjets in a simulated $\Zprime \to t\bar{t}$ decay with $m_{\Zprime}=1.75~\TeV$.
+  One of the top quarks decays hadronically, and the resulting clusters are matched to the top-quark decay products as well as the additional radiation.
+  Jet constituents are shown as black dots~\cite{ATLAS-CONF-2014-003,Schwienhorst:2016efd}.}
+ \label{fig:largeR_jet}
+\end{figure}
 
 \subsection{Variable Radius Track Jets}\label{subsection:VR_jets}
 
@@ -163,7 +173,7 @@ lower and upper cut-offs on the jet size,
 \[
  R_{\mathrm{eff}} \left(p_{T}\right)= \mathrm{max}\left[\mathrm{min}\left(\frac{\rho}{p_{T}},R_{\mathrm{max}}\right),R_{\mathrm{min}}\right]\,.
 \]
-For my thesis analysis variable radius track jets~\cite{Zenz:2010hfa} were used with $\rho=30~\GeV$, $R_{\mathrm{min}}=0.02$, and $R_{\mathrm{max}}=0.4$, which in simulation gives the highest truth sujbet double $b$-labelling efficiency for high $p_{T}$ Higgs bosons~\cite{ATL-PHYS-PUB-2017-010}, as seen in \Cref{fig:VR_jets_parameters}.
+For my thesis analysis variable radius track jets~\cite{Zenz:2010hfa} were used with $\rho=30~\GeV$, $R_{\mathrm{min}}=0.02$, and $R_{\mathrm{max}}=0.4$, which in simulation gives the highest truth subjet double $b$-labelling efficiency for high $p_{T}$ Higgs bosons~\cite{ATL-PHYS-PUB-2017-010}, as seen in \Cref{fig:VR_jets_parameters}.
 It is seen from \Cref{fig:VR_jets_lead_subjet}, \Cref{fig:VR_jets_sublead_subjet}, and \Cref{fig:Higgs_VR_DeltaR} that VR track jets are able to describe the topology of $\Hbb$ events across high $p_{T}$ spectrum much more accurately than fixed radius $R=0.2$ track jets, making their use an excellent choice for the analysis.
 
 \begin{figure}[htbp]
@@ -260,8 +270,8 @@ Flavor tagging of jets is the process of determining a ``flavor'' label --- ligh
 Flavor tagging is vital in precision measurements in the top quark sector%
 \footnote{Noting that the top quark has a branching fraction of $\mathcal{B}\left(t \to W b\right) = 0.96_{-0.066}^{+0.068}\left(\mathrm{stat.}\right)_{-0.052}^{+0.064}\left(\mathrm{syst.}\right)$~\cite{Abazov:2010tm,PhysRevD.98.030001}.}%
 , in the search for the Higgs boson as well as new phenomena decaying to $b\bar{b}$ states, and, in particular importance to this thesis analysis, the suppression of background processes that contain predominantly light-flavor jets~\cite{PERF-2012-04}.
-Of particular great interest in flavor tagging is $b$-tagging (labeling of jets containing $B$ hadrons --- $b$-jets), as $B$ hadrons are often produced in decays of heavy resonances that could be indicative of interesting new physics.
-$B$ hadrons have a number of unique properties that distinguish them, as seen in \Cref{fig:b_jet}.
+Of particular great interest in flavor tagging is $b$-tagging (labeling of jets containing $b$-hadrons --- $b$-jets), as $b$-hadrons are often produced in decays of heavy resonances that could be indicative of interesting new physics.
+$b$-hadrons have a number of unique properties that distinguish them, as seen in \Cref{fig:b_jet}.
 Notable among them is their long lifetime, discussed in \Cref{appendix:B_hadron_lifetimes}, of approximately $1.5~\mathrm{ps}$ which gives a characteristic length scale of $c\tau \sim 0.45~\mathrm{mm}$.
 This is a significant enough flight distance of the $B$ meson before it decays, that this subsequent hadron shower and jet is viewed as having a secondary vertex (SV) displaced from the original jet vertex.
 This secondary vertex is detectable as the vertex resolution in ATLAS for $50$ associated tracks is approximately $20~\mu\mathrm{m}$ in $r$-$\phi$ by $30~\mu\mathrm{m}$ in $z$~\cite{Choi:2271033,ATL-PHYS-PUB-2015-026}.
@@ -280,9 +290,11 @@ Collectively, these properties can be exploited by $b$-tagging algorithms to dis
 
 It is seen from \Cref{fig:signed_impact_parameters} that the transverse and longitudinal impact parameters --- respectively, $d_{0}$ and $z_{0}$ --- of $b$-jets tend to be positive, while $c$-jets and light-jets tend to have more impact parameters distributed more symmetrically around $0$.
 As a result, these impact parameters can be used as inputs to discriminating algorithms.
-For the data taking periods of my thesis analysis the main $b$-tagging algorithm used in ATLAS was the \texttt{MV2c10} Boosted Decision Tree (BDT) based algorithm.%
+For the data taking periods of my thesis analysis the main $b$-tagging algorithm used in ATLAS was the \texttt{MV2c10} \gls{BDT} based algorithm.%
 \footnote{\texttt{MV2c10} is named to reflect that it is a multivariate algorithm with the fraction of $c$-jets in the training sample at roughly $10\%$.
  In reality the $c$-jet fraction is $7\%$ and the light-jet fraction is $93\%$ to give a good balance between light-jet and $c$-jet rejection.}
+A \gls{BDT} is a machine learning algorithm that uses the weighted score of an ensemble of decision trees (flows of orthogonal selection criteria) to give a discriminant score.
+The ensemble is iteratively constructed to emphasize areas of poor performance in previous iterations.
 In addition to the quantities of the jet itself, \texttt{MV2c10} uses the output of other lower level $b$-tagging algorithms as inputs, as seen in \Cref{fig:MV2_inputs}.
 These include the likelihood ratio based two-dimensional and three-dimensional impact parameter algorithms, IP2D and IP3D.
 The IP2D and IP3D algorithms assume that the track IPs are uncorrelated.
@@ -301,7 +313,8 @@ The performance of the BDT is calibrated in data using jets that contain a muon,
  \centering
  \includegraphics[width=\textwidth]{event_reconstruction/MV2_inputs.pdf}
  \caption[Inputs to the high level $b$-tagging algorithm \texttt{MV2c10} for data taking in 2017 and 2018.]{%
-  Inputs to the high level $b$-tagging algorithm \texttt{MV2c10} for data taking in 2017 and 2018~\cite{Feickert:ML4Jets2018}.}
+  Inputs to the high level $b$-tagging algorithm \texttt{MV2c10} for data taking in 2017 and 2018~\cite{Feickert:ML4Jets2018}.
+  The RNNIP was added in 2017; for the 2015 and 2016 data taking JetFitter was used instead.}
  \label{fig:MV2_inputs}
 \end{figure}
 
@@ -423,7 +436,7 @@ As hadronic decays of the tau also have a displaced secondary vertex they can be
 
 Missing transverse momentum, $\MET$ --- or ``MET'' --- is the imbalance of momentum in the transverse plane of the event.
 Any event that has neutrinos produced in it, such as events with $W \to \ell \nu_{\ell}$ processes, will have $\MET$ as neutrinos pass through ATLAS without interaction, escaping detection.
-However, in events without neutrinos if other physics objects are not properly reconstructed there will still be some $\MET$ in the event.
+However, in events without neutrinos if other physics objects are not properly reconstructed there will still be some $\MET$ in the event due to acceptance and efficiency effects.
 
 In closing, given the fully hadronic signature of the analysis signature in the high momentum regime, that will be described in \Cref{chapter:analysis}, and the use of $b$-tagging it is seen that the proper reconstruction of \largeR{} jets with $b$-tagged VR subjets is going to be of great importance.
 Additionally, well reconstructed muons will play an important role in the establishment of a $t\bar{t}$ control region.
