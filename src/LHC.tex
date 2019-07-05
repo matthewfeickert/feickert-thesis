@@ -54,7 +54,7 @@ The beams can circulate stably in the LHC for many hours and so only need to be 
   The LHC proton injector chain is the indicated by the paths marked with light grey arrows.}\label{fig:LHC_accelerator_complex}
 \end{figure}
 
-\section{Collider}
+\section{Collider}\label{section:LHC_collider}
 
 The circulating proton beams in the LHC cross paths at the four experimental interaction points where the main LHC experiments are located.
 The collisions of the proton beams in the experiments have a resulting center-of-mass energy of $\sqrt{s} = 13~\TeV$ and, as shown by \Cref{eq:events_from_luminosity}, the number of events generated per second for a particular process is governed by the machine (instantaneous) luminosity, $\luminosity$, which for a beam shape that is Gaussian in profile is
@@ -74,6 +74,17 @@ Nominal design values for these quantities are given in \Cref{table:LHC_collider
 From \Cref{eq:events_from_luminosity} and \Cref{eq:machine_luminosity} it is seen that to obtain the high number of hard collisions to have sensitivity to new physics both high beam energies and high luminosities are required.
 As can be seen from \Cref{eq:machine_luminosity}, one approach to increasing the luminosity in the future for the High-Luminosity LHC (HL-LHC) is to decrease $\beta^{*}$ through the use of more powerful quadrupole focusing magnets.
 However, this requires a larger crossing angle, decreasing the geometric factor, but this can be compensated for by the use of crab cavities~\cite{PhysRevAccelBeams.19.101003}.
+
+As the luminosity of the LHC increases so does the cross section for proton-proton interaction.
+As a result, at higher luminosities there are multiple interactions per proton bunch crossing.
+These additional interactions that occur with the primary event are known as ``pile-up''.
+``In-time'' pile-up are additional interactions that occur in the same bunch crossing as the primary event, and ``out-of-time'' pile-up are the result of interactions from bunch crossings outside of the one in which the primary event being considered occurred in.
+The distribution of pile-up, $\mu$, for the data-taking years of the thesis analysis and the time averaged pile-up, $\braket{\mu}$, per year is shown in \Cref{fig:mu_2015_2017}.
+It is seen that for a given year the pile-up can change drastically.
+The pile-up per bunch crossing is Poisson distributed, and as the number of protons decreases over the duration of a LHC beam fill the Poisson mean does as well.
+Pile-up is an important quantity at the LHC and its effect on both analyses and hardware systems must be carefully considered.
+As part of my work in the ATLAS $b$-jet trigger working group I carried out performance studies of the 2017 $b$-jet triggers in high pile-up environments.
+This work is discussed in \Cref{section:BJetTrig_efficiency}.
 
 \begin{table}[htpb]
  \centering
@@ -102,3 +113,15 @@ However, this requires a larger crossing angle, decreasing the geometric factor,
   \bottomrule
  \end{tabular}\label{table:LHC_collider_parameters}%
 \end{table}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=\textwidth]{LHC/mu_2015_2017.eps}
+ \caption[The luminosity-weighted distribution of the mean number of interactions per crossing for the 2015, 2016, and 2017 $pp$ collision data at $13~\TeV$ center-of-mass energy.]{%
+  The luminosity-weighted distribution of the mean number of interactions per crossing for the 2015, 2016, and 2017 $pp$ collision data at $13~\TeV$ center-of-mass energy.
+  All data recorded by ATLAS during stable beams is shown, and the integrated luminosity and the mean value, $\braket{\mu}$, are shown.
+  The mean number of interactions per crossing corresponds to the mean of the Poisson distribution of the number of interactions per crossing calculated for each bunch.
+  It is calculated from the instantaneous per bunch luminosity as $\mu = \luminosity_{\mathrm{bunch}} \times \sigma_{\mathrm{inel}} / f_{r}$ where $\luminosity_{\mathrm{bunch}}$ is the per bunch instantaneous luminosity, $\sigma_{\mathrm{inel}}$ is the inelastic cross section which is taken to be $80~\mathrm{mb}$ for $13~\TeV$ collisions, and $f_{r}$ is the LHC revolution frequency.
+  The luminosity shown represents the preliminary $13~\TeV$ luminosity calibration released in February 2018, based on van-der-Meer beam-separation scans in 2017~\cite{ATLAS:pileup_2015_2017}.}
+ \label{fig:mu_2015_2017}
+\end{figure}

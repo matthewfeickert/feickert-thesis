@@ -269,14 +269,45 @@ It is seen from \Cref{fig:VR_jets_lead_subjet}, \Cref{fig:VR_jets_sublead_subjet
 Flavor tagging of jets is the process of determining a ``flavor'' label --- light, charm $(c)$, or bottom $(b)$ --- to characterize the type of hadrons in the hadronic shower that resulted in the jet.
 Flavor tagging is vital in precision measurements in the top quark sector%
 \footnote{Noting that the top quark has a branching fraction of $\mathcal{B}\left(t \to W b\right) = 0.96_{-0.066}^{+0.068}\left(\mathrm{stat.}\right)_{-0.052}^{+0.064}\left(\mathrm{syst.}\right)$~\cite{Abazov:2010tm,PhysRevD.98.030001}.}%
-, in the search for the Higgs boson as well as new phenomena decaying to $b\bar{b}$ states, and, in particular importance to this thesis analysis, the suppression of background processes that contain predominantly light-flavor jets~\cite{PERF-2012-04}.
+, in the search for the Higgs boson as well as new phenomena decaying to $b\bar{b}$ states, and, of particular importance to this thesis analysis, the suppression of background processes that contain predominantly light-flavor jets~\cite{PERF-2012-04}.
 Of particular great interest in flavor tagging is $b$-tagging (labeling of jets containing $b$-hadrons --- $b$-jets), as $b$-hadrons are often produced in decays of heavy resonances that could be indicative of interesting new physics.
 $b$-hadrons have a number of unique properties that distinguish them, as seen in \Cref{fig:b_jet}.
 Notable among them is their long lifetime, discussed in \Cref{appendix:B_hadron_lifetimes}, of approximately $1.5~\mathrm{ps}$ which gives a characteristic length scale of $c\tau \sim 0.45~\mathrm{mm}$.
 This is a significant enough flight distance of the $B$ meson before it decays, that this subsequent hadron shower and jet is viewed as having a secondary vertex (SV) displaced from the original jet vertex.
-This secondary vertex is detectable as the vertex resolution in ATLAS for $50$ associated tracks is approximately $20~\mu\mathrm{m}$ in $r$-$\phi$ by $30~\mu\mathrm{m}$ in $z$~\cite{Choi:2271033,ATL-PHYS-PUB-2015-026}.
+This secondary vertex is detectable as the vertex resolution in ATLAS for $50$ associated tracks is approximately $20~\mu\mathrm{m}$ in $r$-$\phi$ by $30~\mu\mathrm{m}$ in $z$~\cite{Choi:2271033,ATL-PHYS-PUB-2015-026}, as seen in \Cref{fig:primary_vertex_resolution}.
 $B$ mesons also have a mass of approximately $5~\GeV$.
 Collectively, these properties can be exploited by $b$-tagging algorithms to discriminate $b$-jets from light or charm jets~\cite{ATL-PHYS-PUB-2015-022,ATL-PHYS-PUB-2016-012,ATL-PHYS-PUB-2017-013,PERF-2016-05}.
+
+\begin{figure}[htbp]
+ \centering
+ \begin{subfigure}[t]{0.315\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{event_reconstruction/primary_vertex_resolution_x.pdf}
+  \caption[The primary vertex resolution in $x$.]{%
+   The primary vertex resolution in $x$.}
+  \label{fig:primary_vertex_resolution_x}
+ \end{subfigure}%
+ \quad
+ \begin{subfigure}[t]{0.315\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{event_reconstruction/primary_vertex_resolution_y.pdf}
+  \caption[The primary vertex resolution in $y$.]{%
+   The primary vertex resolution in $y$.}
+  \label{fig:primary_vertex_resolution_y}
+ \end{subfigure}%
+ \quad
+ \begin{subfigure}[t]{0.315\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{event_reconstruction/primary_vertex_resolution_z.pdf}
+  \caption[The primary vertex resolution in $z$.]{%
+   The primary vertex resolution in $z$.}
+  \label{fig:primary_vertex_resolution_z}
+ \end{subfigure}%
+ \caption[The primary vertex resolution as a function of the average number of tracks in the two vertices used in the Split-Vertex method for low-$\mu$ data compared to Monte Carlo simulation.]{%
+  The primary vertex resolution (with the reconstruction resolution corrected by the appropriate scale-factor) as a function of the average number of tracks in the two vertices used in the Split-Vertex method for low-$\mu$ data compared to Monte Carlo simulation (\textsc{Pythia8}).
+  This measurement uses a subset of a low-$\mu$ dataset corresponding to an integrated luminosity of $216.9~\mu\textrm{b}^{-1}$~\cite{ATL-PHYS-PUB-2015-026}.}
+ \label{fig:primary_vertex_resolution}
+\end{figure}
 
 \begin{figure}[htbp]
  \centering
@@ -302,11 +333,11 @@ The output of IP3D is shown in \Cref{fig:IP3D_LLR} for the 2017 and 2018 data ta
 The 2016 optimization used a training sample of $50\%$ $t\bar{t}$ and $50\%$ $\Zprime \to t\bar{t}$.
 In the 2017 data taking a Recurrent Neural Network (RNN) impact parameter tagger (RNNIP)~\cite{ATL-PHYS-PUB-2017-003} was added as well, that exploits the correlations between the impact parameters between the tracks, as $b$-jets tend to have multiple highly significant IP tracks, while this is not the case for light flavor jets, as seen in \Cref{fig:RNNIP_track_significance}.
 There are additional displaced secondary vertex finding algorithms (SV1), and Kalman filter algorithms (JetFitter) that exploit that roughly $90\%$ of $b$-jets contain a $c$-jet and so follow this decay chain.
-Additionally a Soft Muon Tagger is also added which in the 2017 data taking based on
+Additionally a Soft Muon Tagger is also added in the 2017 data taking based on
 the reconstruction of muons from the semileptonic decay of $b$-hadrons and $c$-hadrons.
 The \texttt{MV2c10} BDT combines all these inputs and then gives a discriminant score indicative of how $b$-jet-like or how un-$b$-jet-like the inputs are given its training, as seen in \Cref{fig:MV2c10_BDT}.
-The \texttt{MV2c10} BDT is trained using $t\bar{t}$ for the 2016 optimization, and a hybrid sample of $t\bar{t}$ and $\Zprime$ to cover a wide $p_{T}$ spectrum for the 2017 optimization.
-The performance of the BDT is calibrated in data using jets that contain a muon, indicative of the semileptonic decay of a $b$-hadron, and a correction scale factor is derived.
+The \texttt{MV2c10} BDT is trained using $t\bar{t}$ for the 2016 optimization, and a hybrid sample of $t\bar{t}$ and a dedicated high mass sample of $\Zprime$ decaying to jets, with nominal mass of $m = 4~\TeV$, to cover a wide $p_{T}$ spectrum for the 2017 optimization, as seen in \Cref{fig:hybrid_sample_jets}~\cite{ATL-PHYS-PUB-2017-013}.
+The performance of the BDT is calibrated in data using jets that contain a muon, indicative of the semileptonic decay of a $b$-hadron, and a correction scale factor is derived~\cite{PERF-2016-05}.
 
 \begin{figure}[htbp]
  \centering
@@ -418,10 +449,32 @@ The performance of the BDT is calibrated in data using jets that contain a muon,
    The light-flavor jet (dashed line) and $c$-jet rejection factors (solid line) as a function of the $b$-jet tagging efficiency of the \texttt{MV2c10} $b$-tagging algorithm.}
   \label{fig:MV2c10_background_rejection}
  \end{subfigure}%
- \caption[The performance of the \texttt{MV2c10} BDT $b$-tagging algorithm in simulated $t\bar{t}$ events.]{%
-  The performance of the \texttt{MV2c10} BDT $b$-tagging algorithm in simulated $t\bar{t}$ events.
+ \caption[The performance of the \texttt{MV2c10} BDT $b$-tagging algorithm for the 2016 optimization in simulated $t\bar{t}$ events.]{%
+  The performance of the \texttt{MV2c10} BDT $b$-tagging algorithm for the 2016 optimization in simulated $t\bar{t}$ events.
   The performance was evaluated on $t\bar{t}$ events simulated using \textsc{Powheg} interfaced to \textsc{Pythia6}~\cite{PERF-2016-05}.}
  \label{fig:MV2c10_BDT}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{event_reconstruction/hybrid_sample_light_jets.eps}
+  \caption[Distribution of the jet transverse momentum for light-flavor jets in the $\Zprime$ and $t\bar{t}$ sample.]{%
+   Distribution of the jet transverse momentum for light-flavor jets in the $\Zprime$ and $t\bar{t}$ sample.}
+  \label{fig:hybrid_sample_light_jets}
+ \end{subfigure}%
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{event_reconstruction/hybrid_sample_b_jets.eps}
+  \caption[Distribution of the jet transverse momentum for $b$-jets in the $\Zprime$ and $t\bar{t}$ sample.]{%
+   Distribution of the jet transverse momentum for $b$-jets in the $\Zprime$ and $t\bar{t}$ sample.}
+  \label{fig:hybrid_sample_b_jets}
+ \end{subfigure}%
+ \caption[Distribution of the jet transverse momentum of the 2017 $\Zprime$ sample compared to that of $t\bar{t}$ events for light-flavor and $b$-jets.]{%
+  Distribution of the jet transverse momentum of the 2017 $\Zprime$ sample compared to that of $t\bar{t}$ events for light-flavor and $b$-jets~\cite{ATL-PHYS-PUB-2017-013}.}
+ \label{fig:hybrid_sample_jets}
 \end{figure}
 
 \clearpage
