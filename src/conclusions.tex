@@ -13,8 +13,36 @@ Given the major systematic uncertainties in \Cref{sec:systematic_uncertainties},
 As the ATLAS calorimeter system is designed to give excellent energy resolution over mass resolution, it will be interesting to see how improvements in jet technologies can improve the analysis.
 There is active work in ATLAS to build particle flow into \largeR{} jets, which with the addition of tracks from the ID pointing into the calorimeter would improve the mass resolution of the analysis.
 Additionally, the use of new substructure based triggers can improve the signal event selection.
-Both searches will benefit from the full Run 2 ATLAS dataset of approximately $140~\ifb$, as the search is dominated by statistical uncertainties.
-However, naive scaling of the expected significance by the root of the ratio of the luminosities, $\left(140~\ifb/80.5\ifb\right)^{-1/2}$, brings the expected sensitivity of the Higgs analysis to only $0.37\,\sigma$ --- further motivating the importance of optimizing the analysis and exploring new techniques.
+
+In both the ATLAS and CMS searches of this analysis, a signal strength greater than the Standard Model expectation for the Higgs boson at $m_{H} = 125~\GeV$ has been observed.
+Neither of these excesses is significant, given their uncertainties.
+However, looking towards the future as both experiments take more data, if the observed signal strength holds at the luminosity weighted mean,
+\[
+ \braket{\mu} = \sum_{i} f_{i}\,\mu_{i} \pm \left(\sum_{i} \left(f_{i}\sigma_{i}\right)^{2}\right)^{1/2} = 4.7_{-2.82}^{+2.83}, \qquad f_{i} = \frac{L_{i}}{\displaystyle\sum_{i}L_{i}},~i \in \left\{\textrm{ATLAS}, \textrm{CMS}\right\}
+\]
+then the significance of the observed deviation from the Standard Model expected value of $\mu_{H, \textrm{SM}}=1$ would grow given the proportional decrease%
+\footnote{Scaling the statistical uncertainty component of the total uncertainty on the signal strength with increasing luminosity by $\left(L/L_{0}\right)^{-1/2}$.}
+in the statistical uncertainty, as shown in \Cref{table:signal_significance_lumi_scaling}.
+\Cref{table:signal_significance_lumi_scaling} assumes no improvements to the systematic or theoretical uncertainties, and highlights the integrated luminosities at $\sqrt{s}=13~\TeV$ that the ATLAS analysis will have available at the end of Run 2 of the LHC, the end of Run 3, and the $\sqrt{s}=13~\TeV$ equivalent luminosity%
+\footnote{Given a roughly $10\%$ increase in the Higgs production cross section at $\sqrt{s}=14~\TeV$.}
+at $\sqrt{s}=14~\TeV$.
+It is seen that even with great increases in luminosity the analysis will be limited by the the systematic and theoretical uncertainties.
+This further motivates the importance of optimizing the analysis and exploring new techniques, in addition to closely watching the improvements of the theoretical community.
+
+\begin{table}[htbp]
+ \centering
+ \caption[Values of the observed signal significance and total uncertainty on the observed signal strength for increasing integrated luminosity.]{%
+  Values of the observed signal significance and total uncertainty on the observed signal strength for increasing integrated luminosity.
+  Improvements are assumed for only the the statistical uncertainty component of the total uncertainty of the analysis.}
+ \label{table:signal_significance_lumi_scaling}
+ \begin{tabular}{@{}rrrl@{}} \toprule
+  Integrated Luminosity~$\left(\ifb\right)$ & Total Uncertainty  & $\mu$ Significance & Note                     \\ \midrule
+  $140$ at $\sqrt{s}=13~\TeV$               & $_{-2.29}^{+2.31}$ & $1.62\,\sigma$     & Full Run 2 dataset       \\
+  $440$ at $\sqrt{s}=13~\TeV$               & $_{-1.99}^{+2.01}$ & $1.87\,\sigma$     & $300~\ifb$ in Run 3      \\
+  $3000$ at $\sqrt{s}=14~\TeV$              & $_{-1.85}^{+1.87}$ & $2.01\,\sigma$     & $3300~\ifb$ at $13~\TeV$ \\
+  \bottomrule
+ \end{tabular}
+\end{table}
 
 In addition to the measurement of boosted $\Hbb$, a search for low mass leptophobic dark matter mediator $\Zprime$ with democratic vector-axial couplings to the Standard Model quarks was performed using the same dataset.
 No significant excess of events is observed in the data, resulting in competitive limits being set for exotic dark matter mediator $\Zprime$ models that exclude at the $95\%$ credibility level mediator models with $g_{q} = 0.25$ below masses of $m_{\Zprime} < 200~\GeV$.
