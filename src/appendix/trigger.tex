@@ -25,7 +25,7 @@ The purpose of the $b$-jet trigger to provide effective $b$-jet identification a
 This still needs to be done quickly, but given that $b$-tagging is being performed on each jet candidate that passes other selection criteria tracking must also be performed.
 As a result, the $b$-jet triggers are the leading consumers of CPU out of all triggers in the ATLAS trigger menu.
 In Run 2 to address this issue a new CPU and time saving measure was introduced~\cite{Hetherly:2313140}.
-Instead of running the track matching algorithms in each \gls{RoI} that existed for the event, even if there was substantial overlap between the RoIs, all RoIs --- regardless of if they have topologically overlap --- are merged into a single ``Super-RoI'', as seen in \Cref{fig:all_ROI_vs_superROI}.
+Instead of running the track matching algorithms in each \gls{RoI} that existed for the event, even if there was substantial overlap between the RoIs, all RoIs --- regardless of if they have topologically overlap --- are merged into a single ``Super-RoI,'' as seen in \Cref{fig:all_ROI_vs_superROI}.
 Once the Super-RoI has been created, fast tracking is run in the Super-RoI to find a primary vertex.
 Once a primary vertex has been found, precision tracking is then run in each of the original RoIs, but with the tracks constrained by the Super-RoI primary vertex.
 
