@@ -4,7 +4,7 @@
 
 The Standard Model of particle physics is the collection of \glspl{QFT} that describes the interactions of elementary matter with three of the four%
 \footnote{Gravity is noticeably absent, as at the time of writing there is no working quantum theory of gravitation.}
-forces of Nature: the electromagnetic force, the weak nuclear force, and the strong nuclear force.
+known forces of Nature: the electromagnetic force, the weak nuclear force, and the strong nuclear force.
 These theories collectively form a symmetry group%
 \footnote{$\mathrm{SU}(n)$ is the special unitary group of degree $n$ which is the Lie group  of $n\times n$ unitary matrices with determinant of $1$.
  As the group is non-Abelian the gauge symmetries that belong to these groups are known as ``non-Abelian gauge symmetires.''}
@@ -14,8 +14,8 @@ Though known to be an incomplete model, it has proven to be a successful guide a
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{theory/ATLAS_SMSummary_FiducialXsect_rotated.eps}
- \caption[Summary of several Standard Model total and fiducial production cross section measurements, corrected for leptonic branching fractions, compared to the corresponding theoretical expectations.]{%
-  Summary of several Standard Model total and fiducial production cross section measurements, corrected for leptonic branching fractions, compared to the corresponding theoretical expectations.
+ \caption[Summary of several Standard Model total and fiducial production cross section measurements using LHC proton-proton collisions, corrected for leptonic branching fractions, compared to the corresponding theoretical expectations.]{%
+  Summary of several Standard Model total and fiducial production cross section measurements using LHC proton-proton collisions, corrected for leptonic branching fractions, compared to the corresponding theoretical expectations.
   All theoretical expectations were calculated at NLO or higher.
   The dark-color uncertainty bar represents the statistical uncertainty.
   The lighter-color uncertainty bar represents the full uncertainty, including systematics and luminosity uncertainties.
@@ -23,7 +23,7 @@ Though known to be an incomplete model, it has proven to be a successful guide a
   Uncertainties for the theoretical predictions are quoted from the original ATLAS papers.
   They were not always evaluated using the same prescriptions for PDFs and scales.
   The $W\gamma$ and $Z\gamma$ theoretical cross-sections have non-perturbative corrections applied to the NNLO fixed order calculations~\cite{STDM-2011-17}.
-  Not all measurements are statistically significant yet~\cite{web:ATLAS_SM_summary_plots}.}
+  Not all measurements are yet statistically significant~\cite{web:ATLAS_SM_summary_plots}.}
  \label{fig:cross_section_experiment_theory}
 \end{figure}
 
@@ -39,7 +39,7 @@ The electrically charged $W$ bosons mediate charged flavor changing interactions
 The eight%
 \footnote{As a result of the $\mathrm{SU}(3)$ symmetry.}
 massless gluons mediate the strong nuclear force and so have couplings with all particles that have color charge: the quarks and the gluons themselves.
-The coupling strength of the gluons varies with distance --- being extremely strong at close ranges and then sharply dropping of at the distance of confinement (approximately the radius of the proton).
+The coupling strength of the gluons varies with distance between color charged particles --- being extremely strong at close ranges and then sharply dropping of at the distance of confinement (approximately the radius of the proton).
 Finally, the Higgs boson imparts mass to particles that it couples to, with stronger coupling strengths manifesting as larger masses.
 This process --- which has been come to be known as the ``Higgs mechanism'' --- gives rise to the non-zero mass of the $W^{\pm}$ and $Z$ through a processes called ``electroweak symmetry breaking'' and will be discussed more throughly in \Cref{section:EWSB}.
 
@@ -53,7 +53,7 @@ This process --- which has been come to be known as the ``Higgs mechanism'' --- 
  \label{fig:Standard_Model}
 \end{figure}
 
-The following discussion of the theories that compose the Standard Model is my interpretation of many post-lecture conversations with Kent Hornbostel and readings of~\cite{Pich:2005mk}.
+The following discussion of the theories that compose the Standard Model is my summary of many post-lecture conversations with former SMU professor Kent Hornbostel and readings of~\cite{Pich:2005mk}.
 
 \section{Quantum Field Theories}\label{section:QFT}
 
@@ -63,7 +63,7 @@ All possible physical interactions of these fields are encoded in the terms of t
 Given the ubiquity of the use of the Lagrangian density in calculations it will be interchangeably referred to as the ``Lagrangian'' henceforth, with hopefully minimal confusion.
 Additionally, the Lagrangian density must be locally gauge invariant; meaning that it is invariant under certain Lie group transformations.
 Local gauge invariance is an expression that representations of the Lagrangian density that result in the same physical interactions must be equivalently valid.
-A local gauge symmetry is distinct from a global gauge symmetry, as would arise in Noether's theorem, in that a local gauge symmetry results in a gauge invariance for the point of consideration, but is not guaranteed to be valid in all cases.
+A local gauge symmetry is distinct from a global gauge symmetry, as would arise in Noether's theorem, in that a local gauge symmetry results in a gauge invariance for the spacetime point of consideration, but is not guaranteed to be valid in all cases.
 That is, a global gauge symmetry is in some sense a special case of a local gauge symmetry, where the symmetry applies for all points.
 As an example, consider the Dirac Lagrangian
 \begin{equation}
@@ -86,7 +86,9 @@ then for the Lagrangian
 \[
  \Lagrangian \to \bar{\psi} \left(i \gamma^{\mu}\partial_{\mu} - m\right)\psi + \bar{\psi}\, \gamma^{\mu} \left(\partial_{\mu} \theta\right)\psi
 \]
-to preserve the definition of the four-gradient requires the addition of a gauge field $A_{\mu}(x)$ to form the covariant derivative,
+to preserve the definition of the four-gradient under such a local transformation requires the addition of a gauge field $A_{\mu}(x)$ to form the covariant%
+\footnote{``Covariant'' in that it transforms with the gauge fields so that the derivative remains unchanged.}
+derivative,
 \[
  D_{\mu} \equiv \partial_{\mu} - iq A_{\mu}(x),
 \]
@@ -115,7 +117,7 @@ The Lagrangian density for QED --- which describes the interactions of a spin-$1
  \label{eq:QED_Lagrangian}
 \end{equation}
 where $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the electromagnetic field strength tensor.
-In the QED Lagrangian, the kinetic term $-\frac{1}{4}F_{\mu\nu} F^{\mu\nu}$ describes the behavior of the electromagnetic field --- which with the Euler-Lagrange equations result in Maxwell's equations --- and the term $\bar{\psi} \left(i \slashed{D} - m\right)\psi$ gives the interactions of the electromagnetic field with charged particles.
+In the QED Lagrangian, the kinetic term $-\frac{1}{4}F_{\mu\nu} F^{\mu\nu}$ describes the behavior of the electromagnetic field --- which along with the Euler-Lagrange equations result in Maxwell's equations --- and the term $\bar{\psi} \left(i \slashed{D} - m\right)\psi$ gives the interactions of the electromagnetic field with charged particles.
 
 \subsection{Quantum Chromodynamics (QCD)}\label{subsection:QCD}
 
@@ -134,12 +136,20 @@ The term $\sum_{f} i \bar{\psi}_{f} D_{\mu} \gamma^{\mu} \psi_{f}$ with covarian
  D_{\mu} = \partial_{\mu} - i g_{s} G_{\mu}^{a} T^{a},
 \]
 where $T^{a}$ are the generators of the $\mathrm{SU}(3)$ symmetry group, is the kinetic term for the quarks and describes the interactions between quarks and gluons.
+All terms in the Lagrangian density that involve quarks and gluons are color singlets, which promotes the idea of ``color confinement.''
+In Nature this color confinement is seen empirically by the observation of quarks only in bound states with other quarks that are colorless --- i.e., free quarks have never been directly observed.
+These bound states of quarks are known as ``hadrons.''
+Half-integer spin hadrons formed from an even number of quarks are known as ``mesons,'' and integer spin hadrons formed from an odd number of quarks are known as ``baryons.''
+In strong interactions at hadron colliders there is enough energy to break individual quarks and gluons out of their hadronic forms, however these free partons then immediately ``hadronize'' by forming bound states with other quarks, even if that requires sacrificing some of their energy to pull another quark from the vacuum.
+This process of hadronization, and subsequent decays, creates a shower of hadrons and leptons that is collectively referred to as a ``jet'' and will be discussed more in \Cref{section:jets}.
+Jets play an important role in understanding the physics of QCD, and the observation of three jet systems is the best experimental evidence of the existence of gluons~\cite{Brandelik:1979bd,Ellis:1978wp,Andersson:1983ia,Brandelik:1980vs}.
+
 QCD is a deeply rich theory that deserves much attention (c.f.~\cite{Campbell:2017hsr}), but for the purposes of this thesis it will only be introduced here to motivate a more complete picture of the QFTs that build the Standard Model.
 
 \section{Spontaneous Symmetry Breaking}\label{section:symmetry_breaking}
 
 Spontaneous symmetry breaking is the process by which a physical system that has a symmetry does not express that symmetry for perturbations around the ground state of the system.
-It is worth noting, given the somewhat confusing nature of the use of ``breaking,'' that the symmetry of the Lagrangian is not destroyed under symmetry breaking, but rather is not manifest given the ground state the system has been perturbed into.
+It is worth noting, given the somewhat confusing nature of the use of ``breaking,'' that the symmetry of the Lagrangian is not destroyed under symmetry breaking, but rather is not manifest given the ground state into which the system has been perturbed.
 A classical example of spontaneous symmetry breaking is that of a pen being balanced upright on its tip on a table.
 In the unstable equilibrium state of the pen being balanced (the high energy/excited state configuration) the pen possesses a $\mathrm{U}(1)$ symmetry of rotation about its axis.
 If the pen is perturbed from this state by a small vibration it will fall into its ground state onto the surface of the table and will lie along some direction ``breaking'' the symmetry that was exhibited by the previous state.
@@ -147,7 +157,7 @@ Another example is that of Heisenberg’s model of the ferromagnet, which has Ha
 This Hamiltonian also possesses as rotational symmetry above the Curie temperature --- rotating all the spins by some amount leaves the total spin of the system invariant.
 However, below the Curie temperature a non-zero magnetization will arise along a particular direction which will cause all spins to become aligned parallel to it, breaking the symmetry.
 
-A final illustrative toy model, that will prove useful in the context of the Higgs mechanism, is that of a complex scalar field
+A final illustrative toy model, that will prove useful in the context of the Higgs mechanism, is that of a massive complex scalar field
 \[
  \phi = \frac{1}{\sqrt{2}} \left(\phi_{1} + i \phi_{2}\right),
 \]
@@ -260,14 +270,14 @@ Given the covariant derivative, \Cref{eq:EW_derivative}, and resulting Lagrangia
 \]
 it is seen that there are interactions between the fermions and the vector gauge fields (dropping fermion index for compactness),
 \[
- \Lagrangian \subset g_{2} \bar{\psi}_{1} \gamma^{\mu}\vec{W}_{\mu} \psi_{1} + g_{1} B_{\mu} \sum_{j=1}^{3} y_{j}\bar{\psi}_{j} \gamma^{\mu} \,\psi_{j}\,,
+ \Lagrangian \subset g_{2} \bar{\psi}_{1} \gamma^{\mu}\vec{W}_{\mu} \psi_{1} + g_{1} B_{\mu} \sum_{j=1}^{3} y_{j}\bar{\psi}_{j} \gamma^{\mu} \,\psi_{j}\,.
 \]
-where the first term contains the $\mathrm{SU}(2)_{L}$ matrix
+The first term, which contains the $\mathrm{SU}(2)_{L}$ matrix
 \[
  \vec{W}_{\mu} = W_{\mu}^{i}(x) \frac{\tau^{i}}{2} = \frac{1}{\sqrt{2}} \begin{pmatrix}%
   \sqrt{2} W_{\mu}^{3} & W_{\mu}^{\dagger}     \\
   W_{\mu}              & -\sqrt{2} W_{\mu}^{3}
- \end{pmatrix}
+ \end{pmatrix}\,,
 \]
 gives rise to the charged current interactions of the charged $W$ boson fields
 \[
@@ -365,7 +375,7 @@ The Higgs potential
  \label{eq:Higgs_potential}
 \end{equation}
 shown in \Cref{fig:Higgs_potential}, is chosen such that $\mu^{2} < 0$ and $\lambda > 0$ to provide stable minima.
-As before in \Cref{section:symmetry_breaking} with the case of the toy model of the complex scalar field, once a ground state has been arbitrarily chosen this spontaneously breaks the $\mathrm{SU}(2)_{L} \otimes \mathrm{U}(1)_{Y}$ symmetry to the subgroup $\mathrm{U}(1)_{\textrm{QED}}$.
+As before in \Cref{section:symmetry_breaking} with the case of the toy model of the massive complex scalar field, once a ground state has been arbitrarily chosen this spontaneously breaks the $\mathrm{SU}(2)_{L} \otimes \mathrm{U}(1)_{Y}$ symmetry to the subgroup $\mathrm{U}(1)_{\textrm{QED}}$.
 This time, the four fields of the complex scalar doublet are reparameterized into
 \[
  \phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix}
@@ -396,7 +406,7 @@ of $v$ has been calculated independently~\cite{Plehn:2005nk} to be approximately
 It is also noted that in further interactions the quarks and charged leptons acquire a mass term from Yukawa couplings~\cite{Yukawa:1935xg}, $c_i$, with the Higgs field
 \[
  \begin{split}
-  \Lagrangian_{\textrm{Yukawa}} &= \frac{1}{\sqrt{2}} \left(v+h\right) \left(c_{1}\bar{d}d + c_{2}\bar{u}u + c_{3}\bar{e}e\right) \\
+  \Lagrangian_{\textrm{Yukawa}} &= -\frac{1}{\sqrt{2}} \left(v+h\right) \left(c_{1}\bar{d}d + c_{2}\bar{u}u + c_{3}\bar{e}e\right) \\
   &= - \left(1 + \frac{h}{v}\right)\left(m_{d}\bar{d}d + m_{u}\bar{u}u + m_{e}\bar{e}e\right)\,.
  \end{split}
 \]
@@ -406,8 +416,8 @@ The neutrinos notably do not participate in this interaction, and their observed
  \centering
  \includegraphics[width=\linewidth]{theory/higgs_potential.pdf}
  \caption[Sketch of the Higgs potential shape.]{%
- Sketch of the Higgs potential's ``winebottle'' shape.
- The trough (the bottom of the eponymous winebottle) are the infinite choices of minima at the vacuum expectation value, $v$, that can be chosen from upon spontaneously breaking the $\mathrm{SU}(2)_{L} \otimes \mathrm{U}(1)_{Y}$ symmetry to the subgroup $\mathrm{U}(1)_{\textrm{QED}}$.}
+ Sketch of the Higgs potential's ``wine bottle'' shape.
+ The trough (the bottom of the eponymous wine bottle) are the infinite choices of minima at the vacuum expectation value, $v$, that can be selected upon spontaneously breaking the $\mathrm{SU}(2)_{L} \otimes \mathrm{U}(1)_{Y}$ symmetry to the subgroup $\mathrm{U}(1)_{\textrm{QED}}$.}
  \label{fig:Higgs_potential}
 \end{figure}
 
@@ -416,7 +426,7 @@ The neutrinos notably do not participate in this interaction, and their observed
 The massive Higgs boson produced though the ``Higgs mechanism'' approach to electroweak symmetry breaking is a particle of great interest, as the interactions of the Higgs field with all other elementary particle fields generates their mass.
 As a result, through these couplings the Higgs boson can be produced through a large number of interactions.
 As this thesis is focused on experimental efforts at CERN's \gls{LHC}, the production mechanisms of interest will be the leading ones in a hadron collider with center-of-mass energy $\sqrt{s}=13~\TeV$.
-In decreasing cross section, those production modes are: gluon-gluon fusion (ggF), vector boson fusion (VBF), vector boson-associated production or ``Higgsstrahlung'' (VH), and associated production with $t\bar{t}$ ($t\bar{t}H$), seen in \Cref{fig:Higgs_production_diagrams}.
+In order of decreasing cross section, those production modes are: gluon-gluon fusion (ggF), vector boson fusion (VBF), vector boson-associated production or ``Higgsstrahlung'' (VH), and associated production with $t\bar{t}$ ($t\bar{t}H$) and $b\bar{b}$ ($b\bar{b}H$), seen in \Cref{fig:Higgs_production_diagrams}.
 The predicted cross section for these production modes are given in \Cref{table:Higgs_production_cross_section} and plotted with theory uncertainties in \Cref{fig:Higgs_production_cross_section_theory}.
 
 \begin{figure}[htbp]
@@ -448,8 +458,8 @@ The predicted cross section for these production modes are given in \Cref{table:
  \begin{subfigure}[t]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{theory/Higgs_ttbar_associated.pdf}
-  \caption[Feynman diagram for Higgs production through associated production with $t\bar{t}$.]{%
-   Feynman diagram for Higgs production through associated production with $t\bar{t}$.}
+  \caption[Feynman diagram for Higgs production through associated production with heavy quarks ($t\bar{t}$ and $b\bar{b}$).]{%
+   Feynman diagram for Higgs production through associated production with with heavy quarks ($t\bar{t}$ and $b\bar{b}$).}
   \label{fig:Higgs_associated_production_ttbar}
  \end{subfigure}%
  \caption[The leading production modes at the LHC for Higgs bosons.]{%
@@ -461,12 +471,12 @@ The predicted cross section for these production modes are given in \Cref{table:
  \centering
  \caption[The Standard Model Higgs boson production cross sections in units of pb for $m_{H}=125~\GeV$ in $pp$ collisions as a function of the center-of-mass energy, $\sqrt{s}$, at the LHC.]{%
   The SM Higgs boson production cross sections in units of pb for $m_{H}=125~\GeV$ in $pp$ collisions as a function of the center-of-mass energy, $\sqrt{s}$, at the LHC.
-  The predictions for the ggF channel include the latest N3LO results leading to reduced theoretical uncertainties by a factor around 2 compared to the N2LO results~\cite{PDG2018:Ch11}.}
- \begin{tabular}{@{}rrrrrrr@{}} \toprule
-  $\sqrt{s}~(\TeV)$ & ggF                  & VBF                  & $WH$                 & $ZH$                 & $t\bar{t}H$           & Total~(pb) \\ \midrule
-  $13$              & $48.6_{-5\%}^{+5\%}$ & $3.78_{-2\%}^{+2\%}$ & $1.37_{-2\%}^{+2\%}$ & $0.88_{-5\%}^{+5\%}$ & $0.50_{-13\%}^{+9\%}$ & $55.1$     \\
+  The predictions for the ggF channel include the latest N3LO results leading to reduced theoretical uncertainties by a factor around 2 compared to the N2LO results~\cite{PDG2018:Ch11,deFlorian:2016spz}.}
+ \begin{tabular}{@{}rrrrrrrr@{}} \toprule
+  $\sqrt{s}~(\TeV)$ & ggF                  & VBF                  & $WH$                 & $ZH$                 & $t\bar{t}H$           & $b\bar{b}H$            & Total~(pb) \\ \midrule
+  $13$              & $48.6_{-5\%}^{+5\%}$ & $3.78_{-2\%}^{+2\%}$ & $1.37_{-2\%}^{+2\%}$ & $0.88_{-5\%}^{+5\%}$ & $0.50_{-13\%}^{+9\%}$ & $0.49_{-24\%}^{+20\%}$ & $55.59$    \\
   \addlinespace[0.3em]
-  $14$              & $54.7_{-5\%}^{+5\%}$ & $4.28_{-2\%}^{+2\%}$ & $1.51_{-2\%}^{+2\%}$ & $0.99_{-5\%}^{+5\%}$ & $0.60_{-13\%}^{+9\%}$ & $62.1$     \\
+  $14$              & $54.7_{-5\%}^{+5\%}$ & $4.28_{-2\%}^{+2\%}$ & $1.51_{-2\%}^{+2\%}$ & $0.99_{-5\%}^{+5\%}$ & $0.60_{-13\%}^{+9\%}$ & $0.55_{-24\%}^{+20\%}$ & $62.65$    \\
   \bottomrule
  \end{tabular}\label{table:Higgs_production_cross_section}%
 \end{table}
@@ -577,6 +587,10 @@ from QCD processes, identifying jets coming from resonant $H \to b\bar{b}$ event
 \end{figure}
 
 \section{Extensions to the Standard Model}
+
+From astronomical observations of the rotation speeds of galaxies~\cite{Rubin:1970zza,Begeman:1991iy}, precision measurements of the cosmic microwave background~\cite{2013ApJS:darkmatter,Akrami:2018vks}, and gravitational lensing measurements~\cite{Trimble:10.1146,Bertone:2004pz,Feng:2010gw}, there is evidence that in addition to the normal matter of the Standard Model in the Universe there exists ``dark matter'' that constitutes approximately $26.8\%$ of the energy density of the Universe.
+Dark matter is so far seen to interact with normal matter only through gravitation.
+As it does not interact with normal matter through the electroweak or strong nuclear force, any interactions with normal matter are outside of the Standard Model.
 
 To incorporate a model of particle dark matter there are a number of existing extensions of the Standard Model.
 Among these are frameworks of simplified dark matter models~\cite{EXOT-2017-32,Jacques:2016dqz,Kahlhoefer:2015bea,Alves:2015pea} where new particles mediate the interactions of dark matter, $\chi$, with the Standard Model particles.
