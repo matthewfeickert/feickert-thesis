@@ -350,7 +350,7 @@ and the alternative model, the Formal Laurent series,
  f_{n} \left(x \middle|\,\vec{\theta}\right) = a \sum_{i=0}^{n} \frac{\theta_{i}}{x^{i+1}}, \quad a=10^{5},\,x = \frac{m_{J} - 150~\GeV}{80~\GeV},
  \label{eq:formal_laurent}
 \end{equation}
-The parameterization of the polynomial exponential function maps the independent variable to $x \in \left[-1,1\right]$ for the fit range of $[70,230]~\GeV$, and the parameterization of the Formal Laurent series maps the independent independent variable to $x \in \left[1,2\right]$ over the same range.
+The parameterization of the polynomial exponential function maps the independent variable to $x \in \left[-1,1\right]$ for the fit range of $[70,230]~\GeV$, and the parameterization of the Formal Laurent series maps the independent variable to $x \in \left[1,2\right]$ over the same range.
 This reparameterization is done, as I observed that it improved the numerical stability of the fit.
 The scaling factor, $a$, for the Formal Laurent is not a free parameter; it is empirically chosen to keep the scale of the parameters at $\mathcal{O}(1)$.
 The Formal Laurent series serves as a cross check for the polynomial exponential function models.
@@ -402,9 +402,9 @@ Given this contention and the very strong favoring of the 5 parameter model in t
   The observed \pvalue{} for the likelihood ratio test and $F$-test for comparing the polynomial exponential model with different number of parameters.}
  \label{table:stat_test_parameters}
  \begin{tabular}{@{}crr@{}} \toprule
-  Parameters in compared models & likelihood ratio test \pvalue{} & $F$-test test \pvalue{} \\ \midrule
-  4 v. 5                        & $0.0001$                        & $0.0748$                \\
-  5 v. 6                        & $0.3355$                        & $0.4867$                \\
+  Parameters in compared models & likelihood ratio test \pvalue{} & $F$-test \pvalue{} \\ \midrule
+  4 v. 5                        & $0.0001$                        & $0.0748$           \\
+  5 v. 6                        & $0.3355$                        & $0.4867$           \\
   \bottomrule
  \end{tabular}
 \end{table}
@@ -751,10 +751,10 @@ Given the Formal Laurent series also robustly models the multijet continuum dist
  \caption{The observed \pvalue{}s for the likelihood ratio test and $F$-test for comparing the Formal Laurent model with different number of parameters.}
  \label{table:stat_test_parameters_laurent}
  \begin{tabular}{@{}crr@{}} \toprule
-  Parameters in compared models & likelihood ratio test \pvalue{} & $F$-test test \pvalue{} \\ \midrule
-  3 v. 4                        & $<0.0001$                       & $0.0001$                \\
-  4 v. 5                        & $0.0598$                        & $0.3500$                \\
-  5 v. 6                        & $1$                             & $0.5393$                \\
+  Parameters in compared models & likelihood ratio test \pvalue{} & $F$-test \pvalue{} \\ \midrule
+  3 v. 4                        & $<0.0001$                       & $0.0001$           \\
+  4 v. 5                        & $0.0598$                        & $0.3500$           \\
+  5 v. 6                        & $1$                             & $0.5393$           \\
   \bottomrule
  \end{tabular}
 \end{table}
