@@ -8,11 +8,12 @@ ATLAS is the largest of the LHC experiments with dimensions of $44~\mathrm{m}$ i
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.9\textwidth]{ATLAS/ATLAS_detector.eps}
+ \includegraphics[width=\textwidth]{ATLAS/ATLAS_detector.eps}
  \caption[Cut-away view of the ATLAS detector.]{%
   Model of human particle physicists with ATLAS detector shown for scale~\cite{Pequenao:1095924}.}\label{fig:ATLAS_detector}
 \end{figure}
 
+\clearpage
 \section{Geometry}\label{sec:ATLAS_geometry}
 
 The ATLAS detector is cylindrical in design and forward-backward symmetrical with respect to the center of the detector.
@@ -177,7 +178,9 @@ The trigger system for the muon system provides coverage out to $\abs{\eta} < 2.
 \section{Trigger and Data Acquisition}\label{sec:ATLAS_TDAQ}
 
 The ATLAS \gls{TDAQ} systems, shown in \Cref{fig:ATLAS_TDAQ_system}, function collectively at two different levels: the L1 trigger and the \gls{HLT}.
-Collectively, the trigger system is responsible for reducing the $40~\mathrm{MHz}$ event rate from the $25~\mathrm{ns}$ bunch crossings --- which is not possible to write out and save in real time --- to a much more manageable $1~\mathrm{kHz}$ that can be written to storage~\cite{TRIG-2016-01}.
+Collectively, the trigger system is responsible for reducing the approximately $1~\mathrm{GHz}$ event rate from the $25~\mathrm{ns}$ bunch crossings%
+\footnote{Often reported as the equivalent $40~\mathrm{MHz}$ bunch crossing rate.}
+--- which is not possible to write out and save in real time --- to a much more manageable $1~\mathrm{kHz}$ that can be written to storage~\cite{TRIG-2016-01}.
 With raw event sizes of approximately $1.6~\mathrm{Mbytes}$ this still results in data generation of over a Gigabyte per second.
 
 \begin{figure}[htbp]
@@ -214,7 +217,7 @@ From these six elements algorithms then make decisions on the order of nanosecon
 Simultaneously in L1, the L1Muon trigger uses trigger chambers in the barrel and end-cap regions of the muon spectrometer.
 Information from events with large transverse energy are then sent to the L1 topological processor (L1Topo) in the Central Trigger for a trigger decision.
 The Central Trigger Processor (CTP) applies a trigger ``menu'' of collections of trigger selections and events that pass these selections are sent to subdetector-specific electronics for processing and data acquisition for possible readout.
-Additionally, the L1 trigger defines and sends information on RoIs to the HLTrigger for more detailed decision making.
+Additionally, the L1 trigger defines and sends information on RoIs to the HLT for more detailed decision making.
 
 \subsection{High Level Trigger (HLT)}\label{sec:ATLAS_HLT}
 
