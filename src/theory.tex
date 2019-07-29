@@ -396,9 +396,9 @@ where the $W^{\pm}$ and $Z$ bosons have absorbed the Nambu-Goldstone bosons as p
 \[
  m_{W} = \frac{1}{2}vg, \qquad m_{Z} = \frac{m_{W}}{\cos\theta_{W}} = \frac{vg}{2\cos\theta_{W}}\,.
 \]
-The scalar field --- the Higgs field --- also acquires a mass term of
+Through self-coupling the scalar field --- the Higgs field --- also acquires a mass term of
 \[
- m_{h} = \sqrt{-2\mu^{2}} = \sqrt{2h}v.
+ m_{h} = \sqrt{-2\mu^{2}} = \sqrt{2\lambda}v.
 \]
 In the Standard Model $v$, $g_{1}$, $g_{2}$ are free parameters to be measured by experiment, and so the masses of the bosons are not directly predicted.
 However, the value%
@@ -501,6 +501,9 @@ However, as hadron colliders mostly produce multijet events%
 \footnote{Discovery machines are a messy business.}
 from QCD processes, identifying jets coming from resonant $H \to b\bar{b}$ events is quite challenging.
 
+Through the combination of results from the ATLAS and CMS experiment collaborations using approximately $5~\ifb$ of LHC Run 1 data~\cite{Pieri:2016szr}, experimental measurements of the Standard Model Higgs production cross-sections and decay modes have been made, as seen in \Cref{fig:combined_experiment_production_cross_sections}, \Cref{fig:combined_experiment_decay_BRs}, and \Cref{fig:combined_experiment_sigma_BR}.
+It is seen that given the uncertainties on the measurements there is generally good agreement between the predictions of the Standard Model and experimental measurements, with all best fit values within two standard deviations of the SM predictions.
+
 \begin{figure}[htbp]
  \centering
  \begin{subfigure}[t]{0.48\textwidth}
@@ -587,6 +590,39 @@ from QCD processes, identifying jets coming from resonant $H \to b\bar{b}$ event
  \label{fig:Higgs_BRs}
 \end{figure}
 
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.5\textwidth]{theory/combined_experiment_production_cross_sections.pdf}
+ \caption[Best fit results for the production signal strengths for the Standard Model Higgs boson for the combination of ATLAS and CMS data.]{%
+  Best fit results for the production signal strengths for the Standard Model Higgs boson for the combination of ATLAS and CMS data.
+  Also shown are the results from each experiment.
+  The uncertainty bars indicate the $1\,\sigma$ (thick lines) and $2\,\sigma$ (thin lines) intervals.
+  The measurements of the global signal strength $\mu$ are also shown~\cite{Pieri:2016szr}.}
+ \label{fig:combined_experiment_production_cross_sections}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.45\textwidth]{theory/combined_experiment_decay_BRs.pdf}
+ \caption[Best fit results for the decay signal strengths for the Standard Model Higgs boson for the combination of ATLAS and CMS data.]{%
+  Best fit results for the decay signal strengths for the Standard Model Higgs boson for the combination of ATLAS and CMS data.
+  Also shown are the results from each experiment.
+  The uncertainty bars indicate the $1\,\sigma$ (thick lines) and $2\,\sigma$ (thin lines) intervals~\cite{Pieri:2016szr}.}
+ \label{fig:combined_experiment_decay_BRs}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.45\textwidth]{theory/combined_experiment_sigma_BR.pdf}
+ \caption[Best fit values of $\sigma_{i} \cdot B^{f}$ for each specific channel $i \to H \to f$, as obtained from the generic parameterization with 23 parameters for the combination of ATLAS and CMS measurements.]{%
+  Best fit values of $\sigma_{i} \cdot B^{f}$ for each specific channel $i \to H \to f$, as obtained from the generic parameterization with 23 parameters for the combination of ATLAS and CMS measurements.
+  The uncertainty bars indicate the $1\,\sigma$ intervals.
+  The fit results are normalized to the SM predictions for the various parameters and the shaded bands indicate the theoretical uncertainties in these predictions.
+  Only 20 parameters are shown because some are either not measured with a meaningful precision, in the case of the $H \to ZZ$ decay channel for the $WH$, $ZH$, and
+  $ttH$ production processes, or not measured at all and therefore fixed to their corresponding SM predictions, in the case of the $H \to b\bar{b}$ decay mode for the ggF and VBF production processes~\cite{Pieri:2016szr}.}
+ \label{fig:combined_experiment_sigma_BR}
+\end{figure}
+
 \clearpage
 \section{Extensions to the Standard Model}
 
@@ -597,7 +633,7 @@ As it does not interact with normal matter through the electroweak or strong nuc
 To incorporate a model of particle dark matter there are a number of existing extensions of the Standard Model.
 Among these are frameworks of simplified dark matter models~\cite{EXOT-2017-32,Jacques:2016dqz,Kahlhoefer:2015bea,Alves:2015pea} where new particles mediate the interactions of dark matter, $\chi$, with the Standard Model particles.
 Among these are models for a single neutral vector mediator particle: a $\Zprime$.
-One simple extension of the standard model is a vector or axial-vector simplified model through an additional $\mathrm{U}(1)$ gauge symmetry which gives dark matter particles a charge of this symmetry group~\cite{Abercrombie:2015wmb}, and results in either a vector $\left(Z'_{V}\right)$ or axial-vector $\left(Z'_{A}\right)$ boson mediator.
+One simple extension of the Standard Model is a vector or axial-vector simplified model through an additional $\mathrm{U}(1)$ gauge symmetry which gives dark matter particles a charge of this symmetry group~\cite{Abercrombie:2015wmb}, and results in either a vector $\left(\Zprime_{V}\right)$ or axial-vector $\left(\Zprime_{A}\right)$ boson mediator.
 This model introduces five new parameters: the mass of the mediator, $m_{\Zprime}$, the mass of the Dirac fermion dark matter particle, $m_{\chi}$, the flavor-universal coupling of the $\Zprime$ to SM quarks, $g_{q}$, the coupling of the $\Zprime$ to all lepton flavors, $g_{\ell}$, and the coupling of the $\Zprime$ to dark matter, $g_{\chi}$.
 The resulting interactions of the $\Zprime$ mediator and the particles are shown in \Cref{fig:Zprime_interactions}.
 
@@ -623,7 +659,8 @@ The resulting interactions of the $\Zprime$ mediator and the particles are shown
  \label{fig:Zprime_interactions}
 \end{figure}
 
-For the purposes of the analysis done in this thesis only fully hadronic final states are of interest, and so a leptophobic $\left(g_{\ell}=0\right)$ $\Zprime$ model is considered.
+Models with non-zero values of $g_{\ell}$ only slightly increase the mediator width, but further unnecessarily restrict the model space~\cite{Abercrombie:2015wmb}.
+To simplify the model and the analysis done in this thesis, only leptophobic $\left(g_{\ell}=0\right)$ $\Zprime$ models are then considered.
 This model then introduces the additional term to the Lagrangian density for a vector model of
 \[
  \Lagrangian_{\textrm{vector}} = g_{q} \sum_{q} Z^{\prime}_{\mu} \bar{q} \gamma^{\mu} q + g_{\chi} Z^{\prime}_{\mu} \bar{\chi} \gamma^{\mu} \chi
@@ -633,3 +670,74 @@ and for an axial-vector model
  \Lagrangian_{\textrm{axial-vector}} = g_{q} \sum_{q} Z^{\prime}_{\mu} \bar{q} \gamma^{\mu}\gamma^{5} q + g_{\chi} Z^{\prime}_{\mu} \bar{\chi} \gamma^{\mu}\gamma^{5} \chi
 \]
 where $q$ and $\chi$ are respectively the Dirac spinors for the SM quark and dark matter fields and $g_{q}$ is democratic with respect to all quark flavors.
+
+In $t$-channel processes that occur in scattering of dark matter off atomic nuclei, seen in \Cref{fig:Zprime_direct_detection}, the spin-independent interaction cross section of the vector mediator model is enhanced by $A^{2}$, where $A$ is the number of nucleons in the nucleus, as the result of spin coherence effects~\cite{Buchmueller:2014yoa,Chala:2015ama,EXOT-2017-32}.
+These processes are relevant in dark matter direct detection experiments such as LUX~\cite{Akerib:2013tjd} and XENON100~\cite{Aprile:2013doa}, where the dark matter candidate considered is a weakly interacting massive particle (WIMP) model with a $\Zprime$ mediator.
+For these experiments, the spin enhancement in the spin-independent model provides a limit more than $10^{4}$ stronger than the spin-dependent model limits, as seen for an example model with $g_{q} = 0.25$, $g_{\ell} = 0$, and $g_{\chi} = 1$ in \Cref{fig:direct_detection_exclusions}.
+Similar results hold for the leptophilic models~\cite{EXOT-2017-32}.
+Collider experiment searches exploit the $s$-channel process --- where there is no large spin dependence --- and as a result do not give competitive limits for vector mediator models, as seen in \Cref{fig:vector_model_exclusions}.
+There is no large difference in collider detection sensitivity between vector and axial-vector mediator models, as seen in \Cref{fig:m_DM_vs_m_Zprime}.
+However, for axial-vector models with $2 m_{\chi} > m_{\Zprime}$ there are unconstrained regions for low $\Zprime_{A}$ masses.
+As a result, this thesis analysis considers an exotic signal search for only a low mass axial-vector leptophobic $\Zprime$ model in the high momentum regime to both further simplify the analysis and exploit similar analysis techniques developed for high momentum fully-hadronic decays of the Higgs boson.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.4\textwidth]{theory/Zprime_direct_detection.pdf}
+ \caption[Feynman diagram of the scattering of dark matter off Standard Model quarks through exchange of a $\Zprime$ mediator.]{%
+  Feynman diagram of the $t$-channel scattering of dark matter, $\chi$, off Standard Model quarks, $q$, through exchange of a $\Zprime$ mediator.}
+ \label{fig:Zprime_direct_detection}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{theory/vector_model_exclusions.pdf}
+  \caption[Limits on the spin-independent WIMP--nucleon scattering cross section for a $\Zprime$ vector mediator model.]{%
+   Limits on the spin-independent WIMP--nucleon scattering cross section for a $\Zprime$ vector mediator model.}
+  \label{fig:vector_model_exclusions}
+ \end{subfigure}%
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{theory/axialvector_model_exclusions.pdf}
+  \caption[Limits on the spin-dependent WIMP--neutron scattering cross section for a $\Zprime$ axial-vector mediator model.]{%
+   Limits on the spin-dependent WIMP--neutron scattering cross section for a $\Zprime$ axial-vector mediator model.}
+  \label{fig:axialvector_model_exclusions}
+ \end{subfigure}%
+ \caption[Comparison of inferred LHC experiment limits with the constraints from direct detection experiments on the WIMP--nucleon scattering cross section in the context of $\Zprime$ simplified model with $g_{q} = 0.25$, $g_{\ell} = 0$, and $g_{\chi} = 1$.]{%
+  Comparison of inferred LHC experiment limits with the constraints from direct detection experiments on the WIMP--nucleon scattering cross section in the context of $\Zprime$ simplified model with $g_{q} = 0.25$, $g_{\ell} = 0$, and $g_{\chi} = 1$.
+  LHC limits are shown at $95\%$ CL and direct detection limits at $90\%$ CL.
+  The comparison is valid solely in the context of this model, assuming a mediator width fixed by the dark matter mass and the coupling values given.
+  LHC searches and direct detection experiments exclude the shaded areas.
+  Exclusions of smaller scattering cross sections do not imply that larger scattering cross sections are also excluded~\cite{EXOT-2017-32}.}
+ \label{fig:direct_detection_exclusions}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{theory/m_DM_vs_m_ZprimeV.pdf}
+  \caption[Exclusions for a $\Zprime$ vector mediator model.]{%
+   Exclusions for a $\Zprime$ vector mediator model.
+   Above the curve annihilation processes described by the simplified model deplete the density to $\Omega h^{2} < 0.12$.}
+  \label{fig:m_DM_vs_m_ZprimeV}
+ \end{subfigure}%
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{theory/m_DM_vs_m_ZprimeA.pdf}
+  \caption[Exclusions for a $\Zprime$ axial-vector mediator model.]{%
+   Exclusions for a $\Zprime$ axial-vector mediator model.
+   Between the two curves annihilation processes described by the simplified model deplete the density to $\Omega h^{2} < 0.12$.}
+  \label{fig:m_DM_vs_m_ZprimeA}
+ \end{subfigure}%
+ \caption[Regions in the (mediator-mass, DM-mass) plane excluded at $95\%$ CL by visible and invisible searches for leptophobic $\Zprime$ mediator simplified models with $g_{q} = 0.25$, $g_{\ell} = 0$, and $g_{\chi} = 1$.]{%
+  Regions in the (mediator-mass, DM-mass) plane excluded at $95\%$ CL by visible and invisible searches for leptophobic $\Zprime$ mediator simplified models.
+  The exclusions are computed for $g_{q} = 0.25$, $g_{\ell} = 0$, and $g_{\chi} = 1$.
+  Dashed curves labeled ``thermal relic'' correspond to combinations of DM and mediator mass values that are consistent with a DM density of $\Omega h^{2} = 0.12$ and a standard thermal history~\cite{Baer:2014eja}, for dimensionless Hubble parameter $h$.
+  The dotted line indicates the kinematic threshold where the mediator can decay on-shell into DM.
+  Excluded regions that are in tension with the perturbative unitary considerations of~\cite{Kahlhoefer:2015bea} are indicated by shading in the upper left corner~\cite{EXOT-2017-32}.}
+ \label{fig:m_DM_vs_m_Zprime}
+\end{figure}
