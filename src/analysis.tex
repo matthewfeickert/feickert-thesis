@@ -4,26 +4,34 @@ This chapter describes the analysis that was performed for a search for high mom
 In addition to the overview and description of the analysis the chapter will also focus on my contributions to modeling the irreducible multijet continuum background --- the dominant background of the analysis.
 
 Extensive analyses searching for dijet resonances have been performed by ATLAS and CMS in Run 2 of the LHC~\cite{EXOT-2016-21,CMS-EXO-16-032,CMS-EXO-16-046}, though the focus of these analyses were high mass resonances above $1~\TeV$, where the search sensitivity and range is largely dictated by the LHC center-of-mass energy.
-This leaves the sub-$\mathrm{TeV}$ mass range as a possible landscape for new resonances with small couplings to SM particles, such as $\Zprime$ bosons as seen in \Cref{fig:darkmatter_coupling_summary}.
-Probing low mass regions imposes its own set of challenges, as low mass resonances can produce lower energy final states, which in the high event rate environment of the LHC can be difficult to distinguish and trigger on.
+This leaves the sub-$\mathrm{TeV}$ mass range as a possible landscape for new resonances with small couplings to SM particles, such as $\Zprime$ bosons as seen in \Cref{fig:darkmatter_coupling_summary} and \Cref{fig:CMS_dijet_summary}.
+Probing low mass regions imposes its own set of challenges, as low mass resonances can produce lower energy final states, which in the high event rate environment of the LHC can be difficult to distinguish and trigger on as most proton-proton collisions at the LHC are soft interactions that result in many low momentum jets.\footnote{%
+ This is reflected in the large cross section for jets and di-jet events shown in \Cref{fig:cross_section_experiment_theory}.}
 In particular for dijet analyses, this introduces an enormous multijet background produced by QCD interactions, as seen in \Cref{fig:SM_fiducial_cross_section_summary}.
 Requiring that the transverse momentum of these resonances is very large (highly boosted) offers a path forward to both triggering on the interesting signal events and also reducing the multijet background which exponentially falls off with increasing momentum.
-To achieve this highly boosted state, the resonance can recoil off a high energy jet that is produced through initial state radiation or another similar process, as shown in the leading order at Feynman diagrams in \Cref{fig:signal_LO_diagrams} for signal models of a leptophobic $\Zprime$ and the Higgs boson at the LHC.
+To achieve this highly boosted state, the resonance can recoil off a high energy jet or photon~\cite{EXOT-2017-01} that is produced through initial state radiation (ISR) or another similar process, as shown in the leading order at Feynman diagrams in \Cref{fig:signal_LO_diagrams} for signal models of a leptophobic $\Zprime$ and the Higgs boson at the LHC.
+For this thesis analysis only the jet ISR is considered to simplify the trigger.
 For highly boosted systems, where the resonance's $p_{T}$ is greater than twice its mass, the angular separation between the jets coming from the resonance's decay is reduced enough such that the dijets can be reconstructed with a single anti-$k_{t}$ jet with $R=1.0$ --- a ``\largeR{}'' jet --- as shown in \Cref{fig:Xbb_jet_recoil}.
 If the leptophobic $\Zprime$ has Higgs-like couplings%
 \footnote{Where the coupling strength is proportional to the mass of the decay products, $g \propto m$.}
 to SM quarks, then it should have preferential decays of $\Zprime \to b\bar{b}$.
 By applying $b$-tagging to the signal \largeR{} jet and requiring the presence of two $b$-tagged sub-jets the performance of the analysis can be improved.
-Even in the circumstances where the $\Zprime$ has democratic (independent of quark generation) couplings to the SM quarks the application of $b$-tagging is still preferred, as it significantly reduces the dominant multijet background, as shown in \Cref{fig:SR_flavor_composition}.
+Even in the circumstances where the $\Zprime$ has democratic (independent of quark generation) couplings to the SM quarks the application of $b$-tagging is still preferred, as it significantly reduces the dominant multijet background, which is predominantly light-flavor events~\cite{STDM-2011-40}, as shown in \Cref{table:cutflow}, and the flavor composition of the surviving multijet background in the signal region is mostly heavy flavor, as seen in \Cref{fig:SR_flavor_composition}.
 
 In addition to the search for $\Zprime \to b\bar{b}$, a measurement of boosted $\Hbb$ is performed as well.
-At high enough energies the production of Higgs bosons through gluon-gluon fusion begins to be sensitive to the heavy fermion loop~\cite{Schlaffer:2014osa}.
+At high enough energies --- $p_{T,H} \gtrsim 500~\GeV$ --- the production of Higgs bosons through gluon-gluon fusion begins to be sensitive to the heavy fermion loop~\cite{Schlaffer:2014osa}.
 If there are new resonances that run in the loop they contribute to the coupling strength of the effective gluon-gluon-Higgs interaction and would give an anomalous coupling compared to the SM predicted value.
-In some models the effect of the anomalous couplings is very significant and would affect the production cross section of high-$p_{T}$ Higgs through gluon-gluon fusion by as much as $50\%$~\cite{Grojean:2013nya,Dawson:2015gka}.
+In the effective field theory models of~\cite{Schlaffer:2014osa,Grojean:2013nya,Dawson:2015gka} the effect of the anomalous couplings is very significant and could affect the production cross section of high-$p_{T}$ Higgs through gluon-gluon fusion by more than $50\%$ for $p_{T,H} > 500~\GeV$.
+
+This chapter will cover the signal models and datasets in \Cref{sec:data_and_simulation}.
+The $p_{T}$ requirements to have a fully efficient \largeR{} jet trigger across the 2015, 2016, and 2017 datasets is discussed in \Cref{sec:analysis_trigger}.
+The construction of the signal region and supporting validation regions is covered in \Cref{sec:event_selection} and the effects of the resonant and non-resonant SM backgrounds in \Cref{sec:analysis_backgrounds}.
+\Cref{sec:multijet_background_modeling} is devoted to my parametric modeling of the irreducible multijet background.
+\Cref{sec:systematic_uncertainties} covers the effect of the leading systematic uncertainties on the analysis, and the results of the analysis are covered in \Cref{chapter:results}.
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=\linewidth]{analysis/darkmatter_coupling_summary.pdf}
+ \includegraphics[width=0.95\linewidth]{analysis/darkmatter_coupling_summary.pdf}
  \caption[Dijet search contours for $95\%$ CL upper limits on the coupling $g_{q}$ for the leptophobic axial-vector $\Zprime_{A}$ model.]{%
  Dijet search contours for $95\%$ CL upper limits on the coupling $g_{q}$ as a function of the resonance mass $m_{\Zprime_{A}}$ for the leptophobic axial-vector $\Zprime_{A}$ model.
  The expected limits from each search are indicated by dotted lines.
@@ -36,6 +44,20 @@ In some models the effect of the anomalous couplings is very significant and wou
  Benchmark width lines are indicated in the canvas.
  The $\Gamma/m_{\Zprime} = 50\%$ lies beyond the canvas borders~\cite{EXOT-2017-32}.}
  \label{fig:darkmatter_coupling_summary}
+\end{figure}
+\clearpage
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.95\linewidth]{analysis/c_gq_cms_eps2019_logx_logy.eps}
+ \caption[Limits on the universal coupling $g'_{q}$ between a leptophobic $\Zprime$ boson and quarks from CMS dijet analyses.]{%
+ Limits on the universal coupling $g'_{q}$ between a leptophobic $\Zprime$ boson and quarks~\cite{CMS-EXO-16-032} from CMS dijet analyses.
+ The expected limits are shown in dashed lines, and the corresponding observed limits are shown in solid lines.
+ The hashed areas show the direction of the excluded area from the observed limits.
+ The grey dashed lines show the $g'_{q}$ values at fixed values of $\Gamma_{\Zprime}/M_{\Zprime}$.
+ Most of the analyses, with the exception of Dijet $\chi$ and Broad Dijet, assume that the intrinsic width is negligible compared to the experimental resolution, and hence are valid for $\Gamma_{\Zprime}/M_{\Zprime} \lesssim 10\%$.
+ The $t\bar{t}$ resonance analysis is valid for $\Gamma_{\Zprime}/M_{\Zprime} \lesssim 5\%$, the Broad Dijet analysis is valid for $\Gamma_{\Zprime}/M_{\Zprime} \lesssim 30\%$, and the Dijet $\chi$ analysis is valid for $\Gamma_{\Zprime}/M_{\Zprime} \lesssim 100\%$~\cite{CMS:exotic-dijet-exclusions}.}
+ \label{fig:CMS_dijet_summary}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -91,13 +113,27 @@ In some models the effect of the anomalous couplings is very significant and wou
  \label{fig:SR_flavor_composition}
 \end{figure}
 
-This chapter will cover the signal models and datasets in \Cref{sec:data_and_simulation}.
-The $p_{T}$ requirements to have a fully efficient \largeR{} jet trigger across the 2015, 2016, and 2017 datasets is discussed in \Cref{sec:analysis_trigger}.
-The construction of the signal region and supporting validation regions is covered in \Cref{sec:event_selection} and the effects of the resonant and non-resonant SM backgrounds in \Cref{sec:analysis_backgrounds}.
-\Cref{sec:multijet_background_modeling} is devoted to my parametric modeling of the irreducible multijet background.
-\Cref{sec:systematic_uncertainties} covers the effect of the leading systematic uncertainties on the analysis, and the results of the analysis are covered in \Cref{chapter:results}.
+\begin{table}[htpb]
+ \centering
+ \caption[The relative cutflow, with respect to the number of events passing the trigger, of the different regions using simulated background events and data.]{%
+  The relative cutflow, with respect to the number of events passing the trigger, of the different regions using simulated background events and data.
+  The QCD multijet contribution is scaled by 0.74 to match data.}
+ \begin{tabular}{@{}lrrrrr@{}}
+  \toprule
+  Cut                                             & QCD multijet & $W+\mathrm{jets}$ & $Z+\mathrm{jets}$ & $t\bar{t}$ & Data    \\ \midrule
+  Trigger                                         & $1.000$      & $1.000$           & $1.000$           & $1.000$    & $1.000$ \\
+  Jet Cleaning                                    & $1.000$      & $0.999$           & $0.999$           & $0.999$    & $0.999$ \\
+  Lead \largeR{} jet $p_{T} > 480~\GeV$           & $0.200$      & $0.301$           & $0.290$           & $0.263$    & $0.484$ \\
+  Sublead \largeR{} jet $p_{T} > 250~\GeV$        & $0.181$      & $0.284$           & $0.275$           & $0.218$    & $0.446$ \\
+  At least one signal candidate jet               & $0.160$      & $0.272$           & $0.263$           & $0.210$    & $0.402$ \\
+  Signal candidate jet $p_{T} > 480~\GeV$         & $0.099$      & $0.208$           & $0.198$           & $0.159$    & $0.248$ \\
+  $0$ loose $b$-tagged VR subjets (\CRQCD{})      & $0.076$      & $0.154$           & $0.134$           & $0.068$    & $0.187$ \\
+  $2$ tight $b$-tagged VR subjets (Signal Region) & $0.001$      & $0.001$           & $0.010$           & $0.006$    & $0.003$ \\
+  \bottomrule
+ \end{tabular}
+ \label{table:cutflow}
+\end{table}
 
-\clearpage
 \section{Data and Simulation}\label{sec:data_and_simulation}
 
 The analysis was done using $80.5~\ifb$ of data from ATLAS datasets collected in 2015, 2016, and 2017.
@@ -110,7 +146,7 @@ As both Higgs and $\Zprime$ are signals of the analysis two signal simulations w
 As the mass of the SM Higgs is known the analysis is optimized for the Higgs signal, while the production of $\Zprime$ simulation samples allows for searching a broad range of mass hypotheses.
 
 The Higgs events were simulated with the three main production mechanisms at the LHC, seen in \Cref{fig:Higgs_production_diagrams}: gluon-gluon fusion, vector boson fusion, and Higgsstrahlung (associated $W$/$Z$ production).
-These production modes respectively contribute to $50\%$, $30\%$, and $20\%$ of the total number of simulated signal events.
+These production modes respectively contribute to $50\%$, $30\%$, and $20\%$ of the total number of simulated signal events produced before any selection was applied.
 The ggF plus jet signal events are generated using the HJ+MiNLO~\cite{Hamilton:2015nsa} prescription with finite top quark mass using \textsc{Powheg-Box} 2~\cite{Campbell:2012am} and the NNPDF30 NNLO parton distribution function~\cite{Hamilton:2012rf} and then showered using \textsc{Pythia} 8.212~\cite{Sjostrand:2014zea} with the AZNLO tune and the CTEQ6L1~\cite{Pumplin:2002vw} parton distribution function.
 The decay of the resulting $b$-hadrons is performed with EvtGen~\cite{Lange:2001uf}.
 Similarly, with the exception of HJ+MiNLO, the VBF Higgs events are generated in the same manner.
@@ -124,7 +160,7 @@ To enhance the truth jet filter efficiency \textsc{MadGraph5_aMC@NLO} is configu
 Separate orthogonal samples for decays to light quarks $\left(\Zprime \to q\bar{q}\right)$ and $b$-quarks $\left(\Zprime \to b\bar{b}\right)$ are also produced to create datasets that are enhanced in $\Zprime \to b\bar{b}$ events.
 As the search range of the analysis is between $100~\GeV$ and $200~\GeV$ signal samples are generated for the mass hypotheses of $m_{\Zprime} \in \left\{100, 125, 150, 175, 200, 250\right\}~\GeV$ to create events across the range of masses that might be used in studies or fits.
 The simplified model defines an absolute axial coupling to SM quak-antiquark paris, $g_{q}$, that is assumed to be democratic.
-The signal events are simulated with $g_{q} = 0.25$ corresponding to an approximate sensitivity estimate.
+The signal events are simulated with $g_{q} = 0.25$ corresponding to a rough estimate of the analysis sensitivity.
 However, this choice does not have a significant effect on the kinematics of the reconstructed event as the natural width of the $\Zprime$ is smaller than the typical \largeR{} jet mass resolution in the $p_{T}$ and mass range of interest (i.e., about $10\%$ of the jet mass).
 The total decay width of the $\Zprime$ is given as
 \[
@@ -149,11 +185,35 @@ As the cross section is proportional to $g_{q}^2$, the cross section at other va
 
 \subsection{Simulated Backgrounds}\label{sec:simulation_background}
 
-Simulation of the expected Standard Model backgrounds is used in the development of the non-resonant background processes and are used to model the resonant background processes.
+The major backgrounds for the analysis are non-resonant multijet processes and resonant $\Vjets{}$ and $t\bar{t}$, as seen in \Cref{fig:background_shape_SR}.
+Simulation of the expected Standard Model backgrounds is used in the development of modeling the non-resonant background processes and are used to model the resonant background processes.
 Dijet events from QCD interactions are simulated using \textsc{Pythia 8.186} with the A14 tune and the NNPDF23 LO PDF and the decay of $b$-hadrons is done with EvtGen.
 To achieve a constant statistical uncertainty over the large energy range weighted events are generated with a flat jet $p_{T}$ spectrum and split into multiple samples before reconstruction using an anti-$k_{t}$ $R=0.6$ jet algorithm run on the final-state truth particles.
 
-The hadronically decaying $W$ and $Z$ events, with a maximum of four additional partons at leading order, were generated using \textsc{Sherpa} 2.1.1 with the CTO parton distribution function and were separated into multiple orthogonal samples based on the $p_{T}$ of the vector boson.
+\begin{figure}[htbp]
+ \centering
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{analysis/background_shape_nonresonant_SR.pdf}
+  \caption[Simulation of the non-resonant multijet background in the signal region.]{%
+   Simulation of the non-resonant multijet background in the signal region.}
+  \label{fig:background_shape_nonresonant_SR}
+ \end{subfigure}%
+ \quad
+ \begin{subfigure}[t]{0.48\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{analysis/background_shape_resonant_SR.pdf}
+  \caption[Simulation of the resonant backgrounds in the signal region.]{%
+   Simulation of the resonant {$V+\mathrm{jets}$} and $t\bar{t}$ backgrounds in the signal region.
+   Simulation of the Higgs boson signal is shown for comparison.}
+  \label{fig:background_shape_resonant_SR}
+ \end{subfigure}
+ \caption[Results of the likelihood ratio test and $F$-test of comparing the polynomial exponential fit models.]{%
+  Simulation of the non-resonant and resonant backgrounds in the signal region for an integrated luminosity of $80.5~\ifb$.}
+ \label{fig:background_shape_SR}
+\end{figure}
+
+The hadronically decaying $W$ and $Z$ events, with a maximum of four additional partons at leading order, were generated using \textsc{Sherpa} 2.1.1~\cite{Gleisberg:2008ta} with the CTO parton distribution function and were separated into multiple orthogonal samples based on the $p_{T}$ of the vector boson.
 Leptonically decaying $W$ and $Z$ events are also produced with a maximum of two additional partons at leading order and a maximum of four at NLO.
 These are used to correct the cross section of the hadronic sample by applying a multiplicative factor to scale the hadronic cross section to the leptonic sample cross section.
 These ``$k$-factors'' are $1.28$ for the $W+\mathrm{jets}$ and $1.37$ for the $Z+\mathrm{jets}$~\cite{EXOT-2017-01}.
@@ -181,7 +241,8 @@ As they are all fully efficient for $p_{T} > 480~\GeV$ and in an effort to simpl
 \begin{table}[htpb]
  \centering
  \caption[Summary of the triggers used in the analysis.]{%
-  Summary of the \largeR{} jet triggers used in the analysis for the data taking periods of 2015, 2016, and 2017.}
+  Summary of the \largeR{} jet triggers used in the analysis for the data taking periods of 2015, 2016, and 2017 and the offline $p_{T}$ thresholds at which they become fully efficient.
+  The recorded integrated luminosity with each trigger is additionally shown.}
  \begin{tabular}{@{}rlrr@{}}
   \toprule
   Year   & Trigger Name                 & Offline $p_{T}$ Threshold~$(\GeV)$ & Luminosity~$\left(\ifb\right)$ \\ \midrule
@@ -207,9 +268,9 @@ The signal candidate selection process is summarized visually in \Cref{fig:event
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.9\linewidth]{analysis/event_selection.pdf}
+ \includegraphics[width=0.75\linewidth]{analysis/event_selection.pdf}
  \caption[Diagram of the signal candidate event selection process.]{%
-  Diagram of the signal candidate event selection process.}
+  Diagram of the signal candidate event selection process and the labeling scheme of the \largeR{} jets in the signal candidate event.}
  \label{fig:event_selection}
 \end{figure}
 
@@ -220,11 +281,12 @@ The $77\%$ efficiency working point is selected to optimize signal significance.
 Signal candidate events with zero loose $b$-tagged track-jets define a control region for non-resonant background estimation studies (\CRQCD).
 Events with exactly two tight $b$-tagged track-jets form the signal region (SR).
 
-The efficiencies and yields of the resonant backgrounds and the signal processes under the event selection criteria in the $0$-tag control region and the signal region are given in \Cref{table:efficiencies_and_yields}, where the efficiency is defined as the fraction of events that pass the leading \largeR{} jet $p_{T} > 480~\GeV$ event selection requirement that get classified in the particular region.
+The efficiencies and yields of the resonant backgrounds and the signal processes under the event selection criteria in the $0$-tag control region and the signal region are given in \Cref{table:efficiencies_and_yields}, where the efficiency in each region is defined as the fraction of events that pass the leading \largeR{} jet $p_{T} > 480~\GeV$ event selection requirement.
 The composition of the vector boson, $\ttbar$, and $\Hbb$ resonant components in the $0$-tag control region and signal region are shown in \Cref{table:fractional_composition}.
 As expected, in the \CRQCD{} the $W+\mathrm{jets}$ contribution is dominant for the vector boson component and in the signal region is primarily from $Z+\mathrm{jets}$.
 The $\ttbar$ contribution is roughly equivalent in both the \CRQCD{} and the SR with approximately $60\%$ resulting from hadronic decays.
-In both regions the dominant component of $\Hbb$ is from gluon-gluon fusion production. In the signal region gluon-gluon fusion contributes $53\%$, followed by VBF production at $25\%$, and Higgsstrahlung at $22\%$.
+In both regions the dominant component of $\Hbb$ is from gluon-gluon fusion production.
+In the signal region gluon-gluon fusion contributes $53\%$, followed by VBF production at $25\%$, and Higgsstrahlung at $22\%$.
 
 \begin{table}[htpb]
  \centering
@@ -259,7 +321,8 @@ In both regions the dominant component of $\Hbb$ is from gluon-gluon fusion prod
 \begin{table}[htpb]
  \centering
  \caption[The fractional composition of the different resonant contributions in the $0$-tag control region and signal region.]{%
-  The fractional composition of the different resonant contributions in the $0$-tag control region (\CRQCD{}) and the signal region (SR).}
+  The fractional composition of the different resonant contributions in the $0$-tag control region (\CRQCD{}) and the signal region (SR).
+  The fraction is evaluated using the given contribution type as the total.}
  \begin{tabular}{@{}lrr@{}}
   \toprule
   Process                                   & \CRQCD{} Fraction & SR Fraction \\ \midrule
@@ -271,7 +334,7 @@ In both regions the dominant component of $\Hbb$ is from gluon-gluon fusion prod
   \phantom{$t\bar{t}$\quad} Semi-leptonic   & $0.38$            & $0.34$      \\
   \phantom{$t\bar{t}$\quad} Dileptonic      & $0.04$            & $0.03$      \\
   $\Hbb$                                    &                   &             \\
-  \phantom{$\Hbb$\quad} ggF                 & $0.49$            & $0.53$      \\
+  \phantom{$\Hbb$\quad} ggF                 & $0.50$            & $0.53$      \\
   \phantom{$\Hbb$\quad} VBF                 & $0.17$            & $0.25$      \\
   \phantom{$\Hbb$\quad} $WH$                & $0.21$            & $0.12$      \\
   \phantom{$\Hbb$\quad} $ZH$                & $0.12$            & $0.10$      \\
@@ -301,7 +364,7 @@ The $\ttbar$ enriched control region uses the same selections for the signal can
 Three regions are defined by requiring zero, one, or two $b$-tags in the two leading $p_{T}$ track-jets of the signal candidate, though the region with one $b$-tagged track-jet is taken as the \CRttbar{}, given that it exploits the single $b$-quark in a top quark decay.
 The other regions are used to validate the extrapolation of the $k$-factor into the \CRQCD{} and SR topologies.
 The sample further requires the muon from the semi-leptonic decay of the second top quark to be in the opposite hemisphere of the signal jet.
-This is implemented by applying a cut of $\Delta \phi \left(\mathrm{muon}, \mathrm{signal~jet}\right) > 2\pi/3$, which significantly reduces the QCD and $\Vjets$ contribution to the signal region which reducing the $\ttbar$ contribution by roughly a factor of three.%
+This is implemented by applying a cut of $\Delta \phi \left(\mathrm{muon}, \mathrm{signal~jet}\right) > 2\pi/3$, which significantly reduces the QCD and $\Vjets$ contribution to the signal region, reducing the $\ttbar$ contribution by roughly a factor of three.%
 \footnote{This is to be expected as the leptonic decay modes of the $W$ have roughly uniform branching fractions, $BR\left(W \to \mu\, \nu_{\mu}\right)/BR\left(W \to \ell \,\nu_{\ell}\right) \simeq 1/3$.}
 To further reduce contamination from multijet events, a cut of $p_{T} > 40~\GeV$ is applied to muon to veto softer muons resulting from multijet events.
 Finally, at least one tight $b$-tagged track-jet is required to be within $\Delta R \left(\mathrm{jet}, \mathrm{muon}\right) < 1.5$ to reduce contamination from $V\left(\to \ell\ell\,\right)+\mathrm{jets}$ and $VV$ events.
@@ -315,7 +378,7 @@ The \CRttbar{} selection criteria are summarized visually in \Cref{fig:ttbar_CR_
  \label{fig:ttbar_CR_selection}
 \end{figure}
 
-The $\ttbar$ MC template is fit to the data in the \CRttbar{} over the mass range of $70~\GeV$ to $230~\GeV$ and the uncertainty on the fit is determined from running the Bayesian Analysis Toolkit with \largeR{} jet energy scale and jet energy resolution variations as nuisance parameters, which will be described in \Cref{sec:systematic_uncertainties}.
+The $\ttbar$ MC template is fit to the data in the \CRttbar{} over the mass range of $70~\GeV$ to $230~\GeV$ and the uncertainty on the fit is determined from running the Bayesian Analysis Toolkit~\cite{Beaujean:2011zz} with \largeR{} jet energy scale and jet energy resolution variations as nuisance parameters, which will be described in \Cref{sec:systematic_uncertainties}.
 This results in a $k$-factor of $0.84 \pm 0.11$, which is then used to constrain the $t\bar{t}$ contribution in the final fit to the signal region data.
 
 
@@ -330,7 +393,7 @@ As approximately $1.2~\ifb$ of data in the \CRQCD{} gives a similar yield as is 
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=\linewidth]{analysis/fit_range_QCD_shape.pdf}
+ \includegraphics[width=0.95\linewidth]{analysis/fit_range_QCD_shape.pdf}
  \caption[Comparison of the multijet background shape in the signal region and $0$-tag control region (\CRQCD{}).]{%
   The expected shape of the multijet background in the signal region and the \CRQCD{} normalized to the same event count between $70~\GeV < m_{J} < 230~\GeV$.}
  \label{fig:fit_range_QCD_shape}
@@ -357,6 +420,7 @@ The Formal Laurent series serves as a cross check for the polynomial exponential
 To focus only on the QCD part of the spectrum, the MC templates for the $W+\mathrm{jets}$, $Z+\mathrm{jets}$, and $\ttbar$ (scaled by their cross section times the luminosity of each slice and any relevant $k$-factors) are subtracted from the data.
 This is done to decouple the study from any possible bias introduced by the fitting procedure.
 
+\clearpage
 \subsubsection{Likelihood ratio test}
 
 Using Wilk's theorem, as described in \Cref{subsection:wilks_theorem}, the \pvalue{} for a likelihood ratio test statistic,
@@ -393,7 +457,9 @@ For models of the same family that exhibited good reduced $\chi^2$ values during
 To check this result, I repeated the two statistical tests for the polynomial exponential family of functions for all \CRQCD{} data slices.
 The relative frequencies of the observed \pvalue{}s for the tests are iteratively summed, as seen in \Cref{fig:empirical_CDF_polyexp}, producing an empirical cumulative distribution function (CDF) for the test \pvalue{}s.
 It is seen that for the \emph{a priori} threshold of $\alpha=0.1$ that in a large majority of the cases the likelihood ratio test favors a 5 parameter model ($\textrm{CDF}_{4\textrm{v.}5}\left(0.1\right) > 0.9$) while in most cases the $F$-test favors a 4 parameter model ($\textrm{CDF}_{4\textrm{v.}5}\left(0.1\right) < 0.2$).
-Given this contention and the very strong favoring of the 5 parameter model in the likelihood ratio test, the 5 parameter model is conservatively chosen to model the shape of the QCD background distribution.
+Given this contention and that the likelihood ratio test is the more powerful\footnote{%
+ It is actually the most powerful test for a given significance value $\alpha$.}
+of the two tests given the Neyman-Pearson lemma~\cite{Neyman_Pearson_lemma}, in addition to the very strong favoring of the 5 parameter model in the likelihood ratio test, the 5 parameter model is conservatively chosen to model the shape of the QCD background distribution.
 \Cref{fig:5param_QCD_model_fit} shows the result of the fit in the original data slice with the selected 5 parameter QCD model.
 
 \begin{table}[htbp]
