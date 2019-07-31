@@ -12,7 +12,7 @@ The LHC was designed to collide beams of protons at high energy with very high l
 Its design center-of-mass energy is $14~\TeV{}$ and its design maximum instantaneous luminosity%
 \footnote{In the more familiar units of barns used by particle physicists, $10^{34}~\mathrm{cm}^{-2}\mathrm{s}^{-1}=10~\mathrm{nb}^{-1}\mathrm{s}^{-1}=0.036~\mathrm{fb}^{-1}\mathrm{hr}^{-1}$.}
 is $10^{34}~\mathrm{cm}^{-2}\mathrm{s}^{-1}$~\cite{Bruning:782076,Evans:2008}.
-Given the extreme beam intensity required to reach such luminosities proton-anti-proton collisions (as was used successfully at Fermilab's Tevatron) are not feasible.
+Given the extreme beam intensity required to reach such luminosities proton-anti-proton collisions (as was used successfully at Fermilab's Tevatron) are not feasible given the technical difficulties in capturing anti-protons of desired momentum in sufficient numbers~\cite{Oliveros:2017xrw}.
 Instead, two counter-circulating beams of protons are used.
 This imposes the requirement of opposite magnetic dipole fields in the rings.
 
@@ -62,7 +62,7 @@ The collisions of the proton beams in the experiments have a resulting center-of
  \luminosity = \frac{N_{b}^{2} n_{b} f_{\mathrm{rev}} \,\gamma_{r}}{4 \pi \epsilon_{n} \beta^{*}} F
  \label{eq:machine_luminosity}
 \end{equation}
-where $N_{b}$ is the number of particles per bunch, $n_{b}$ is the number of bunches per beam, $f_{\mathrm{rev}}$ is the revolution frequency, $\gamma_{r}$ is the relativistic gamma factor, $\epsilon_{n}$ is the normalized transverse beam emittance, $\beta^{*}$ is the beta function%
+where $N_{b}$ is the number of particles per bunch, $n_{b}$ is the number of bunches per beam, $f_{\mathrm{rev}}$ is the revolution frequency, $\gamma_{r}$ is the relativistic Lorentz factor of the beam, $\epsilon_{n}$ is the normalized transverse beam emittance (area in position-momentum phase space), $\beta^{*}$ is the beta function%
 \footnote{The amplitude function is dependent on the bunch cross section, $\sigma$, and the transverse beam emittance, $\epsilon$, $\beta = \pi \sigma^{2}/\epsilon$~\cite{PDG2018:Ch30}.
  The beams are squeezed as they approach the interaction point, decreasing the amplitude such that $\beta^{*}$ is a smaller value of $\beta$ than at other points.}
 (or ``amplitude function'') at the collision point, and $F$ is the geometric luminosity reduction factor due to the crossing angle at the interaction point:
@@ -73,7 +73,8 @@ where $\theta_{c}$ is the full crossing angle at the interaction point, $\sigma_
 Nominal design values for these quantities are given in \Cref{table:LHC_collider_parameters}, which additionally shows the incredibly successfully results of the LHC operations and accelerator teams' operation of the LHC in Run II.
 From \Cref{eq:events_from_luminosity} and \Cref{eq:machine_luminosity} it is seen that to obtain the high number of hard collisions to have sensitivity to new physics both high beam energies and high luminosities are required.
 As can be seen from \Cref{eq:machine_luminosity}, one approach to increasing the luminosity in the future for the High-Luminosity LHC (HL-LHC) is to decrease $\beta^{*}$ through the use of more powerful quadrupole focusing magnets.
-However, this requires a larger crossing angle, decreasing the geometric factor, but this can be compensated for by the use of crab cavities~\cite{PhysRevAccelBeams.19.101003}.
+However, to mitigate the resulting long range beam-beam effects requires a larger crossing angle of the beams, which decreases the geometric factor and the effective beam-beam cross section.
+This can be compensated for with crab cavities, which are RF cavities operated in a transverse dipole mode that ``crab'' (or pinch) the beams and rotate them to restore effective head-on collisions~\cite{PhysRevSTAB.12.101002,PhysRevAccelBeams.19.101003}.
 
 As the luminosity of the LHC increases so does the cross section for proton-proton interaction.
 As a result, at higher luminosities there are multiple interactions per proton bunch crossing.
