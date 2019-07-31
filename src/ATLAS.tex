@@ -29,7 +29,7 @@ Located at the heart of ATLAS and inside of the $2~\mathrm{T}$ solenoidal magnet
 To maximize the effective detector area, the pixels and SCT in the barrel region are arranged in concentric cylinders, as seen in \Cref{fig:ATLAS_pixel}.
 The pixel layers are closest to the beamline and consist of roughly $80.4$ million identical pixel sensors forming three cylindrical layers in the barrel and three consecutive disks at each end-cap.
 Each of the pixels is of area\footnote{$50~\mu\mathrm{m}$ in the $R\textrm{-}\phi$ direction by $400~\mu\mathrm{m}$ in the $z$ direction.} $20,000~\mu\mathrm{m}^{2}$ with resolution of $10~\mu\mathrm{m}~(R\textrm{-}\phi) \times 115~\mu\mathrm{m}~(z)$.
-The excellent resolution in $R\textrm{-}\phi$ is a result of the strong magnetic field bending particles along $\hat{\vec{\phi}}$ causing them to spiral through the pixel detector~\cite{PERF-2007-01}.
+This fine pixel cell size, and charge sharing between adjacent pixel cells --- given the reverse biased $p^{+}$-$n$ junction architecture --- give excellent spatial resolution in $R\textrm{-}\phi$ along with the strong magnetic field bending particles along $\hat{\vec{\phi}}$ causing them to spiral through the pixel detector~\cite{Aad:2008zz,PERF-2007-01}.
 Charged particle hits in the pixel detector are paramount for robust tracking and identifying and reconstructing the primary and secondary vertices necessary for physics object reconstruction (i.e., jets) and flavor tagging.
 
 \begin{figure}[htbp]
@@ -64,6 +64,7 @@ Combined with the precision tracking from the pixel detectors and SCT, the track
   The track traverses successively the beryllium beam-pipe, the three cylindrical silicon-pixel layers with individual sensor elements of $50 \times 400~\mu\mathrm{m}^{2}$, the four cylindrical double layers (one axial and one with a stereo angle of $40~\mathrm{mrad}$) of barrel SCT sensors of pitch $80~\mu\mathrm{m}$, and approximately 36 axial straws of $4~\mathrm{mm}$ diameter contained in the barrel TRT modules within their support structure~\cite{PERF-2007-01}.}\label{fig:ATLAS_inner_detector_radial_view}
 \end{figure}
 
+\clearpage
 \section{Calorimeter System}\label{sec:ATLAS_calo}
 
 The ATLAS calorimeter system, shown in \Cref{fig:ATLAS_calorimeter}, provides excellent energy deposition measurements for particles with coverage up to $\abs{\eta} < 4.9$ with different calorimetry subsystems for various physics processes.
@@ -74,11 +75,12 @@ The calorimeter subsystems are also designed to be sufficiently thick as to cont
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.7\textwidth]{ATLAS/ATLAS_calorimeter.eps}
+ \includegraphics[width=0.8\textwidth]{ATLAS/ATLAS_calorimeter.eps}
  \caption[Cut-away view of the ATLAS calorimeter system.]{%
   Cut-away view of the ATLAS calorimeter system~\cite{Pequenao:1095927}.}\label{fig:ATLAS_calorimeter}
 \end{figure}
 
+\clearpage
 \subsection{Electromagnetic Calorimeter}\label{sec:ATLAS_electromagnetic_calorimeter}
 
 The electromagnetic calorimeter system, shown in \Cref{fig:ATLAS_LAr}, consists of lead-liquid argon detectors with a characteristically unique ``accordion'' lead absorber plate design that allows for continuous coverage in $\phi$ with folding angles of the accordion ``waves'' that vary with the radius to keep the LAr gap constant, as shown in \Cref{fig:ATLAS_LAr_module}.
@@ -223,4 +225,4 @@ Additionally, the L1 trigger defines and sends information on RoIs to the HLT fo
 
 After the L1 trigger acceptance, events sent to the HLT are processed using higher granularity calorimeter information, tracking information from the ID, and precision measurements from the muon spectrometer --- all of which are not available at L1.
 The reconstruction and processing in the HLT can utilize both information from the RoIs passed from L1 as well as information received from the full detector subsystems.
-Aspects of these processes will be elaborated on in \Cref{appendix:bjet_trigger}.
+Aspects of these processes are elaborated on in \Cref{appendix:bjet_trigger}.
