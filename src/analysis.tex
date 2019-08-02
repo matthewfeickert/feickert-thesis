@@ -16,7 +16,7 @@ If the leptophobic $\Zprime$ has Higgs-like couplings%
 \footnote{Where the coupling strength is proportional to the mass of the decay products, $g \propto m$.}
 to SM quarks, then it should have preferential decays of $\Zprime \to b\bar{b}$.
 By applying $b$-tagging to the signal \largeR{} jet and requiring the presence of two $b$-tagged sub-jets the performance of the analysis can be improved.
-Even in the circumstances where the $\Zprime$ has democratic (independent of quark generation) couplings to the SM quarks the application of $b$-tagging is still preferred, as it significantly reduces the dominant multijet background, which is predominantly light-flavor events~\cite{STDM-2011-40}, as shown in \Cref{table:cutflow}, and the flavor composition of the surviving multijet background in the signal region is mostly heavy flavor, as seen in \Cref{fig:SR_flavor_composition}.
+Even in the circumstances where the $\Zprime$ has democratic (independent of quark generation) couplings to the SM quarks the application of $b$-tagging is still preferred, as it significantly reduces the dominant multijet background, which is predominantly light-flavor events~\cite{STDM-2011-40}, as shown in \Cref{table:cutflow} and \Cref{table:cutflow_relative}, and the flavor composition of the surviving multijet background in the signal region is mostly heavy flavor, as seen in \Cref{fig:SR_flavor_composition}.
 
 In addition to the search for $\Zprime \to b\bar{b}$, a measurement of boosted $\Hbb$ is performed as well.
 At high enough energies --- $p_{T,H} \gtrsim 500~\GeV$ --- the production of Higgs bosons through gluon-gluon fusion begins to be sensitive to the heavy fermion loop~\cite{Schlaffer:2014osa}.
@@ -115,23 +115,48 @@ The construction of the signal region and supporting validation regions is cover
 
 \begin{table}[htpb]
  \centering
- \caption[The relative cutflow, with respect to the number of events passing the trigger, of the different regions using simulated background events and data.]{%
-  The relative cutflow, with respect to the number of events passing the trigger, of the different regions using simulated background events and data.
+ \caption[The cutflow of the different analysis regions using simulated background events and data.]{%
+  The cutflow of the different analysis regions using simulated background events and data.
   The QCD multijet contribution is scaled by 0.74 to match data.}
- \begin{tabular}{@{}lrrrrr@{}}
-  \toprule
-  Cut                                             & QCD multijet & $W+\mathrm{jets}$ & $Z+\mathrm{jets}$ & $t\bar{t}$ & Data    \\ \midrule
-  Trigger                                         & $1.000$      & $1.000$           & $1.000$           & $1.000$    & $1.000$ \\
-  Jet Cleaning                                    & $1.000$      & $0.999$           & $0.999$           & $0.999$    & $0.999$ \\
-  Lead \largeR{} jet $p_{T} > 480~\GeV$           & $0.200$      & $0.301$           & $0.290$           & $0.263$    & $0.484$ \\
-  Sublead \largeR{} jet $p_{T} > 250~\GeV$        & $0.181$      & $0.284$           & $0.275$           & $0.218$    & $0.446$ \\
-  At least one signal candidate jet               & $0.160$      & $0.272$           & $0.263$           & $0.210$    & $0.402$ \\
-  Signal candidate jet $p_{T} > 480~\GeV$         & $0.099$      & $0.208$           & $0.198$           & $0.159$    & $0.248$ \\
-  $0$ loose $b$-tagged VR subjets (\CRQCD{})      & $0.076$      & $0.154$           & $0.134$           & $0.068$    & $0.187$ \\
-  $2$ tight $b$-tagged VR subjets (Signal Region) & $0.001$      & $0.001$           & $0.010$           & $0.006$    & $0.003$ \\
-  \bottomrule
- \end{tabular}
+ \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{@{}lrrrrrr@{}}
+   \toprule
+   Cut                                             & QCD multijet & $W+\mathrm{jets}$ & $Z+\mathrm{jets}$ & $t\bar{t}$ & Total       & Data        \\ \midrule
+   Trigger                                         & $385385408$  & $1419912$         & $629320$          & $1624282$  & $389193728$ & $159567488$ \\
+   Jet Cleaning                                    & $385195264$  & $1418308$         & $628717$          & $1623173$  & $389000192$ & $159354608$ \\
+   Lead \largeR{} jet $p_{T} > 480~\GeV$           & $77069624$   & $427349$          & $182546$          & $427728$   & $78151368$  & $77183760$  \\
+   Sublead \largeR{} jet $p_{T} > 250~\GeV$        & $69628144$   & $403870$          & $172806$          & $354653$   & $70596512$  & $71117008$  \\
+   At least one signal candidate jet               & $61771844$   & $385898$          & $165464$          & $340425$   & $62699272$  & $64152952$  \\
+   Signal candidate jet $p_{T} > 480~\GeV$         & $52034768$   & $348965$          & $148796$          & $288012$   & $52851096$  & $53996920$  \\
+   $0$ loose $b$-tagged VR subjets (\CRQCD{})      & $29435344$   & $219353$          & $84389$           & $110905$   & $29863870$  & $29883336$  \\
+   $2$ tight $b$-tagged VR subjets (Signal Region) & $400020$     & $1506$            & $6173$            & $10553$    & $419087$    & $484551$    \\
+   \bottomrule
+  \end{tabular}
+ \end{adjustbox}
  \label{table:cutflow}
+\end{table}
+
+\begin{table}[htpb]
+ \centering
+ \caption[The relative cutflow, with respect to the number of events passing the trigger, of the different analysis regions using simulated background events and data.]{%
+  The relative cutflow, with respect to the number of events passing the trigger, of the different analysis regions using simulated background events and data.
+  The QCD multijet contribution is scaled by 0.74 to match data.}
+ \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{@{}lrrrrr@{}}
+   \toprule
+   Cut                                             & QCD multijet & $W+\mathrm{jets}$ & $Z+\mathrm{jets}$ & $t\bar{t}$ & Data    \\ \midrule
+   Trigger                                         & $1.000$      & $1.000$           & $1.000$           & $1.000$    & $1.000$ \\
+   Jet Cleaning                                    & $1.000$      & $0.999$           & $0.999$           & $0.999$    & $0.999$ \\
+   Lead \largeR{} jet $p_{T} > 480~\GeV$           & $0.200$      & $0.301$           & $0.290$           & $0.263$    & $0.484$ \\
+   Sublead \largeR{} jet $p_{T} > 250~\GeV$        & $0.181$      & $0.284$           & $0.275$           & $0.218$    & $0.446$ \\
+   At least one signal candidate jet               & $0.160$      & $0.272$           & $0.263$           & $0.210$    & $0.402$ \\
+   Signal candidate jet $p_{T} > 480~\GeV$         & $0.099$      & $0.208$           & $0.198$           & $0.159$    & $0.248$ \\
+   $0$ loose $b$-tagged VR subjets (\CRQCD{})      & $0.076$      & $0.154$           & $0.134$           & $0.068$    & $0.187$ \\
+   $2$ tight $b$-tagged VR subjets (Signal Region) & $0.001$      & $0.001$           & $0.010$           & $0.006$    & $0.003$ \\
+   \bottomrule
+  \end{tabular}
+ \end{adjustbox}
+ \label{table:cutflow_relative}
 \end{table}
 
 \section{Data and Simulation}\label{sec:data_and_simulation}
