@@ -33,6 +33,7 @@ The observed signal strength for the $\Vjets$ process is
 \]
 corresponding to an observed significance of $5\,\sigma$ with an expected significance of $4.8\,\sigma$.
 This constitutes the first direct observation of boosted vector bosons decaying to bottom quark pairs in ATLAS for a center-of-mass energy of $\sqrt{s}=13~\TeV$ following the lower momentum Run-I measurement of high transverse momentum $\Zbb$~\cite{STDM-2013-04}.
+From the results of simulation, seen in \Cref{table:cutflow}, the expected composition of the $\Vjets$ excess is approximately $24\%$ $W+\mathrm{jets}$ and approximately $76\%$ $Z+\mathrm{jets}$.
 
 \subsection{Measurement of boosted $H\to b\bar{b}$}
 
@@ -87,13 +88,17 @@ as
   Plot of $\frac{1}{2}\left(1 - \mathrm{erf}\left(z/\sqrt{2}\,\right)\right)$, which describes the corresponding \pvalue{} for a given $z$-score.}\label{fig:pvalues_from_zscores}
 \end{figure}
 
-In the absence of excesses in the data that could correspond to new physics, $95\%$ credibility level upper limits, competitive with other published ATLAS limits~\cite{EXOT-2017-32}, are set on signals from dark matter mediators with democratic decays to quarks for masses between $100~\GeV$ and $200~\GeV$.
+In the absence of excesses in the data that could correspond to new physics, $95\%$ credibility level upper limits, competitive with other published ATLAS limits~\cite{EXOT-2017-32} as seen in \Cref{fig:darkmatter_coupling_summary}, are set on signals from dark matter mediators with democratic decays to quarks for masses between $100~\GeV$ and $200~\GeV$.
 These limits are shown in \Cref{fig:Zprime_limits}, in terms of cross section times branching ratio, acceptance and efficiency (\Cref{fig:cross_section_limits}), and in terms of the $g_{q}$ parameter%
 \footnote{The limits on $g_{q}$ are determined from the limits on $\sigma \times \epsilon \times A \times BR$ which used signal events simulated with $g_{q} = 0.25$, meaning that as $\sigma\left(\Zprime \to q\bar{q}\right) \propto g_{q}^{2}$ that $g_{q} = 0.25 \sqrt{\sigma/\sigma_{g_{q} = 0.25}}$\,.}
 that controls the coupling of the \gls{dark matter mediator} to quarks that determines the cross-section (\Cref{fig:gq_limits}).
 From these limits, an exotic dark matter mediator $\Zprime$ with $g_{q}=0.25$ is excluded for $m_{\Zprime} < 200~\GeV$ at the $95\%~\mathrm{CL}$.
 As in seen in \Cref{fig:gq_limits}, the smallest coupling to quarks excluded at the $95\%~\mathrm{CL}$ is $g_{q} = 0.124$ for a mass hypothesis of $m_{\Zprime} = 105~\GeV$.
 The limits become less restrictive at higher masses as the systematic uncertainty on the $t\bar{t}$ scale factor becomes dominant and greatly affects the total uncertainty, as seen in \Cref{table:systematic_uncertainties}.
+CMS has more restrictive limits for a generic leptophobic $\Zprime$ resonance in $77.0~\ifb$ of data~\cite{CMS:2019hlx}, as seen in \Cref{fig:CMS_dijet_summary} and \Cref{fig:CMS-PAS-EXO-18-012_Zprime_limits}.
+Though the results of the two analyses are similar, as the expected uncertainties largely overlap\footnote{%
+ This is, however, a comparison of credible intervals to confidence intervals, which should be done more carefully given their differing interpretations.}
+in the search range of $100~\GeV$ to $200~\GeV$ and between $100~\GeV$ and around $130~\GeV$ the limits are comparable.
 
 \begin{figure}[htbp]
  \centering
@@ -115,7 +120,6 @@ The limits become less restrictive at higher masses as the systematic uncertaint
  \label{fig:Zprime_limits}
 \end{figure}
 
-\clearpage
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=\linewidth]{results/BH_final}
@@ -127,4 +131,15 @@ The limits become less restrictive at higher masses as the systematic uncertaint
   The bottom panel shows the bin-by-bin significances~\cite{Choudalakis:2012} of the differences between the data and the fit, considering only statistical fluctuations~\cite{ATLAS-CONF-2018-052}.
  }
  \label{fig:BumpHunter_scan}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\linewidth]{results/CMS-PAS-EXO-18-012_Zprime_limits.pdf}
+ \caption[CMS upper limits at $95\%$ CL on the coupling $g_{q}^{\prime}$ as a function of resonance mass for a leptophobic $\Zprime$ resonance that only couples to quarks using $77.0~\ifb$.]{%
+  CMS upper limits at the $95\%$ confidence level on the coupling $g_{q}^{\prime}$ as a function of resonance mass for a leptophobic $\Zprime$ resonance that only couples to quarks.
+  For masses between $50~\GeV$ and $220~\GeV$ the limits correspond to a $\Zprime$ resonance reconstructed in AK8 jets using $77.0~\ifb$ of statistically combined data from 2016 and 2017.
+  The excess in the observed limit over the expected limit near $120~\GeV$ is a remnant of the analysis of the data collected in 2016.For masses above $220~\GeV$ up to $450~\GeV$ the results correspond to a $\Zprime$ resonance reconstructed in CA15 jets using $41.1~\ifb$ of data collected in 2017~\cite{CMS:2019hlx}.
+ }
+ \label{fig:CMS-PAS-EXO-18-012_Zprime_limits}
 \end{figure}
