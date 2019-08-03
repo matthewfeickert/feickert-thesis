@@ -142,6 +142,9 @@ def main():
     print(
         f"ATLAS Higgs best-fit value compatibility with SM: {z_score(ATLAS['mu'], 1, ATLAS['uncert_down']):.2f} sigma"
     )
+    print(
+        f"Luminosity weighted mean signal strength: {weighted_mu:.2f} -{weighted_uncert[0]:.2f},+{weighted_uncert[1]:.2f} sigma\n"
+    )
     print('Improvements to statistical uncertainty only:\n')
     for lumi in luminosity:
         print(
