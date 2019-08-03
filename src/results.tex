@@ -4,7 +4,7 @@ To search for and quantify the significance of the production of signals $\left(
 In this method, a final conditional probability of the parameters of interest given the observed data (the ``posterior'') is built by integrating over the nuisance parameters (``marginalization'') with a Markov Chain Monte Carlo (\Gls{MCMC}) procedure.
 The posterior distribution is used to gauge the fitted signal statistical significance and to set $95\%$ credibility level (CL)%
 \footnote{As discussed in \Cref{section:intervals_and_limits}, \emph{credibility levels} for Bayesian credible intervals are different from \emph{confidence levels} for frequentist confidence intervals.}
-upper limits on the cross-section times acceptance times efficiency.
+upper limits on the cross section times acceptance times efficiency.
 
 \section{Measurement of Standard Model Signals}
 
@@ -83,41 +83,33 @@ as
 
 \begin{figure}[htbp]
  \centering
- \includegraphics[width=0.575\linewidth]{results/pvalues_from_zscores.eps}
+ \includegraphics[width=0.75\linewidth]{results/pvalues_from_zscores.eps}
  \caption[Plot of \pvalue{} as a function of $z$-score.]{%
   Plot of $\frac{1}{2}\left(1 - \mathrm{erf}\left(z/\sqrt{2}\,\right)\right)$, which describes the corresponding \pvalue{} for a given $z$-score.}\label{fig:pvalues_from_zscores}
 \end{figure}
 
 In the absence of excesses in the data that could correspond to new physics, $95\%$ credibility level upper limits, competitive with other published ATLAS limits~\cite{EXOT-2017-32} as seen in \Cref{fig:darkmatter_coupling_summary}, are set on signals from dark matter mediators with democratic decays to quarks for masses between $100~\GeV$ and $200~\GeV$.
-These limits are shown in \Cref{fig:Zprime_limits}, in terms of cross section times branching ratio, acceptance and efficiency (\Cref{fig:cross_section_limits}), and in terms of the $g_{q}$ parameter%
+These limits are shown in terms of cross section times branching ratio, acceptance and efficiency in \Cref{fig:cross_section_limits}, and in terms of the $g_{q}$ parameter%
 \footnote{The limits on $g_{q}$ are determined from the limits on $\sigma \times \epsilon \times A \times BR$ which used signal events simulated with $g_{q} = 0.25$, meaning that as $\sigma\left(\Zprime \to q\bar{q}\right) \propto g_{q}^{2}$ that $g_{q} = 0.25 \sqrt{\sigma/\sigma_{g_{q} = 0.25}}$\,.}
-that controls the coupling of the \gls{dark matter mediator} to quarks that determines the cross-section (\Cref{fig:gq_limits}).
+that controls the coupling of the \gls{dark matter mediator} to quarks that determines the cross section in \Cref{fig:gq_limits}.
 From these limits, an exotic dark matter mediator $\Zprime$ with $g_{q}=0.25$ is excluded for $m_{\Zprime} < 200~\GeV$ at the $95\%~\mathrm{CL}$.
 As in seen in \Cref{fig:gq_limits}, the smallest coupling to quarks excluded at the $95\%~\mathrm{CL}$ is $g_{q} = 0.124$ for a mass hypothesis of $m_{\Zprime} = 105~\GeV$.
 The limits become less restrictive at higher masses as the systematic uncertainty on the $t\bar{t}$ scale factor becomes dominant and greatly affects the total uncertainty, as seen in \Cref{table:systematic_uncertainties}.
-CMS has more restrictive limits for a generic leptophobic $\Zprime$ resonance in $77.0~\ifb$ of data~\cite{CMS:2019hlx}, as seen in \Cref{fig:CMS_dijet_summary} and \Cref{fig:CMS-PAS-EXO-18-012_Zprime_limits}.
-Though the results of the two analyses are similar, as the expected uncertainties largely overlap\footnote{%
- This is, however, a comparison of credible intervals to confidence intervals, which should be done more carefully given their differing interpretations.}
-in the search range of $100~\GeV$ to $200~\GeV$ and between $100~\GeV$ and around $130~\GeV$ the limits are comparable.
 
 \begin{figure}[htbp]
  \centering
- \begin{subfigure}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=\textwidth]{results/Final_Limits}
-  \caption{The limit on the cross-section times acceptance times branching ratio times efficiency.}
-  \label{fig:cross_section_limits}
- \end{subfigure}%
- ~
- \begin{subfigure}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=\textwidth]{results/gqlimit}
-  \caption{The limit on the $g_{q}$ parameter that controls the decay width of the $\Zprime$ into SM quarks.}
-  \label{fig:gq_limits}
- \end{subfigure}
- \caption[The $95\%$ credibility level upper limits obtained from the invariant mass distribution for the $\Zprime$ dark matter mediator model.]{%
-  The $95\%$ credibility level upper limits obtained from the invariant mass distribution for the $\Zprime$ dark matter mediator model~\cite{ATLAS-CONF-2018-052}.}
- \label{fig:Zprime_limits}
+ \includegraphics[width=\textwidth]{results/Final_Limits}
+ \caption[The $95\%$ credibility level upper limit on the cross section times acceptance times branching ratio times efficiency for the $\Zprime$ dark matter mediator model.]{%
+  The $95\%$ credibility level upper limit on the cross section times acceptance times branching ratio times efficiency obtained from the invariant mass distribution for the $\Zprime$ dark matter mediator model~\cite{ATLAS-CONF-2018-052}.}
+ \label{fig:cross_section_limits}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\textwidth]{results/gqlimit}
+ \caption[The $95\%$ credibility level upper limit on the $g_{q}$ parameter for the $\Zprime$ dark matter mediator model.]{%
+  The $95\%$ credibility level upper limit on the $g_{q}$ parameter that controls the decay width of the $\Zprime$ into SM quarks obtained from the invariant mass distribution for the $\Zprime$ dark matter mediator model~\cite{ATLAS-CONF-2018-052}.}
+ \label{fig:gq_limits}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -131,15 +123,4 @@ in the search range of $100~\GeV$ to $200~\GeV$ and between $100~\GeV$ and aroun
   The bottom panel shows the bin-by-bin significances~\cite{Choudalakis:2012} of the differences between the data and the fit, considering only statistical fluctuations~\cite{ATLAS-CONF-2018-052}.
  }
  \label{fig:BumpHunter_scan}
-\end{figure}
-
-\begin{figure}[htbp]
- \centering
- \includegraphics[width=\linewidth]{results/CMS-PAS-EXO-18-012_Zprime_limits.pdf}
- \caption[CMS upper limits at $95\%$ CL on the coupling $g_{q}^{\prime}$ as a function of resonance mass for a leptophobic $\Zprime$ resonance that only couples to quarks using $77.0~\ifb$.]{%
-  CMS upper limits at the $95\%$ confidence level on the coupling $g_{q}^{\prime}$ as a function of resonance mass for a leptophobic $\Zprime$ resonance that only couples to quarks.
-  For masses between $50~\GeV$ and $220~\GeV$ the limits correspond to a $\Zprime$ resonance reconstructed in AK8 jets using $77.0~\ifb$ of statistically combined data from 2016 and 2017.
-  The excess in the observed limit over the expected limit near $120~\GeV$ is a remnant of the analysis of the data collected in 2016.For masses above $220~\GeV$ up to $450~\GeV$ the results correspond to a $\Zprime$ resonance reconstructed in CA15 jets using $41.1~\ifb$ of data collected in 2017~\cite{CMS:2019hlx}.
- }
- \label{fig:CMS-PAS-EXO-18-012_Zprime_limits}
 \end{figure}
