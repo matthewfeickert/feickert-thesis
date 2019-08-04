@@ -9,7 +9,7 @@ Probing low mass regions imposes its own set of challenges, as low mass resonanc
  This is reflected in the large cross section for jets and di-jet events shown in \Cref{fig:cross_section_experiment_theory}.}
 In particular for dijet analyses, this introduces an enormous multijet background produced by QCD interactions, as seen in \Cref{fig:SM_fiducial_cross_section_summary}.
 Requiring that the transverse momentum of these resonances is very large (highly boosted) offers a path forward to both triggering on the interesting signal events and also reducing the multijet background which exponentially falls off with increasing momentum.
-To achieve this highly boosted state, the resonance can recoil off a high energy jet or photon~\cite{EXOT-2017-01} that is produced through initial state radiation (ISR) or another similar process, as shown in the leading order at Feynman diagrams in \Cref{fig:signal_LO_diagrams} for signal models of a leptophobic $\Zprime$ and the Higgs boson at the LHC.
+To achieve this highly boosted state, the resonance can recoil off a high energy jet or photon~\cite{EXOT-2017-01} that is produced through initial state radiation (ISR) or another similar process, as shown at the leading order in Feynman diagrams in \Cref{fig:signal_LO_diagrams} for signal models of a leptophobic $\Zprime$ and the Higgs boson at the LHC.
 For this thesis analysis only the jet ISR is considered to simplify the trigger.
 For highly boosted systems, where the resonance's $p_{T}$ is greater than twice its mass, the angular separation between the jets coming from the resonance's decay is reduced enough such that the dijets can be reconstructed with a single anti-$k_{t}$ jet with $R=1.0$ --- a ``\largeR{}'' jet --- as shown in \Cref{fig:Xbb_jet_recoil}.
 If the leptophobic $\Zprime$ has Higgs-like couplings%
@@ -24,7 +24,7 @@ If there are new resonances that run in the loop they contribute to the coupling
 In the effective field theory models of~\cite{Schlaffer:2014osa,Grojean:2013nya,Dawson:2015gka} the effect of the anomalous couplings is very significant and could affect the production cross section of high-$p_{T}$ Higgs through gluon-gluon fusion by more than $50\%$ for $p_{T,H} > 500~\GeV$.
 
 This chapter will cover the signal models and datasets in \Cref{sec:data_and_simulation}.
-The $p_{T}$ requirements to have a fully efficient \largeR{} jet trigger across the 2015, 2016, and 2017 datasets is discussed in \Cref{sec:analysis_trigger}.
+The $p_{T}$ requirements to have a fully efficient \largeR{} jet trigger across the 2015, 2016, and 2017 datasets are discussed in \Cref{sec:analysis_trigger}.
 The construction of the signal region and supporting validation regions is covered in \Cref{sec:event_selection} and the effects of the resonant and non-resonant SM backgrounds in \Cref{sec:analysis_backgrounds}.
 \Cref{sec:multijet_background_modeling} is devoted to my parametric modeling of the irreducible multijet background.
 \Cref{sec:systematic_uncertainties} covers the effect of the leading systematic uncertainties on the analysis, and the results of the analysis are covered in \Cref{chapter:results}.
@@ -247,7 +247,7 @@ However, unlike the \textsc{Sherpa} samples, only one additional parton is inclu
 The UEEE-4 underlying event tune~\cite{Buckley:2018wdv} was used with the CTEQ6L1 parton distribution function.
 
 The simulated $\ttbar$ events were generated at tree-level using \textsc{Powheg-Box} 2 and the NNPDF30 NLO parton distribution function.
-The hadronization of was performed using \textsc{Pythia} 8.230 with the A14 tune and the NNPDF23 parton distribution function and the decay of $b$-hadrons is performed using EvtGen.
+The hadronization was performed using \textsc{Pythia} 8.230 with the A14 tune and the NNPDF23 parton distribution function and the decay of $b$-hadrons is performed using EvtGen.
 The events are separated into categories based on whether both tops decayed hadronically, if only one of decayed hadronically, and if both tops decayed leptonically.
 An additional set of $\ttbar$ events was generated using \textsc{Sherpa} 2.2.1 using the NNPDF30 parton distribution function, where independent samples were generated for the three decay categories.
 This sample was used to cross-check the main $\ttbar$ samples generated with \textsc{Powheg-Box} 2 + \textsc{Pythia} 8.
@@ -374,7 +374,7 @@ In the signal region gluon-gluon fusion contributes $53\%$, followed by VBF prod
 
 As this analysis is looking for resonances on the tails of the $\Vjets$ and $\ttbar$ mass distributions it is important to ensure that the Monte Carlo based templates don't have statistical fluctuations that could hide possible signals.
 To avoid this, parametric shapes are fitted to the MC-based templates ensuring that the tails are well modeled without fluctuations.
-For the $\Vjets$ and signal templates the sum of three Gaussians plus a constant term are fitted to the templates, and for the $\ttbar$ a double-sided Crystal Ball~\cite{Gaiser:1982yw} is used.
+For the $\Vjets$ and signal templates the sum of three Gaussians plus a constant term are fitted to the templates, and for the $\ttbar$ a double-sided Crystal Ball function~\cite{Gaiser:1982yw} is used.
 All systematic variation histograms are also fitted with the same functional choices.
 
 \subsection{$\ttbar$}\label{sec:ttbar}
@@ -410,7 +410,7 @@ This results in a $k$-factor of $0.84 \pm 0.11$, which is then used to constrain
 \section{Modeling of the Multijet Background}\label{sec:multijet_background_modeling}
 
 The dominant background contribution in the SR is the non-resonant multijet process.
-Its estimate through MC is not reliable due to the statistical precision and the underlying accuracy of the event generation.
+Its estimation through MC is not reliable due to the statistical precision and the underlying accuracy of the event generation.
 A data-driven estimate is therefore employed by fitting the signal candidate \largeR{} jet mass distribution, $m_{J}$, in the SR with a parametric function and by validating the procedure using the data in the \CRQCD{}.
 This data-driven approach is further motivated by the fact that the shape of the \CRQCD{} and the SR is very similar over the mass range of the fit, $70~\GeV$ to $230~\GeV$, as seen in \Cref{fig:fit_range_QCD_shape}.
 The fit range extends beyond the $100~\GeV$ to $200~\GeV$ mass search range to provide additional points to help stabilize the fit.

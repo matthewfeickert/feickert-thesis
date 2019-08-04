@@ -14,7 +14,7 @@
  \node (trigger) [selection] {Trigger\\1 large-$R$ jet\\$p_{T} > 480~\textrm{GeV}$};
  \node (pre) [selection, below of=trigger] {Pre-selection\\$\geq 2$ large-$R$ jets\\$p_{T} > 250~\textrm{GeV}$, $\abs{\eta} < 2$};
  \node (signal) [selection, below left of=pre, node distance=4.5cm, fill=blue!30] {\underline{Signal Candidate}\\Boosted\\$\geq2$ VR track jets\\ $\Delta R_{VR}/\mathrm{min} R_{VR} > 1$\\Surviving leading\\ $p_{T}$ large-$R$ jet\\$p_T > 480~\textrm{GeV}$};
- \node (ISR) [selection, below right of=pre, node distance=3.5cm, fill=green!30] {\underline{ISR}\\Leading $p_{T}$ large-$R$ jet in remaining};
+ \node (ISR) [selection, below right of=pre, node distance=3.5cm, fill=green!30] {\underline{ISR}\\Leading $p_{T}$ large-$R$ jet remaining in event};
 
  \draw [arrow] (trigger) -- (pre);
  \draw [arrow] (pre) -- (signal);
