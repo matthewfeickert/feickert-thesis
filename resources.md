@@ -16,3 +16,12 @@ While writing this thesis I came across, and had shared with me, resources that 
 - [Docker image built from Ubuntu containing latest version of TeX Live](https://hub.docker.com/r/matthewfeickert/latex-docker/)
    - This image powered the CI for my thesis and built the full document with each push to GitHub
 - [Mathpix Snip](https://mathpix.com/) allows for very fast and accurate LaTeX code extraction from screenshots of equations
+
+## Writing
+
+- [How to Write a Thesis, According to Umberto Eco](https://thereader.mitpress.mit.edu/umberto-eco-how-to-write-a-thesis/) - The MIT Press Reader
+
+## Revising
+
+While making comments on my thesis for me to revise, my advisor would mark the upper left-hand corner of the page with two angled parallel lines along with his revisions.
+This was quite helpful as it allowed me to quickly tab through the PDF looking for these indicators, which both sped up the revision process and helped me make sure I didn't miss any small comments.
