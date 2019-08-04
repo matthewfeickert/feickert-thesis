@@ -1,19 +1,55 @@
-\newglossaryentry{MLE}{
- text=MLE,
- long=maximum likelihood estimator,
- name={\glsentrylong{MLE} (\glsentrytext{MLE})},
- first={\glsentryname{MLE}},
- sort={maximum likelihood estimator},
- description={The value of the parameter that maximizes the likelihood function.}
+\newglossaryentry{ATLAS}{
+ name=ATLAS,
+ description={General-purpose detector at the \Gls{LHC}}
 }
 
-\newglossaryentry{LHC}{
- text=LHC,
- long=Large Hadron Collider,
- name={\glsentrylong{LHC} (\glsentrytext{LHC})},
- first={\glsentryname{LHC}},
- sort={large hadron collider},
- description={Large Hadron Collider}
+\newglossaryentry{BDT}{
+ text=BDT,
+ long=Boosted Decision Tree,
+ name={\glsentrylong{BDT} (\glsentrytext{BDT})},
+ first={\glsentryname{BDT}},
+ sort={boosted decision tree},
+ description={Machine learning algorithm that uses the weighted score of an ensemble of decision trees (flows of orthogonal selection criteria) to give a discriminant score.
+   The ensemble is iteratively constructed to emphasize areas of poor performance in previous iterations}
+}
+
+\newglossaryentry{CSC}{
+ text=CSC,
+ plural=CSCs,
+ long=Cathode Strip Chamber,
+ name={\glsentrylong{CSC} (\glsentrytext{CSC})},
+ first={\glsentryname{CSC}},
+ firstplural={\glsentrylong{CSC}\glspluralsuffix{} (\glsentrytext{CSC})},
+ sort=cathode strip chamber,
+ description={Multi-wire proportional chamber with segmented cathode readout},
+}
+
+\newglossaryentry{dark matter mediator}{
+ text=DMM,
+ plural=DMMs,
+ long=dark matter mediator,
+ name={Dark Matter Mediator (DMM)},
+ first={\glsentryname{dark matter mediator}},
+ firstplural={\glsentrylong{dark matter mediator}\glspluralsuffix{} (\glsentrytext{dark matter mediator})},
+ description={Massive exotic particle with couplings to both Standard Model particles and dark matter},
+}
+
+\newglossaryentry{HLT}{
+ text=HLT,
+ long=High-Level Trigger,
+ name={\glsentrylong{HLT} (\glsentrytext{HLT})},
+ first={\glsentryname{HLT}},
+ sort=high-level trigger,
+ description={Software based trigger system for ATLAS that uses high granularity information to make the final accept/reject decision on an event},
+}
+
+\newglossaryentry{inner detector}{
+ text=ID,
+ long=Inner Detector,
+ name={\glsentrylong{inner detector} (\glsentrytext{inner detector})},
+ first={\glsentryname{inner detector}},
+ sort=inner detector,
+ description={Highly sensitive ATLAS subsystem comprised of the pixel detector, \glsentrylong{SCT}, and \glsentrylong{TRT} that measures the direction, momentum, and charge of electrically-charged particles},
 }
 
 \newglossaryentry{interaction point}{
@@ -27,70 +63,46 @@
  description={Point along the LHC where the LHC beams can be brought into crossing for collisions},
 }
 
-\newglossaryentry{Pseudorapidity}{
- text=pseudorapidity,
- name=Pseudorapidity,
- description={High energy approximation of the rapidity that only requires angular information},
- symbol={\ensuremath{\eta}}
-}
-
-\newglossaryentry{rapidity}{
- text=rapidity,
- name=Rapidity,
- description={A measurement of the speed of a particle along a given axis given its energy and total momentum},
- symbol={\ensuremath{y}}
-}
-
-\newglossaryentry{Lorentz invariant}{
- text=Lorentz invariant,
- plural=Lorentz invariants,
- name=Lorentz invariant,
- description={A scalar value quantity that is invariant under a Lorentz transformation, such as a spacetime interval or the mass of a particle},
+\newglossaryentry{LHC}{
+ text=LHC,
+ long=Large Hadron Collider,
+ name={\glsentrylong{LHC} (\glsentrytext{LHC})},
+ first={\glsentryname{LHC}},
+ sort={large hadron collider},
+ description={$26.7~\mathrm{km}$ circumference particle accelerator at CERN that stradles the French-Swiss border.
+   It is the world's highest energy proton-proton and proton-heavy-ion collider}
 }
 
 \newglossaryentry{boost}{
  text=boost,
  plural=boosts,
  name=Lorentz boost,
- description={A Lorentz transformation without any rotations, such that the reference frame is ``boosted'' along a single direction},
+ description={Lorentz transformation without any rotations, such that the reference frame is ``boosted'' along a single direction},
 }
 
-\newglossaryentry{Proton Synchrotron}{
- text=Proton Synchrotron,
- name=Proton Synchrotron (PS),
- description={Synchrotron accelerator in the LHC injection chain where the proton beams form a bunch train with $25~\textrm{ns}$ spacing}
+\newglossaryentry{Lorentz invariant}{
+ text=Lorentz invariant,
+ plural=Lorentz invariants,
+ name=Lorentz invariant,
+ description={Scalar value quantity that is invariant under a Lorentz transformation, such as a spacetime interval or the mass of a particle},
 }
 
-\newglossaryentry{ATLAS}{
- name=ATLAS,
- description={a general-purpose detector at the \Gls{LHC}}
+\newglossaryentry{MCMC}{
+ text=MCMC,
+ long=Markov Chain Monte Carlo,
+ name={\glsentrylong{MCMC} (\glsentrytext{MCMC})},
+ first={\glsentryname{MCMC}},
+ sort={markov chain monte carlo},
+ description={Class of Monte Carlo algorithms for sampling from a probability distribution},
 }
 
-\newglossaryentry{inner detector}{
- text=ID,
- long=Inner Detector,
- name={\glsentrylong{inner detector} (\glsentrytext{inner detector})},
- first={\glsentryname{inner detector}},
- sort=inner detector,
- description={inner detector},
-}
-
-\newglossaryentry{SCT}{
- text=SCT,
- long=Semiconductor Tracker,
- name={\glsentrylong{SCT} (\glsentrytext{SCT})},
- first={\glsentryname{SCT}},
- sort=semiconductor tracker,
- description={Semiconductor Tracker},
-}
-
-\newglossaryentry{TRT}{
- text=TRT,
- long=Transition Radiation Tracker,
- name={\glsentrylong{TRT} (\glsentrytext{TRT})},
- first={\glsentryname{TRT}},
- sort=transition radiation tracker,
- description={Transition Radiation Tracker},
+\newglossaryentry{MLE}{
+ text=MLE,
+ long=maximum likelihood estimator,
+ name={\glsentrylong{MLE} (\glsentrytext{MLE})},
+ first={\glsentryname{MLE}},
+ sort={maximum likelihood estimator},
+ description={The value of the parameter that maximizes the likelihood function}
 }
 
 \newglossaryentry{MDT}{
@@ -101,67 +113,7 @@
  first={\glsentryname{MDT}},
  firstplural={\glsentrylong{MDT}\glspluralsuffix{} (\glsentrytext{MDT})},
  sort=monitored drift tube,
- description={Monitored Drift Tube},
-}
-
-\newglossaryentry{CSC}{
- text=CSC,
- plural=CSCs,
- long=Cathode Strip Chamber,
- name={\glsentrylong{CSC} (\glsentrytext{CSC})},
- first={\glsentryname{CSC}},
- firstplural={\glsentrylong{CSC}\glspluralsuffix{} (\glsentrytext{CSC})},
- sort=cathode strip chamber,
- description={Cathode Strip Chamber},
-}
-
-\newglossaryentry{RPC}{
- text=RPC,
- plural=RPCs,
- long=Resistive Plate Chamber,
- name={\glsentrylong{RPC} (\glsentrytext{RPC})},
- first={\glsentryname{RPC}},
- firstplural={\glsentrylong{RPC}\glspluralsuffix{} (\glsentrytext{RPC})},
- sort=resistive plate chamber,
- description={Resistive Plate Chamber},
-}
-
-\newglossaryentry{TGC}{
- text=TGC,
- plural=TGCs,
- long=Thin Gap Chamber,
- name={\glsentrylong{TGC} (\glsentrytext{TGC})},
- first={\glsentryname{TGC}},
- firstplural={\glsentrylong{TGC}\glspluralsuffix{} (\glsentrytext{TGC})},
- sort=thin gap chamber,
- description={Thin Gap Chamber},
-}
-
-\newglossaryentry{TDAQ}{
- text=TDAQ,
- long=Trigger and Data Acquisition,
- name={\glsentrylong{TDAQ} (\glsentrytext{TDAQ})},
- first={\glsentryname{TDAQ}},
- sort=trigger and data acquisition,
- description={Trigger and Data Acquisition},
-}
-
-\newglossaryentry{HLT}{
- text=HLT,
- long=High Level Trigger,
- name={\glsentrylong{HLT} (\glsentrytext{HLT})},
- first={\glsentryname{HLT}},
- sort=high level trigger,
- description={High Level Trigger},
-}
-
-\newglossaryentry{RoI}{
- text=RoI,
- long=Regions of Interest,
- name={\glsentrylong{RoI} (\glsentrytext{RoI})},
- first={\glsentryname{RoI}},
- sort=regions of interest,
- description={Regions of Interest},
+ description={Chamber in the ATLAS \glsentrylong{muon spectrometer} of six layers of drift tubes, arranged such that three layers of closely-packed tubes (multilayers) are mounted on each side of a support structure, designed to measure the curvature of muon tracks},
 }
 
 \newglossaryentry{muon spectrometer}{
@@ -170,29 +122,38 @@
  name={\glsentrylong{muon spectrometer} (\glsentrytext{muon spectrometer})},
  first={\glsentryname{muon spectrometer}},
  sort=muon spectrometer,
- description={Muon Spectrometer},
+ description={ATLAS subsystem comprised of \glsentrylong{MDT}s and \glsentrylong{CSC}s designed to identify tracks and measure the momentum of muons},
 }
 
-\newglossaryentry{Standard Model}{
- text=Standard Model,
- name=Standard Model (SM),
- description={The collection of quantum field theories that collectively describe the electromagnetic, weak nuclear, and strong nuclear forces and all their interactions with matter particles to fantastic accuracy}
+\newglossaryentry{Proton Synchrotron}{
+ text=Proton Synchrotron,
+ name=Proton Synchrotron (PS),
+ description={Synchrotron accelerator in the LHC injection chain where the proton beams form a bunch train with $25~\textrm{ns}$ spacing}
 }
 
-\newglossaryentry{dark matter mediator}{
- text=DMM,
- plural=DMMs,
- long=dark matter mediator,
- name={Dark Matter Mediator (DMM)},
- first={\glsentryname{dark matter mediator}},
- firstplural={\glsentrylong{dark matter mediator}\glspluralsuffix{} (\glsentrytext{dark matter mediator})},
- description={massive exotic particle with couplings to both Standard Model particles and dark matter},
+\newglossaryentry{Pseudorapidity}{
+ text=pseudorapidity,
+ name=Pseudorapidity (\(\boldsymbol{\eta}\)),
+ description={High energy approximation of the rapidity that only requires angular information},
+ symbol={\ensuremath{\eta}}
 }
 
-\newglossaryentry{MCMC}{
- text=MCMC,
- name=Markov Chain Monte Carlo (MCMC),
- description={Markov Chain Monte Carlo},
+\newglossaryentry{QCD}{
+ text=QCD,
+ long=Quantum Chromodynamics,
+ name={\glsentrylong{QCD} (\glsentrytext{QCD})},
+ first={\glsentryname{QCD}},
+ sort={quantum chromodynamics},
+ description={Quantum field theory that describes the strong nuclear force and the interactions of particles that carry the QCD color charge --- quarks and gluons}
+}
+
+\newglossaryentry{QED}{
+ text=QED,
+ long=Quantum Electrodynamics,
+ name={\glsentrylong{QED} (\glsentrytext{QED})},
+ first={\glsentryname{QED}},
+ sort={quantum electrodynamics},
+ description={Quantum field theory that describes the electromagnetic force and the interactions of particles that are electrically charged by photon exchange}
 }
 
 \newglossaryentry{QFT}{
@@ -204,25 +165,34 @@
  first={\glsentryname{QFT}},
  firstplural={Quantum Field Theories~(\glsentrytext{QFT})},
  sort={quantum field theory},
- description={Quantum Field Theory}
+ description={Theoretical framework that combines classical field theory, special relativity, and quantum theory to give powerful calculation techniques for the interactions of subatomic particles at high energy}
 }
 
-\newglossaryentry{QED}{
- text=QED,
- long=Quantum Electrodynamics,
- name={\glsentrylong{QED} (\glsentrytext{QED})},
- first={\glsentryname{QED}},
- sort={quantum electrodynamics},
- description={Quantum Electrodynamics}
+\newglossaryentry{rapidity}{
+ text=rapidity,
+ name=Rapidity (\(\boldsymbol{y}\)),
+ description={Measurement of the speed of a particle along a given axis given its energy and total momentum},
+ symbol={\ensuremath{y}}
 }
 
-\newglossaryentry{QCD}{
- text=QCD,
- long=Quantum Chromodynamics,
- name={\glsentrylong{QCD} (\glsentrytext{QCD})},
- first={\glsentryname{QCD}},
- sort={quantum chromodynamics},
- description={Quantum Chromodynamics}
+\newglossaryentry{RoI}{
+ text=RoI,
+ long=Regions of Interest,
+ name={\glsentrylong{RoI} (\glsentrytext{RoI})},
+ first={\glsentryname{RoI}},
+ sort=regions of interest,
+ description={Reduced detector volumes that contain signatures of possibly interesting physics events},
+}
+
+\newglossaryentry{RPC}{
+ text=RPC,
+ plural=RPCs,
+ long=Resistive Plate Chamber,
+ name={\glsentrylong{RPC} (\glsentrytext{RPC})},
+ first={\glsentryname{RPC}},
+ firstplural={\glsentrylong{RPC}\glspluralsuffix{} (\glsentrytext{RPC})},
+ sort=resistive plate chamber,
+ description={Fast gaseous detectors used in the trigger system for the \glsentrylong{muon spectrometer} consisting of two parallel plates, that serve as an anode and cathode, made of a very high resistivity plastic material and separated by a gas volume},
 }
 
 \newglossaryentry{scale factor}{
@@ -235,12 +205,46 @@
  description={Number applied as a multiplicative correction factor to distributions}
 }
 
-\newglossaryentry{BDT}{
- text=BDT,
- long=Boosted Decision Tree,
- name={\glsentrylong{BDT} (\glsentrytext{BDT})},
- first={\glsentryname{BDT}},
- sort={boosted decision tree},
- description={A machine learning algorithm that uses the weighted score of an ensemble of decision trees (flows of orthogonal selection criteria) to give a discriminant score.
-   The ensemble is iteratively constructed to emphasize areas of poor performance in previous iterations}
+\newglossaryentry{SCT}{
+ text=SCT,
+ long=Semiconductor Tracker,
+ name={\glsentrylong{SCT} (\glsentrytext{SCT})},
+ first={\glsentryname{SCT}},
+ sort=semiconductor tracker,
+ description={Silicon microstrip tracker in the ATLAS \glsentrylong{inner detector} that surrounds the pixel detector in cylindrical layers and end-cap disks},
+}
+
+\newglossaryentry{Standard Model}{
+ text=Standard Model,
+ name=Standard Model (SM),
+ description={The collection of quantum field theories that collectively describe the electromagnetic, weak nuclear, and strong nuclear forces and all their interactions with matter particles to fantastic accuracy}
+}
+
+\newglossaryentry{TGC}{
+ text=TGC,
+ plural=TGCs,
+ long=Thin Gap Chamber,
+ name={\glsentrylong{TGC} (\glsentrytext{TGC})},
+ first={\glsentryname{TGC}},
+ firstplural={\glsentrylong{TGC}\glspluralsuffix{} (\glsentrytext{TGC})},
+ sort=thin gap chamber,
+ description={Thin multiwire proportional chamber with thick field wires with an operating gas mixture filling the chamber gap},
+}
+
+\newglossaryentry{TRT}{
+ text=TRT,
+ long=Transition Radiation Tracker,
+ name={\glsentrylong{TRT} (\glsentrytext{TRT})},
+ first={\glsentryname{TRT}},
+ sort=transition radiation tracker,
+ description={Combined tracking and electron identification drift tube detector in the ATLAS \glsentrylong{inner detector}},
+}
+
+\newglossaryentry{TDAQ}{
+ text=TDAQ,
+ long=Trigger and Data Acquisition,
+ name={\glsentrylong{TDAQ} (\glsentrytext{TDAQ})},
+ first={\glsentryname{TDAQ}},
+ sort=trigger and data acquisition,
+ description={The combined system comprised of the Level-1 hardware and HLT software trigger systems along with the subdetector data readout and buffer systems},
 }
