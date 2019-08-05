@@ -33,6 +33,7 @@ jobs:
                 echo "### File viewable at: https://www.physics.smu.edu/mfeickert/thesis/PRs/draft_PR${CIRCLE_PULL_REQUEST##*/}.pdf"
               elif [[ "$CIRCLE_BRANCH" == "master" ]]; then
                 SSHPASS=$LXPLUS_PASS sshpass -e scp feickert_thesis.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/ATLAS/thesis/draft.pdf
+                SSHPASS=$LXPLUS_PASS sshpass -e scp feickert_thesis.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/feickert-thesis.pdf
                 SSHPASS=$LXPLUS_PASS sshpass -e scp abstract.pdf feickert@lxplus.cern.ch:/eos/user/f/feickert/www/ATLAS/thesis/abstract.pdf
                 echo "### File viewable at: https://cern.ch/feickert/ATLAS/thesis/draft.pdf"
                 SSHPASS=$PHYSSERVER_PASS sshpass -e scp feickert_thesis.pdf mfeickert@rubin.physics.smu.edu:/users/mfeickert/public_html/thesis/draft.pdf
