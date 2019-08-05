@@ -5,13 +5,17 @@
 \renewcommand\vec[1]{\ensuremath\boldsymbol{#1}}
 
 % Units
-\newcommand{\eV}{\mathrm{eV}}% eV
-\newcommand{\MeV}{\mathrm{MeV}}% MeV
-\newcommand{\GeV}{\mathrm{GeV}}% GeV
-\newcommand{\TeV}{\mathrm{TeV}}% TeV
+% Taken from atlaslatex's atlasunit.sty
+\newcommand{\TeV}{\ensuremath{\text{Te\kern-0.1em V}}}
+\newcommand{\GeV}{\ensuremath{\text{Ge\kern-0.1em V}}}
+\newcommand{\MeV}{\ensuremath{\text{Me\kern-0.1em V}}}
+\newcommand{\keV}{\ensuremath{\text{ke\kern-0.1em V}}}
+\newcommand{\eV}{\ensuremath{\text{e\kern-0.1em V}}}
 
 \newcommand{\fb}{\mathrm{fb}}% fb
 \newcommand{\ifb}{\mathrm{fb}^{-1}}% fb^{-1}
+\newcommand{\ipb}{\mathrm{pb}^{-1}}% pb^{-1}
+\newcommand{\inb}{\mathrm{nb}^{-1}}% nb^{-1}
 
 % physics quantities
 \newcommand{\Lagrangian}{\ensuremath{\mathscr{L}}}%
