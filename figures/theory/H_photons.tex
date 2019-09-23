@@ -15,7 +15,7 @@
   \vertex [right=1.75cm of v2] (gamma2) {\(\gamma\)};
   \diagram* {
   (origin) -- [scalar, edge label={\(H\)}] (H),
-  (H) -- [fermion] (v1) -- [fermion] (v2) -- [fermion] (H),
+  (H) -- [boson] (v2) -- [boson, edge label={\(W\)}] (v1) -- [boson] (H),
   (gamma1) -- [photon] (v1),
   (gamma2) -- [photon] (v2),
   };
